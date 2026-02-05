@@ -1,0 +1,19 @@
+{
+  "name": "my-flow-time",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm -r --parallel dev",
+    "typecheck": "pnpm -r typecheck",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
+    "lint": "pnpm -r lint"
+  },
+  "packageManager": "pnpm@10.28.2",
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild", "workerd", "sharp"]
+  },
+  "devDependencies": {
+    "prettier": "^3.8.1"
+  }
+}

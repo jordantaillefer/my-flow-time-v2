@@ -1,0 +1,46 @@
+{
+	"name": "api",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"deploy": "wrangler deploy",
+		"deploy:prod": "wrangler deploy --env prod",
+		"dev": "wrangler dev",
+		"dev:remote": "wrangler dev --remote",
+		"start": "wrangler dev",
+		"db:generate": "drizzle-kit generate",
+		"db:migrate:local": "wrangler d1 migrations apply flowtime-dev --local",
+		"db:migrate:remote": "wrangler d1 migrations apply flowtime-dev --remote",
+		"db:migrate:prod": "wrangler d1 migrations apply flowtime-prod --remote --env prod",
+		"db:studio": "drizzle-kit studio",
+		"lint": "eslint . --fix",
+		"test": "vitest",
+		"cf-typegen": "wrangler types",
+		"typecheck": "tsc -p tsconfig.json --noEmit"
+	},
+	"devDependencies": {
+		"@cloudflare/vitest-pool-workers": "^0.12.4",
+		"@cloudflare/workers-types": "^4.20260131.0",
+		"@eslint/js": "^9.39.2",
+		"@types/luxon": "^3.7.1",
+		"@types/node": "^24.10.9",
+		"drizzle-kit": "^0.31.8",
+		"eslint": "^9.39.2",
+		"eslint-plugin-simple-import-sort": "^12.1.1",
+		"tsx": "^4.21.0",
+		"typescript": "^5.5.2",
+		"typescript-eslint": "^8.54.0",
+		"vitest": "~3.2.0",
+		"wrangler": "^4.61.1"
+	},
+	"dependencies": {
+		"@my-flow-time/shared": "workspace:*",
+		"@trpc/server": "^11.9.0",
+		"better-auth": "^1.4.18",
+		"dotenv": "^17.2.3",
+		"drizzle-orm": "^0.45.1",
+		"hono": "^4.11.7",
+		"luxon": "^3.7.2",
+		"zod": "^4.3.6"
+	}
+}
