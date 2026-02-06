@@ -345,11 +345,15 @@ export const exercise = sqliteTable(
 		id: text('id').primaryKey(),
 		name: text('name').notNull().unique(),
 		muscleGroup: text('muscle_group').notNull(),
+		equipment: text('equipment').notNull().default('poids_du_corps'),
 		description: text('description').notNull().default(''),
 		imageUrl: text('image_url'),
 		createdAt: integer('created_at', { mode: 'timestamp_ms' })
 			.default(sql`(cast(unixepoch('subsecond') * 1000 as integer))`)
 			.notNull(),
 	},
-	(table) => [index('exercise_muscleGroup_idx').on(table.muscleGroup)],
+	(table) => [
+		index('exercise_muscleGroup_idx').on(table.muscleGroup),
+		index('exercise_equipment_idx').on(table.equipment),
+	],
 );

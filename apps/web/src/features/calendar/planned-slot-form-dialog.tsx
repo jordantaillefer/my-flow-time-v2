@@ -44,7 +44,7 @@ export function PlannedSlotFormDialog({
 	});
 
 	// Reset form values each time the dialog opens
-	// eslint-disable-next-line react-hooks/exhaustive-deps
+	 
 	useEffect(() => {
 		if (open) {
 			form.reset(defaultValues ?? EMPTY_VALUES);

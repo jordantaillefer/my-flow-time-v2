@@ -1,5 +1,5 @@
-import { DateTime } from 'luxon';
 import { Loader2 } from 'lucide-react';
+import { DateTime } from 'luxon';
 import { useEffect, useRef, useState } from 'react';
 
 import {
@@ -39,7 +39,7 @@ export function TodayTimeline() {
 		if (activeCardRef.current) {
 			activeCardRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
 		}
-	}, [daysQuery.data]); // eslint-disable-line react-hooks/exhaustive-deps
+	}, [daysQuery.data]);  
 
 	if (daysQuery.isLoading) {
 		return (

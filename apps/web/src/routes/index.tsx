@@ -2,11 +2,10 @@ import { createFileRoute } from '@tanstack/react-router';
 import { DateTime } from 'luxon';
 
 import { Badge } from '@/components/ui/badge';
-import { trpc } from '@/lib/trpc';
-
 import { findActiveSlotIndex } from '@/features/today/active-slot';
 import { TodayTimeline } from '@/features/today/today-timeline';
 import { useCurrentMinutes } from '@/features/today/use-current-minutes';
+import { trpc } from '@/lib/trpc';
 
 export const Route = createFileRoute('/')({
 	component: TodayPage,

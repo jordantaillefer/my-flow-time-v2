@@ -1,4 +1,6 @@
-export const DEFAULT_EXERCISES: {
+import { deriveEquipment } from './derive-equipment';
+
+const RAW_EXERCISES: {
 	name: string;
 	muscleGroup: string;
 	description: string;
@@ -2106,3 +2108,8 @@ export const DEFAULT_EXERCISES: {
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2021/10/extension-mollets-sur-marche-exercice.jpg',
 	},
 ];
+
+export const DEFAULT_EXERCISES = RAW_EXERCISES.map((ex) => ({
+	...ex,
+	equipment: deriveEquipment(ex.name),
+}));

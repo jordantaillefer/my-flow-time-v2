@@ -1,4 +1,4 @@
-import { eq, like, and } from 'drizzle-orm';
+import { and,eq, like } from 'drizzle-orm';
 import { z } from 'zod';
 
 import { seedDefaultExercises } from '../../core/seed-exercises';
@@ -11,6 +11,7 @@ export const exerciseRouter = router({
 			z
 				.object({
 					muscleGroup: z.string().optional(),
+					equipment: z.string().optional(),
 					search: z.string().optional(),
 				})
 				.optional(),
@@ -20,6 +21,10 @@ export const exerciseRouter = router({
 
 			if (input?.muscleGroup) {
 				conditions.push(eq(exercise.muscleGroup, input.muscleGroup));
+			}
+
+			if (input?.equipment) {
+				conditions.push(eq(exercise.equipment, input.equipment));
 			}
 
 			if (input?.search) {

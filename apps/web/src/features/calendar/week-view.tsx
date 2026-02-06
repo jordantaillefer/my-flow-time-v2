@@ -1,13 +1,13 @@
-import { DateTime } from 'luxon';
 import { Loader2 } from 'lucide-react';
+import { DateTime } from 'luxon';
 import { useEffect, useRef, useState } from 'react';
 
 import {
 	DAY_END_HOUR,
 	DAY_START_HOUR,
-	HOUR_HEIGHT,
 	formatDayHeader,
 	getWeekDatesFromParam,
+	HOUR_HEIGHT,
 	isToday,
 	minutesToPosition,
 	parseWeekParam,

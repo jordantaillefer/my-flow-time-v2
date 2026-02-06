@@ -15,6 +15,7 @@ export async function seedDefaultExercises(db: DrizzleD1Database<typeof schema>)
 				id: crypto.randomUUID(),
 				name: ex.name,
 				muscleGroup: ex.muscleGroup,
+				equipment: ex.equipment,
 				description: ex.description,
 				imageUrl: ex.imageUrl ?? null,
 			})
