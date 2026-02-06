@@ -1,5 +1,6 @@
 import { categoryRouter, subcategoryRouter } from './routers/category';
 import { dayTemplateRouter } from './routers/day-template';
+import { exerciseRouter } from './routers/exercise';
 import { plannedDayRouter } from './routers/planned-day';
 import { plannedSlotRouter } from './routers/planned-slot';
 import { templateRecurrenceRouter } from './routers/template-recurrence';
@@ -20,6 +21,7 @@ export const appRouter = router({
 	templateRecurrence: templateRecurrenceRouter,
 	plannedDay: plannedDayRouter,
 	plannedSlot: plannedSlotRouter,
+	exercise: exerciseRouter,
 });
 
 export type AppRouter = typeof appRouter;

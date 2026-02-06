@@ -12,6 +12,7 @@ export interface PlannedDayData {
 		subcategory: {
 			id: string;
 			name: string;
+			moduleType: string | null;
 			category: { id: string; name: string; color: string };
 		};
 	}>;

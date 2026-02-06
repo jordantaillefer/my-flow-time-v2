@@ -334,3 +334,22 @@ export const plannedSlotRelations = relations(plannedSlot, ({ one }) => ({
 	templateSlot: one(templateSlot, { fields: [plannedSlot.templateSlotId], references: [templateSlot.id] }),
 	user: one(user, { fields: [plannedSlot.userId], references: [user.id] }),
 }));
+
+// =============================================================================
+// Exercises (referentiel partage, pas lie a un user)
+// =============================================================================
+
+export const exercise = sqliteTable(
+	'exercise',
+	{
+		id: text('id').primaryKey(),
+		name: text('name').notNull().unique(),
+		muscleGroup: text('muscle_group').notNull(),
+		description: text('description').notNull().default(''),
+		imageUrl: text('image_url'),
+		createdAt: integer('created_at', { mode: 'timestamp_ms' })
+			.default(sql`(cast(unixepoch('subsecond') * 1000 as integer))`)
+			.notNull(),
+	},
+	(table) => [index('exercise_muscleGroup_idx').on(table.muscleGroup)],
+);

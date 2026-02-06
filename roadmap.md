@@ -79,30 +79,30 @@ Base de code initiale : projet `billable`.
 - [x] RecurrencePicker : 7 boutons toggle (L M Me J V S D), avertissement si jour deja assigne
 - [x] TemplateList dans Settings : cards en grille, nb creneaux, jours assignes, lien vers editeur
 
-## Phase 4 - Calendrier & planning
+## Phase 4 - Calendrier & planning ✅
 
-- [ ] Schema DB : table `planned_day` (date, FK day_template nullable) + table `planned_slot` (FK planned_day, heure debut, heure fin, FK subcategory, FK template_slot nullable)
-- [ ] API generation des jours a partir des recurrences + CRUD slots individuels
-- [ ] Vue calendrier : semaine (par defaut) et mois
-- [ ] Edition inline d'un jour : ajouter/modifier/supprimer des creneaux
-- [ ] Application rapide d'un template sur un jour
+- [x] Schema DB : table `planned_day` (date, FK day_template nullable) + table `planned_slot` (FK planned_day, heure debut, heure fin, FK subcategory, FK template_slot nullable)
+- [x] API generation des jours a partir des recurrences + CRUD slots individuels
+- [x] Vue calendrier : semaine (grille horaire style Google Calendar, responsive mobile 1 jour) et mois
+- [x] Edition inline d'un jour : ajouter/modifier/supprimer des creneaux + clic sur grille horaire pour pre-remplir
+- [x] Application rapide d'un template sur un jour
 - [ ] Sync offline : cache des donnees du calendrier, queue de modifications
 
-## Phase 5 - Vue "Aujourd'hui"
+## Phase 5 - Vue "Aujourd'hui" ✅
 
-- [ ] Page dediee : affichage des creneaux du jour sous forme de timeline verticale
-- [ ] Indicateur du creneau actif (basee sur l'heure courante, mise a jour en temps reel)
-- [ ] Architecture de modules : registre de composants indexes par `module_type`
-- [ ] Clic sur un creneau = ouvre le module associe (ou un detail generique si pas de module)
-- [ ] Transitions fluides entre creneaux
+- [x] Page dediee : affichage des creneaux du jour sous forme de timeline verticale
+- [x] Indicateur du creneau actif (basee sur l'heure courante, mise a jour en temps reel)
+- [x] Architecture de modules : registre de composants indexes par `module_type`
+- [x] Clic sur un creneau = ouvre le module associe (ou un detail generique si pas de module)
+- [x] Transitions fluides entre creneaux
 
-## Phase 6 - Module Musculation : Base d'exercices
+## Phase 6 - Module Musculation : Base d'exercices ✅
 
-- [ ] Schema DB : table `exercise` (nom, groupe_musculaire, description, image_url nullable)
-- [ ] Seed d'exercices par groupe : pectoraux, dos, jambes, epaules, bras, abdos
-- [ ] API CRUD exercices + filtrage par groupe musculaire
-- [ ] Page de consultation : liste filtrable par groupe, barre de recherche
-- [ ] Composant `ExerciseCard` reutilisable (utilise dans le planificateur et l'historique)
+- [x] Schema DB : table `exercise` (nom, groupe_musculaire, description, image_url nullable)
+- [x] Seed d'exercices par groupe : pectoraux, dos, jambes, epaules, bras, abdos
+- [x] API CRUD exercices + filtrage par groupe musculaire
+- [x] Page de consultation : liste filtrable par groupe, barre de recherche
+- [x] Composant `ExerciseCard` reutilisable (utilise dans le planificateur et l'historique)
 
 ## Phase 7 - Module Musculation : Planificateur de seance
 
