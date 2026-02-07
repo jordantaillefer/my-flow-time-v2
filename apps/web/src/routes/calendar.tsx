@@ -50,11 +50,7 @@ function CalendarPage() {
 				onMonthChange={setMonth}
 			/>
 
-			{view === 'week' ? (
-				<WeekView weekStr={weekStr} />
-			) : (
-				<MonthView monthStr={monthStr} onNavigateToWeek={handleNavigateToWeek} />
-			)}
+			{view === 'week' ? <WeekView weekStr={weekStr} /> : <MonthView monthStr={monthStr} onNavigateToWeek={handleNavigateToWeek} />}
 		</div>
 	);
 }

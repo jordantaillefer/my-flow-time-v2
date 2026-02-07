@@ -22,10 +22,7 @@ export function ExercisePickerDialog({ open, onOpenChange, onPick }: ExercisePic
 	const [pickedExercise, setPickedExercise] = useState<{ id: string; name: string } | null>(null);
 	const [configOpen, setConfigOpen] = useState(false);
 
-	const exercisesQuery = trpc.exercise.list.useQuery(
-		{ muscleGroup: selectedGroup ?? undefined },
-		{ enabled: open },
-	);
+	const exercisesQuery = trpc.exercise.list.useQuery({ muscleGroup: selectedGroup ?? undefined }, { enabled: open });
 
 	function handleOpenChange(nextOpen: boolean) {
 		onOpenChange(nextOpen);
@@ -66,12 +63,7 @@ export function ExercisePickerDialog({ open, onOpenChange, onPick }: ExercisePic
 					{/* Search */}
 					<div className="relative">
 						<Search className="text-muted-foreground absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2" />
-						<Input
-							placeholder="Rechercher..."
-							value={search}
-							onChange={(e) => setSearch(e.target.value)}
-							className="pl-9"
-						/>
+						<Input placeholder="Rechercher..." value={search} onChange={(e) => setSearch(e.target.value)} className="pl-9" />
 					</div>
 
 					{/* Muscle group chips */}
@@ -98,9 +90,7 @@ export function ExercisePickerDialog({ open, onOpenChange, onPick }: ExercisePic
 									onClick={() => setSelectedGroup(isActive ? null : group)}
 									className={cn(
 										'shrink-0 rounded-full border px-3 py-1 text-xs font-medium transition-colors',
-										isActive
-											? 'border-transparent text-white'
-											: 'text-muted-foreground hover:text-foreground',
+										isActive ? 'border-transparent text-white' : 'text-muted-foreground hover:text-foreground',
 									)}
 									style={isActive && meta ? { backgroundColor: meta.color } : undefined}
 								>
@@ -119,11 +109,7 @@ export function ExercisePickerDialog({ open, onOpenChange, onPick }: ExercisePic
 								<Search className="text-muted-foreground h-8 w-8" />
 								<p className="text-muted-foreground text-sm">Aucun exercice trouve.</p>
 								{search && (
-									<button
-										type="button"
-										onClick={() => setSearch('')}
-										className="text-primary text-sm underline underline-offset-4"
-									>
+									<button type="button" onClick={() => setSearch('')} className="text-primary text-sm underline underline-offset-4">
 										Effacer la recherche
 									</button>
 								)}
@@ -141,18 +127,18 @@ export function ExercisePickerDialog({ open, onOpenChange, onPick }: ExercisePic
 										>
 											<div className="h-10 w-10 shrink-0 overflow-hidden rounded">
 												{ex.imageUrl ? (
-													<img
-														src={ex.imageUrl}
-														alt={ex.name}
-														loading="lazy"
-														className="h-full w-full object-cover"
-													/>
+													<img src={ex.imageUrl} alt={ex.name} loading="lazy" className="h-full w-full object-cover" />
 												) : (
 													<div
 														className="flex h-full w-full items-center justify-center text-[10px] font-bold text-white/60"
 														style={{ backgroundColor: group?.color ?? 'oklch(0.35 0.05 275)' }}
 													>
-														{ex.name.split(' ').slice(0, 2).map((w) => w[0]).join('').toUpperCase()}
+														{ex.name
+															.split(' ')
+															.slice(0, 2)
+															.map((w) => w[0])
+															.join('')
+															.toUpperCase()}
 													</div>
 												)}
 											</div>

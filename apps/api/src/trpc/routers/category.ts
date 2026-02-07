@@ -49,17 +49,15 @@ export const categoryRouter = router({
 				.where(and(eq(category.id, input.id), eq(category.userId, ctx.session.user.id)));
 		}),
 
-	delete: authedProcedure
-		.input(z.object({ id: z.string() }))
-		.mutation(async ({ ctx, input }) => {
-			const cat = await ctx.db.query.category.findFirst({
-				where: and(eq(category.id, input.id), eq(category.userId, ctx.session.user.id)),
-			});
-			if (cat?.isDefault) {
-				throw new Error('Impossible de supprimer une categorie par defaut');
-			}
-			await ctx.db.delete(category).where(and(eq(category.id, input.id), eq(category.userId, ctx.session.user.id)));
-		}),
+	delete: authedProcedure.input(z.object({ id: z.string() })).mutation(async ({ ctx, input }) => {
+		const cat = await ctx.db.query.category.findFirst({
+			where: and(eq(category.id, input.id), eq(category.userId, ctx.session.user.id)),
+		});
+		if (cat?.isDefault) {
+			throw new Error('Impossible de supprimer une categorie par defaut');
+		}
+		await ctx.db.delete(category).where(and(eq(category.id, input.id), eq(category.userId, ctx.session.user.id)));
+	}),
 });
 
 export const subcategoryRouter = router({
@@ -98,15 +96,13 @@ export const subcategoryRouter = router({
 				.where(and(eq(subcategory.id, input.id), eq(subcategory.userId, ctx.session.user.id)));
 		}),
 
-	delete: authedProcedure
-		.input(z.object({ id: z.string() }))
-		.mutation(async ({ ctx, input }) => {
-			const sub = await ctx.db.query.subcategory.findFirst({
-				where: and(eq(subcategory.id, input.id), eq(subcategory.userId, ctx.session.user.id)),
-			});
-			if (sub?.isDefault) {
-				throw new Error('Impossible de supprimer une sous-categorie par defaut');
-			}
-			await ctx.db.delete(subcategory).where(and(eq(subcategory.id, input.id), eq(subcategory.userId, ctx.session.user.id)));
-		}),
+	delete: authedProcedure.input(z.object({ id: z.string() })).mutation(async ({ ctx, input }) => {
+		const sub = await ctx.db.query.subcategory.findFirst({
+			where: and(eq(subcategory.id, input.id), eq(subcategory.userId, ctx.session.user.id)),
+		});
+		if (sub?.isDefault) {
+			throw new Error('Impossible de supprimer une sous-categorie par defaut');
+		}
+		await ctx.db.delete(subcategory).where(and(eq(subcategory.id, input.id), eq(subcategory.userId, ctx.session.user.id)));
+	}),
 });

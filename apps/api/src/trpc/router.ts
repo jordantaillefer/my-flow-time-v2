@@ -7,6 +7,8 @@ import { templateRecurrenceRouter } from './routers/template-recurrence';
 import { templateSlotRouter } from './routers/template-slot';
 import { workoutPlanRouter } from './routers/workout-plan';
 import { workoutPlanExerciseRouter } from './routers/workout-plan-exercise';
+import { workoutSessionRouter } from './routers/workout-session';
+import { workoutSetRouter } from './routers/workout-set';
 import { authedProcedure, publicProcedure, router } from './trpc';
 
 export const appRouter = router({
@@ -26,6 +28,8 @@ export const appRouter = router({
 	exercise: exerciseRouter,
 	workoutPlan: workoutPlanRouter,
 	workoutPlanExercise: workoutPlanExerciseRouter,
+	workoutSession: workoutSessionRouter,
+	workoutSet: workoutSetRouter,
 });
 
 export type AppRouter = typeof appRouter;

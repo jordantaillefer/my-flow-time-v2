@@ -129,10 +129,7 @@ export function PlannedSlotFormDialog({
 												<SelectGroup key={cat.id}>
 													<SelectLabel>
 														<span className="flex items-center gap-1.5">
-															<span
-																className="inline-block h-2 w-2 rounded-full"
-																style={{ backgroundColor: cat.color }}
-															/>
+															<span className="inline-block h-2 w-2 rounded-full" style={{ backgroundColor: cat.color }} />
 															{cat.name}
 														</span>
 													</SelectLabel>
@@ -156,10 +153,7 @@ export function PlannedSlotFormDialog({
 								render={({ field }) => (
 									<FormItem>
 										<FormLabel>Plan de seance</FormLabel>
-										<Select
-											onValueChange={(v) => field.onChange(v === NO_PLAN ? undefined : v)}
-											defaultValue={field.value ?? NO_PLAN}
-										>
+										<Select onValueChange={(v) => field.onChange(v === NO_PLAN ? undefined : v)} defaultValue={field.value ?? NO_PLAN}>
 											<FormControl>
 												<SelectTrigger className="w-full">
 													<SelectValue placeholder="Aucun plan" />

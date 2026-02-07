@@ -1,7 +1,7 @@
 import { closestCenter, DndContext, type DragEndEvent } from '@dnd-kit/core';
 import { SortableContext, verticalListSortingStrategy } from '@dnd-kit/sortable';
-import { createFileRoute, Link } from '@tanstack/react-router';
-import { ArrowLeft, Loader2, Pencil, Plus } from 'lucide-react';
+import { createFileRoute, Link, useNavigate } from '@tanstack/react-router';
+import { ArrowLeft, Loader2, Pencil, Play, Plus } from 'lucide-react';
 import { useState } from 'react';
 
 import { Button } from '@/components/ui/button';
@@ -18,6 +18,7 @@ export const Route = createFileRoute('/workouts/$planId')({
 function WorkoutPlanEditorPage() {
 	const { planId } = Route.useParams();
 	const utils = trpc.useUtils();
+	const navigate = useNavigate();
 	const [pickerOpen, setPickerOpen] = useState(false);
 	const [renameOpen, setRenameOpen] = useState(false);
 
@@ -44,6 +45,12 @@ function WorkoutPlanEditorPage() {
 
 	const reorderExercises = trpc.workoutPlanExercise.reorder.useMutation({
 		onSuccess: () => utils.workoutPlan.getById.invalidate({ id: planId }),
+	});
+
+	const startSession = trpc.workoutSession.start.useMutation({
+		onSuccess: (data) => {
+			navigate({ to: '/session/$sessionId', params: { sessionId: data.id } });
+		},
 	});
 
 	if (planQuery.isLoading) {
@@ -111,6 +118,12 @@ function WorkoutPlanEditorPage() {
 					<Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => setRenameOpen(true)}>
 						<Pencil className="h-4 w-4" />
 					</Button>
+					{exercises.length > 0 && (
+						<Button size="sm" onClick={() => startSession.mutate({ workoutPlanId: planId })} disabled={startSession.isPending}>
+							<Play className="mr-1 h-4 w-4" />
+							Demarrer
+						</Button>
+					)}
 				</div>
 			</div>
 
@@ -123,14 +136,9 @@ function WorkoutPlanEditorPage() {
 					</Button>
 				</div>
 
-				{exercises.length === 0 && (
-					<p className="text-muted-foreground py-8 text-center text-sm">Aucun exercice dans ce plan.</p>
-				)}
+				{exercises.length === 0 && <p className="text-muted-foreground py-8 text-center text-sm">Aucun exercice dans ce plan.</p>}
 
-				<DndContext
-					collisionDetection={closestCenter}
-					onDragEnd={handleDragEnd}
-				>
+				<DndContext collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
 					<SortableContext items={exercises.map((e) => e.id)} strategy={verticalListSortingStrategy}>
 						<div className="space-y-2">
 							{exercises.map((item) => (
@@ -146,11 +154,7 @@ function WorkoutPlanEditorPage() {
 				</DndContext>
 			</div>
 
-			<ExercisePickerDialog
-				open={pickerOpen}
-				onOpenChange={setPickerOpen}
-				onPick={handlePick}
-			/>
+			<ExercisePickerDialog open={pickerOpen} onOpenChange={setPickerOpen} onPick={handlePick} />
 
 			<WorkoutPlanFormDialog
 				title="Renommer le plan"

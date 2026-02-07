@@ -53,11 +53,7 @@ export function WorkoutExerciseCard({ item, onUpdate, onDelete }: WorkoutExercis
 
 	return (
 		<>
-			<Card
-				ref={setNodeRef}
-				style={style}
-				className={isDragging ? 'z-50 opacity-50' : ''}
-			>
+			<Card ref={setNodeRef} style={style} className={isDragging ? 'z-50 opacity-50' : ''}>
 				<CardContent className="flex items-center gap-3 py-3">
 					<button
 						type="button"

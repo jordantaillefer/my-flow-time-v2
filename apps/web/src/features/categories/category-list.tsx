@@ -46,9 +46,7 @@ export function CategoryList() {
 				/>
 			</div>
 
-			{categories.length === 0 && (
-				<p className="text-muted-foreground py-8 text-center text-sm">Aucune categorie.</p>
-			)}
+			{categories.length === 0 && <p className="text-muted-foreground py-8 text-center text-sm">Aucune categorie.</p>}
 
 			<div className="grid gap-4 sm:grid-cols-2">
 				{categories.map((cat) => (

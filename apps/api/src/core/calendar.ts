@@ -19,10 +19,7 @@ export function isoWeekday(dateStr: string): number {
 /**
  * Given a date string and a list of recurrences, return the matching templateId or null.
  */
-export function getTemplateForDate(
-	dateStr: string,
-	recurrences: Array<{ dayOfWeek: number; templateId: string }>,
-): string | null {
+export function getTemplateForDate(dateStr: string, recurrences: Array<{ dayOfWeek: number; templateId: string }>): string | null {
 	const weekday = isoWeekday(dateStr);
 	const match = recurrences.find((r) => r.dayOfWeek === weekday);
 	return match?.templateId ?? null;

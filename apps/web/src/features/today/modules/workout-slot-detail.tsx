@@ -1,7 +1,8 @@
-import { Link } from '@tanstack/react-router';
-import { Dumbbell, ExternalLink } from 'lucide-react';
+import { Link, useNavigate } from '@tanstack/react-router';
+import { Dumbbell, ExternalLink, Play } from 'lucide-react';
 
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import { trpc } from '@/lib/trpc';
 
 import { getSlotProgress, getSlotStatus } from '../active-slot';
@@ -10,14 +11,19 @@ import type { ModuleProps } from './module-registry';
 export function WorkoutSlotDetail({ slot, currentMinutes }: ModuleProps) {
 	const status = getSlotStatus(slot, currentMinutes);
 	const progress = status === 'active' ? getSlotProgress(slot, currentMinutes) : null;
+	const navigate = useNavigate();
 
 	const planId = slot.workoutPlanId;
-	const planQuery = trpc.workoutPlan.getById.useQuery(
-		{ id: planId! },
-		{ enabled: !!planId },
-	);
+	const planQuery = trpc.workoutPlan.getById.useQuery({ id: planId! }, { enabled: !!planId });
+
+	const startSession = trpc.workoutSession.start.useMutation({
+		onSuccess: (data) => {
+			navigate({ to: '/session/$sessionId', params: { sessionId: data.id } });
+		},
+	});
 
 	const plan = planQuery.data;
+	const hasExercises = plan && plan.exercises.length > 0;
 
 	return (
 		<div className="flex flex-col gap-4">
@@ -36,10 +42,7 @@ export function WorkoutSlotDetail({ slot, currentMinutes }: ModuleProps) {
 
 			{/* Categorie / Sous-categorie */}
 			<div className="flex items-center gap-2">
-				<span
-					className="inline-block h-3 w-3 rounded-full"
-					style={{ backgroundColor: slot.subcategory.category.color }}
-				/>
+				<span className="inline-block h-3 w-3 rounded-full" style={{ backgroundColor: slot.subcategory.category.color }} />
 				<span className="text-muted-foreground text-sm">{slot.subcategory.category.name}</span>
 				<span className="text-muted-foreground text-sm">/</span>
 				<span className="text-sm font-medium">{slot.subcategory.name}</span>
@@ -53,10 +56,7 @@ export function WorkoutSlotDetail({ slot, currentMinutes }: ModuleProps) {
 						<span className="font-mono font-medium">{Math.round(progress)}%</span>
 					</div>
 					<div className="bg-secondary h-2 overflow-hidden rounded-full">
-						<div
-							className="bg-primary h-full rounded-full transition-all duration-500"
-							style={{ width: `${progress}%` }}
-						/>
+						<div className="bg-primary h-full rounded-full transition-all duration-500" style={{ width: `${progress}%` }} />
 					</div>
 				</div>
 			)}
@@ -89,6 +89,16 @@ export function WorkoutSlotDetail({ slot, currentMinutes }: ModuleProps) {
 							</div>
 						))}
 					</div>
+					{hasExercises && (
+						<Button
+							className="w-full"
+							onClick={() => startSession.mutate({ workoutPlanId: planId!, plannedSlotId: slot.id })}
+							disabled={startSession.isPending}
+						>
+							<Play className="mr-2 h-4 w-4" />
+							Demarrer la seance
+						</Button>
+					)}
 				</div>
 			) : planId && planQuery.isLoading ? (
 				<p className="text-muted-foreground text-sm">Chargement du plan...</p>
@@ -96,10 +106,7 @@ export function WorkoutSlotDetail({ slot, currentMinutes }: ModuleProps) {
 				<div className="flex flex-col items-center gap-2 py-4">
 					<Dumbbell className="text-muted-foreground h-8 w-8" />
 					<p className="text-muted-foreground text-sm">Aucun plan de seance associe</p>
-					<Link
-						to="/workouts"
-						className="text-primary text-sm hover:underline"
-					>
+					<Link to="/workouts" className="text-primary text-sm hover:underline">
 						Voir les plans de seance
 					</Link>
 				</div>

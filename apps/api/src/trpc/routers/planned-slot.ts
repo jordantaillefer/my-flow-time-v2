@@ -74,8 +74,6 @@ export const plannedSlotRouter = router({
 		}),
 
 	delete: authedProcedure.input(z.object({ id: z.string() })).mutation(async ({ ctx, input }) => {
-		await ctx.db
-			.delete(plannedSlot)
-			.where(and(eq(plannedSlot.id, input.id), eq(plannedSlot.userId, ctx.session.user.id)));
+		await ctx.db.delete(plannedSlot).where(and(eq(plannedSlot.id, input.id), eq(plannedSlot.userId, ctx.session.user.id)));
 	}),
 });

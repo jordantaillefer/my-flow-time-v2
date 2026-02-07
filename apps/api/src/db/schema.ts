@@ -127,10 +127,7 @@ export const category = sqliteTable(
 			.default(sql`(cast(unixepoch('subsecond') * 1000 as integer))`)
 			.notNull(),
 	},
-	(table) => [
-		index('category_userId_idx').on(table.userId),
-		uniqueIndex('category_name_userId_uidx').on(table.name, table.userId),
-	],
+	(table) => [index('category_userId_idx').on(table.userId), uniqueIndex('category_name_userId_uidx').on(table.name, table.userId)],
 );
 
 export const subcategory = sqliteTable(
@@ -190,10 +187,7 @@ export const dayTemplate = sqliteTable(
 			.default(sql`(cast(unixepoch('subsecond') * 1000 as integer))`)
 			.notNull(),
 	},
-	(table) => [
-		index('day_template_userId_idx').on(table.userId),
-		uniqueIndex('day_template_name_userId_uidx').on(table.name, table.userId),
-	],
+	(table) => [index('day_template_userId_idx').on(table.userId), uniqueIndex('day_template_name_userId_uidx').on(table.name, table.userId)],
 );
 
 export const templateSlot = sqliteTable(
@@ -353,10 +347,7 @@ export const workoutPlan = sqliteTable(
 			.default(sql`(cast(unixepoch('subsecond') * 1000 as integer))`)
 			.notNull(),
 	},
-	(table) => [
-		index('workout_plan_userId_idx').on(table.userId),
-		uniqueIndex('workout_plan_name_userId_uidx').on(table.name, table.userId),
-	],
+	(table) => [index('workout_plan_userId_idx').on(table.userId), uniqueIndex('workout_plan_name_userId_uidx').on(table.name, table.userId)],
 );
 
 export const workoutPlanExercise = sqliteTable(
@@ -381,9 +372,66 @@ export const workoutPlanExercise = sqliteTable(
 			.default(sql`(cast(unixepoch('subsecond') * 1000 as integer))`)
 			.notNull(),
 	},
+	(table) => [index('wpe_workoutPlanId_idx').on(table.workoutPlanId), index('wpe_userId_idx').on(table.userId)],
+);
+
+// =============================================================================
+// Workout sessions & sets
+// =============================================================================
+
+export const workoutSession = sqliteTable(
+	'workout_session',
+	{
+		id: text('id').primaryKey(),
+		status: text('status').notNull().default('in_progress'), // 'in_progress' | 'completed' | 'abandoned'
+		notes: text('notes').notNull().default(''),
+		startedAt: integer('started_at', { mode: 'timestamp_ms' })
+			.default(sql`(cast(unixepoch('subsecond') * 1000 as integer))`)
+			.notNull(),
+		completedAt: integer('completed_at', { mode: 'timestamp_ms' }),
+		workoutPlanId: text('workout_plan_id')
+			.notNull()
+			.references(() => workoutPlan.id, { onDelete: 'cascade' }),
+		plannedSlotId: text('planned_slot_id').references(() => plannedSlot.id, { onDelete: 'set null' }),
+		userId: text('user_id')
+			.notNull()
+			.references(() => user.id, { onDelete: 'cascade' }),
+	},
 	(table) => [
-		index('wpe_workoutPlanId_idx').on(table.workoutPlanId),
-		index('wpe_userId_idx').on(table.userId),
+		index('workout_session_userId_idx').on(table.userId),
+		index('workout_session_workoutPlanId_idx').on(table.workoutPlanId),
+		index('workout_session_status_idx').on(table.status),
+	],
+);
+
+export const workoutSet = sqliteTable(
+	'workout_set',
+	{
+		id: text('id').primaryKey(),
+		setNumber: integer('set_number').notNull(),
+		reps: integer('reps').notNull(),
+		weight: real('weight').notNull().default(0),
+		feeling: integer('feeling').notNull().default(3), // 1-5
+		completedAt: integer('completed_at', { mode: 'timestamp_ms' })
+			.default(sql`(cast(unixepoch('subsecond') * 1000 as integer))`)
+			.notNull(),
+		sessionId: text('session_id')
+			.notNull()
+			.references(() => workoutSession.id, { onDelete: 'cascade' }),
+		exerciseId: text('exercise_id')
+			.notNull()
+			.references(() => exercise.id, { onDelete: 'cascade' }),
+		workoutPlanExerciseId: text('workout_plan_exercise_id')
+			.notNull()
+			.references(() => workoutPlanExercise.id, { onDelete: 'cascade' }),
+		userId: text('user_id')
+			.notNull()
+			.references(() => user.id, { onDelete: 'cascade' }),
+	},
+	(table) => [
+		index('workout_set_sessionId_idx').on(table.sessionId),
+		index('workout_set_exerciseId_idx').on(table.exerciseId),
+		index('workout_set_userId_idx').on(table.userId),
 	],
 );
 
@@ -395,12 +443,27 @@ export const workoutPlanRelations = relations(workoutPlan, ({ one, many }) => ({
 	user: one(user, { fields: [workoutPlan.userId], references: [user.id] }),
 	exercises: many(workoutPlanExercise),
 	plannedSlots: many(plannedSlot),
+	sessions: many(workoutSession),
 }));
 
 export const workoutPlanExerciseRelations = relations(workoutPlanExercise, ({ one }) => ({
 	workoutPlan: one(workoutPlan, { fields: [workoutPlanExercise.workoutPlanId], references: [workoutPlan.id] }),
 	exercise: one(exercise, { fields: [workoutPlanExercise.exerciseId], references: [exercise.id] }),
 	user: one(user, { fields: [workoutPlanExercise.userId], references: [user.id] }),
+}));
+
+export const workoutSessionRelations = relations(workoutSession, ({ one, many }) => ({
+	workoutPlan: one(workoutPlan, { fields: [workoutSession.workoutPlanId], references: [workoutPlan.id] }),
+	plannedSlot: one(plannedSlot, { fields: [workoutSession.plannedSlotId], references: [plannedSlot.id] }),
+	user: one(user, { fields: [workoutSession.userId], references: [user.id] }),
+	sets: many(workoutSet),
+}));
+
+export const workoutSetRelations = relations(workoutSet, ({ one }) => ({
+	session: one(workoutSession, { fields: [workoutSet.sessionId], references: [workoutSession.id] }),
+	exercise: one(exercise, { fields: [workoutSet.exerciseId], references: [exercise.id] }),
+	workoutPlanExercise: one(workoutPlanExercise, { fields: [workoutSet.workoutPlanExerciseId], references: [workoutPlanExercise.id] }),
+	user: one(user, { fields: [workoutSet.userId], references: [user.id] }),
 }));
 
 // =============================================================================
@@ -420,8 +483,5 @@ export const exercise = sqliteTable(
 			.default(sql`(cast(unixepoch('subsecond') * 1000 as integer))`)
 			.notNull(),
 	},
-	(table) => [
-		index('exercise_muscleGroup_idx').on(table.muscleGroup),
-		index('exercise_equipment_idx').on(table.equipment),
-	],
+	(table) => [index('exercise_muscleGroup_idx').on(table.muscleGroup), index('exercise_equipment_idx').on(table.equipment)],
 );

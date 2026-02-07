@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as WorkoutsRouteImport } from './routes/workouts'
 import { Route as SignupRouteImport } from './routes/signup'
 import { Route as SettingsRouteImport } from './routes/settings'
+import { Route as SessionRouteImport } from './routes/session'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as ExercisesRouteImport } from './routes/exercises'
 import { Route as CalendarRouteImport } from './routes/calendar'
@@ -19,6 +20,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as WorkoutsIndexRouteImport } from './routes/workouts.index'
 import { Route as WorkoutsPlanIdRouteImport } from './routes/workouts.$planId'
 import { Route as TemplatesTemplateIdRouteImport } from './routes/templates.$templateId'
+import { Route as SessionSessionIdRouteImport } from './routes/session.$sessionId'
 
 const WorkoutsRoute = WorkoutsRouteImport.update({
   id: '/workouts',
@@ -33,6 +35,11 @@ const SignupRoute = SignupRouteImport.update({
 const SettingsRoute = SettingsRouteImport.update({
   id: '/settings',
   path: '/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SessionRoute = SessionRouteImport.update({
+  id: '/session',
+  path: '/session',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LoginRoute = LoginRouteImport.update({
@@ -70,15 +77,22 @@ const TemplatesTemplateIdRoute = TemplatesTemplateIdRouteImport.update({
   path: '/templates/$templateId',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SessionSessionIdRoute = SessionSessionIdRouteImport.update({
+  id: '/$sessionId',
+  path: '/$sessionId',
+  getParentRoute: () => SessionRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/calendar': typeof CalendarRoute
   '/exercises': typeof ExercisesRoute
   '/login': typeof LoginRoute
+  '/session': typeof SessionRouteWithChildren
   '/settings': typeof SettingsRoute
   '/signup': typeof SignupRoute
   '/workouts': typeof WorkoutsRouteWithChildren
+  '/session/$sessionId': typeof SessionSessionIdRoute
   '/templates/$templateId': typeof TemplatesTemplateIdRoute
   '/workouts/$planId': typeof WorkoutsPlanIdRoute
   '/workouts/': typeof WorkoutsIndexRoute
@@ -88,8 +102,10 @@ export interface FileRoutesByTo {
   '/calendar': typeof CalendarRoute
   '/exercises': typeof ExercisesRoute
   '/login': typeof LoginRoute
+  '/session': typeof SessionRouteWithChildren
   '/settings': typeof SettingsRoute
   '/signup': typeof SignupRoute
+  '/session/$sessionId': typeof SessionSessionIdRoute
   '/templates/$templateId': typeof TemplatesTemplateIdRoute
   '/workouts/$planId': typeof WorkoutsPlanIdRoute
   '/workouts': typeof WorkoutsIndexRoute
@@ -100,9 +116,11 @@ export interface FileRoutesById {
   '/calendar': typeof CalendarRoute
   '/exercises': typeof ExercisesRoute
   '/login': typeof LoginRoute
+  '/session': typeof SessionRouteWithChildren
   '/settings': typeof SettingsRoute
   '/signup': typeof SignupRoute
   '/workouts': typeof WorkoutsRouteWithChildren
+  '/session/$sessionId': typeof SessionSessionIdRoute
   '/templates/$templateId': typeof TemplatesTemplateIdRoute
   '/workouts/$planId': typeof WorkoutsPlanIdRoute
   '/workouts/': typeof WorkoutsIndexRoute
@@ -114,9 +132,11 @@ export interface FileRouteTypes {
     | '/calendar'
     | '/exercises'
     | '/login'
+    | '/session'
     | '/settings'
     | '/signup'
     | '/workouts'
+    | '/session/$sessionId'
     | '/templates/$templateId'
     | '/workouts/$planId'
     | '/workouts/'
@@ -126,8 +146,10 @@ export interface FileRouteTypes {
     | '/calendar'
     | '/exercises'
     | '/login'
+    | '/session'
     | '/settings'
     | '/signup'
+    | '/session/$sessionId'
     | '/templates/$templateId'
     | '/workouts/$planId'
     | '/workouts'
@@ -137,9 +159,11 @@ export interface FileRouteTypes {
     | '/calendar'
     | '/exercises'
     | '/login'
+    | '/session'
     | '/settings'
     | '/signup'
     | '/workouts'
+    | '/session/$sessionId'
     | '/templates/$templateId'
     | '/workouts/$planId'
     | '/workouts/'
@@ -150,6 +174,7 @@ export interface RootRouteChildren {
   CalendarRoute: typeof CalendarRoute
   ExercisesRoute: typeof ExercisesRoute
   LoginRoute: typeof LoginRoute
+  SessionRoute: typeof SessionRouteWithChildren
   SettingsRoute: typeof SettingsRoute
   SignupRoute: typeof SignupRoute
   WorkoutsRoute: typeof WorkoutsRouteWithChildren
@@ -177,6 +202,13 @@ declare module '@tanstack/react-router' {
       path: '/settings'
       fullPath: '/settings'
       preLoaderRoute: typeof SettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/session': {
+      id: '/session'
+      path: '/session'
+      fullPath: '/session'
+      preLoaderRoute: typeof SessionRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/login': {
@@ -228,8 +260,26 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TemplatesTemplateIdRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/session/$sessionId': {
+      id: '/session/$sessionId'
+      path: '/$sessionId'
+      fullPath: '/session/$sessionId'
+      preLoaderRoute: typeof SessionSessionIdRouteImport
+      parentRoute: typeof SessionRoute
+    }
   }
 }
+
+interface SessionRouteChildren {
+  SessionSessionIdRoute: typeof SessionSessionIdRoute
+}
+
+const SessionRouteChildren: SessionRouteChildren = {
+  SessionSessionIdRoute: SessionSessionIdRoute,
+}
+
+const SessionRouteWithChildren =
+  SessionRoute._addFileChildren(SessionRouteChildren)
 
 interface WorkoutsRouteChildren {
   WorkoutsPlanIdRoute: typeof WorkoutsPlanIdRoute
@@ -250,6 +300,7 @@ const rootRouteChildren: RootRouteChildren = {
   CalendarRoute: CalendarRoute,
   ExercisesRoute: ExercisesRoute,
   LoginRoute: LoginRoute,
+  SessionRoute: SessionRouteWithChildren,
   SettingsRoute: SettingsRoute,
   SignupRoute: SignupRoute,
   WorkoutsRoute: WorkoutsRouteWithChildren,

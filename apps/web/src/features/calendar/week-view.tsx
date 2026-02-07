@@ -188,8 +188,7 @@ export function WeekView({ weekStr }: WeekViewProps) {
 							<span
 								className={cn(
 									'text-xs font-semibold',
-									today &&
-										'bg-primary text-primary-foreground flex h-5 w-5 items-center justify-center rounded-full',
+									today && 'bg-primary text-primary-foreground flex h-5 w-5 items-center justify-center rounded-full',
 								)}
 							>
 								{dayNumber}
@@ -225,9 +224,7 @@ export function WeekView({ weekStr }: WeekViewProps) {
 						<DayGridColumn
 							day={daysByDate.get(dates[selectedDayIndex])}
 							showNowLine={isTodayInWeek && dates[selectedDayIndex] === todayStr}
-							onHourClick={(startTime, endTime) =>
-								setAddSlotState({ date: dates[selectedDayIndex], startTime, endTime })
-							}
+							onHourClick={(startTime, endTime) => setAddSlotState({ date: dates[selectedDayIndex], startTime, endTime })}
 						/>
 					</div>
 				</div>
@@ -241,9 +238,7 @@ export function WeekView({ weekStr }: WeekViewProps) {
 								key={date}
 								day={daysByDate.get(date)}
 								showNowLine={isTodayInWeek && date === todayStr}
-								onHourClick={(startTime, endTime) =>
-									setAddSlotState({ date, startTime, endTime })
-								}
+								onHourClick={(startTime, endTime) => setAddSlotState({ date, startTime, endTime })}
 							/>
 						))}
 					</div>
@@ -257,11 +252,7 @@ export function WeekView({ weekStr }: WeekViewProps) {
 				onOpenChange={(open) => {
 					if (!open) setAddSlotState(null);
 				}}
-				defaultValues={
-					addSlotState
-						? { startTime: addSlotState.startTime, endTime: addSlotState.endTime, subcategoryId: '' }
-						: undefined
-				}
+				defaultValues={addSlotState ? { startTime: addSlotState.startTime, endTime: addSlotState.endTime, subcategoryId: '' } : undefined}
 				onSubmit={async (values: PlannedSlotValues) => {
 					if (!addSlotState) return;
 					const day = daysByDate.get(addSlotState.date);

@@ -1,4 +1,4 @@
-import { getWeekForDate,isInMonth, isToday } from '@/lib/calendar';
+import { getWeekForDate, isInMonth, isToday } from '@/lib/calendar';
 import { cn } from '@/lib/utils';
 
 import type { PlannedDayData } from './types';
@@ -34,12 +34,7 @@ export function MonthDayCell({ date, monthStr, day, onNavigateToWeek }: MonthDay
 				{dayNumber}
 			</span>
 
-			{day?.template && (
-				<span
-					className="mt-1 inline-block h-1.5 w-1.5 rounded-full"
-					style={{ backgroundColor: day.template.color }}
-				/>
-			)}
+			{day?.template && <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full" style={{ backgroundColor: day.template.color }} />}
 
 			{slotCount > 0 && (
 				<span className="text-muted-foreground mt-auto text-[10px]">

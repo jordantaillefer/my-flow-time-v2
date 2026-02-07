@@ -7,6 +7,7 @@ import { AppShell } from '@/components/layout/app-shell';
 import { useSession } from '@/hooks/use-session';
 
 const PUBLIC_ROUTES = ['/login', '/signup'];
+const FULL_SCREEN_ROUTES = ['/session'];
 
 export const Route = createRootRoute({
 	component: RootLayout,
@@ -16,6 +17,7 @@ function RootLayout() {
 	const routerState = useRouterState();
 	const currentPath = routerState.location.pathname;
 	const isPublicRoute = PUBLIC_ROUTES.includes(currentPath);
+	const isFullScreenRoute = FULL_SCREEN_ROUTES.some((r) => currentPath.startsWith(r));
 	const { isAuthenticated, isLoading } = useSession();
 	const navigate = useNavigate();
 
@@ -49,6 +51,15 @@ function RootLayout() {
 	}
 
 	if (!isAuthenticated) return null;
+
+	if (isFullScreenRoute) {
+		return (
+			<>
+				<Outlet />
+				<TanStackRouterDevtools position="bottom-right" />
+			</>
+		);
+	}
 
 	return (
 		<AppShell>

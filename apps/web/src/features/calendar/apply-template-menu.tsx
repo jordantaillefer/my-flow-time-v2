@@ -1,9 +1,4 @@
-import {
-	DropdownMenuItem,
-	DropdownMenuSub,
-	DropdownMenuSubContent,
-	DropdownMenuSubTrigger,
-} from '@/components/ui/dropdown-menu';
+import { DropdownMenuItem, DropdownMenuSub, DropdownMenuSubContent, DropdownMenuSubTrigger } from '@/components/ui/dropdown-menu';
 import { trpc } from '@/lib/trpc';
 
 interface ApplyTemplateMenuProps {

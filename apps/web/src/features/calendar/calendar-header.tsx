@@ -1,14 +1,7 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
-import {
-	formatMonthLabel,
-	formatWeekRange,
-	getCurrentISOWeek,
-	getCurrentMonth,
-	navigateMonth,
-	navigateWeek,
-} from '@/lib/calendar';
+import { formatMonthLabel, formatWeekRange, getCurrentISOWeek, getCurrentMonth, navigateMonth, navigateWeek } from '@/lib/calendar';
 
 import type { CalendarView } from './schemas';
 
@@ -21,14 +14,7 @@ interface CalendarHeaderProps {
 	onMonthChange: (month: string) => void;
 }
 
-export function CalendarHeader({
-	view,
-	weekStr,
-	monthStr,
-	onViewChange,
-	onWeekChange,
-	onMonthChange,
-}: CalendarHeaderProps) {
+export function CalendarHeader({ view, weekStr, monthStr, onViewChange, onWeekChange, onMonthChange }: CalendarHeaderProps) {
 	const label = view === 'week' ? formatWeekRange(weekStr) : formatMonthLabel(monthStr);
 
 	function handlePrev() {

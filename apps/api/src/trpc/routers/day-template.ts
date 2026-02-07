@@ -74,8 +74,6 @@ export const dayTemplateRouter = router({
 		}),
 
 	delete: authedProcedure.input(z.object({ id: z.string() })).mutation(async ({ ctx, input }) => {
-		await ctx.db
-			.delete(dayTemplate)
-			.where(and(eq(dayTemplate.id, input.id), eq(dayTemplate.userId, ctx.session.user.id)));
+		await ctx.db.delete(dayTemplate).where(and(eq(dayTemplate.id, input.id), eq(dayTemplate.userId, ctx.session.user.id)));
 	}),
 });

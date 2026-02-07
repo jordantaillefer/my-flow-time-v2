@@ -2,13 +2,7 @@ import { Loader2 } from 'lucide-react';
 import { DateTime } from 'luxon';
 import { useEffect, useRef, useState } from 'react';
 
-import {
-	Sheet,
-	SheetContent,
-	SheetDescription,
-	SheetHeader,
-	SheetTitle,
-} from '@/components/ui/sheet';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { trpc } from '@/lib/trpc';
 
 import type { PlannedDayData } from '../calendar/types';
@@ -39,7 +33,7 @@ export function TodayTimeline() {
 		if (activeCardRef.current) {
 			activeCardRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
 		}
-	}, [daysQuery.data]);  
+	}, [daysQuery.data]);
 
 	if (daysQuery.isLoading) {
 		return (
@@ -58,9 +52,7 @@ export function TodayTimeline() {
 	}
 
 	// Resolve the detail component for the selected slot
-	const DetailComponent = selectedSlot
-		? getModuleComponent(selectedSlot.subcategory.moduleType) ?? GenericSlotDetail
-		: null;
+	const DetailComponent = selectedSlot ? (getModuleComponent(selectedSlot.subcategory.moduleType) ?? GenericSlotDetail) : null;
 
 	return (
 		<>
@@ -71,32 +63,28 @@ export function TodayTimeline() {
 
 					return (
 						<div key={slot.id} ref={isActive ? activeCardRef : undefined}>
-							<SlotCard
-								slot={slot}
-								status={status}
-								currentMinutes={currentMinutes}
-								onClick={() => setSelectedSlot(slot)}
-							/>
+							<SlotCard slot={slot} status={status} currentMinutes={currentMinutes} onClick={() => setSelectedSlot(slot)} />
 						</div>
 					);
 				})}
 			</div>
 
-			<Sheet open={selectedSlot !== null} onOpenChange={(open) => { if (!open) setSelectedSlot(null); }}>
-				<SheetContent side="bottom" className="max-h-[70vh]">
-					<SheetHeader>
-						<SheetTitle>{selectedSlot?.subcategory.name}</SheetTitle>
-						<SheetDescription>
+			<Dialog
+				open={selectedSlot !== null}
+				onOpenChange={(open) => {
+					if (!open) setSelectedSlot(null);
+				}}
+			>
+				<DialogContent>
+					<DialogHeader>
+						<DialogTitle>{selectedSlot?.subcategory.name}</DialogTitle>
+						<DialogDescription>
 							{selectedSlot?.subcategory.category.name} · {selectedSlot?.startTime} - {selectedSlot?.endTime}
-						</SheetDescription>
-					</SheetHeader>
-					<div className="px-4 pb-4">
-						{selectedSlot && DetailComponent && (
-							<DetailComponent slot={selectedSlot} currentMinutes={currentMinutes} />
-						)}
-					</div>
-				</SheetContent>
-			</Sheet>
+						</DialogDescription>
+					</DialogHeader>
+					{selectedSlot && DetailComponent && <DetailComponent slot={selectedSlot} currentMinutes={currentMinutes} />}
+				</DialogContent>
+			</Dialog>
 		</>
 	);
 }

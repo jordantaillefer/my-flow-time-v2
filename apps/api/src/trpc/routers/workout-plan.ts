@@ -45,30 +45,24 @@ export const workoutPlanRouter = router({
 		});
 	}),
 
-	create: authedProcedure
-		.input(z.object({ name: z.string().min(1) }))
-		.mutation(async ({ ctx, input }) => {
-			const id = crypto.randomUUID();
-			await ctx.db.insert(workoutPlan).values({
-				id,
-				name: input.name,
-				userId: ctx.session.user.id,
-			});
-			return { id };
-		}),
+	create: authedProcedure.input(z.object({ name: z.string().min(1) })).mutation(async ({ ctx, input }) => {
+		const id = crypto.randomUUID();
+		await ctx.db.insert(workoutPlan).values({
+			id,
+			name: input.name,
+			userId: ctx.session.user.id,
+		});
+		return { id };
+	}),
 
-	update: authedProcedure
-		.input(z.object({ id: z.string(), name: z.string().min(1) }))
-		.mutation(async ({ ctx, input }) => {
-			await ctx.db
-				.update(workoutPlan)
-				.set({ name: input.name })
-				.where(and(eq(workoutPlan.id, input.id), eq(workoutPlan.userId, ctx.session.user.id)));
-		}),
+	update: authedProcedure.input(z.object({ id: z.string(), name: z.string().min(1) })).mutation(async ({ ctx, input }) => {
+		await ctx.db
+			.update(workoutPlan)
+			.set({ name: input.name })
+			.where(and(eq(workoutPlan.id, input.id), eq(workoutPlan.userId, ctx.session.user.id)));
+	}),
 
 	delete: authedProcedure.input(z.object({ id: z.string() })).mutation(async ({ ctx, input }) => {
-		await ctx.db
-			.delete(workoutPlan)
-			.where(and(eq(workoutPlan.id, input.id), eq(workoutPlan.userId, ctx.session.user.id)));
+		await ctx.db.delete(workoutPlan).where(and(eq(workoutPlan.id, input.id), eq(workoutPlan.userId, ctx.session.user.id)));
 	}),
 });

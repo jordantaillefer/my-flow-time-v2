@@ -41,6 +41,4 @@ export const COLOR_OPTIONS = [
 	'#6366f1',
 ] as const;
 
-export const MODULE_TYPES = [
-	{ value: 'workout', label: 'Musculation' },
-] as const;
+export const MODULE_TYPES = [{ value: 'workout', label: 'Musculation' }] as const;

@@ -19,16 +19,12 @@ export const plannedDayRouter = router({
 
 			// Fetch existing planned days in range
 			const existingDays = await ctx.db.query.plannedDay.findMany({
-				where: and(
-					eq(plannedDay.userId, userId),
-					gte(plannedDay.date, input.startDate),
-					lte(plannedDay.date, input.endDate),
-				),
+				where: and(eq(plannedDay.userId, userId), gte(plannedDay.date, input.startDate), lte(plannedDay.date, input.endDate)),
 				with: {
 					slots: {
 						with: {
 							subcategory: { with: { category: true } },
-						workoutPlan: true,
+							workoutPlan: true,
 						},
 						orderBy: (slot, { asc }) => [asc(slot.order)],
 					},
@@ -84,16 +80,12 @@ export const plannedDayRouter = router({
 
 			// Re-fetch all days with full relations
 			return ctx.db.query.plannedDay.findMany({
-				where: and(
-					eq(plannedDay.userId, userId),
-					gte(plannedDay.date, input.startDate),
-					lte(plannedDay.date, input.endDate),
-				),
+				where: and(eq(plannedDay.userId, userId), gte(plannedDay.date, input.startDate), lte(plannedDay.date, input.endDate)),
 				with: {
 					slots: {
 						with: {
 							subcategory: { with: { category: true } },
-						workoutPlan: true,
+							workoutPlan: true,
 						},
 						orderBy: (slot, { asc }) => [asc(slot.order)],
 					},
@@ -128,14 +120,9 @@ export const plannedDayRouter = router({
 				day = { id: dayId, date: input.date, templateId: input.templateId, userId, createdAt: new Date() };
 			} else {
 				// Delete existing slots
-				await ctx.db
-					.delete(plannedSlot)
-					.where(and(eq(plannedSlot.plannedDayId, day.id), eq(plannedSlot.userId, userId)));
+				await ctx.db.delete(plannedSlot).where(and(eq(plannedSlot.plannedDayId, day.id), eq(plannedSlot.userId, userId)));
 				// Update template reference
-				await ctx.db
-					.update(plannedDay)
-					.set({ templateId: input.templateId })
-					.where(eq(plannedDay.id, day.id));
+				await ctx.db.update(plannedDay).set({ templateId: input.templateId }).where(eq(plannedDay.id, day.id));
 			}
 
 			// Copy slots from template
@@ -158,21 +145,17 @@ export const plannedDayRouter = router({
 			}
 		}),
 
-	clearDay: authedProcedure
-		.input(z.object({ date: z.string() }))
-		.mutation(async ({ ctx, input }) => {
-			const userId = ctx.session.user.id;
+	clearDay: authedProcedure.input(z.object({ date: z.string() })).mutation(async ({ ctx, input }) => {
+		const userId = ctx.session.user.id;
 
-			const day = await ctx.db.query.plannedDay.findFirst({
-				where: and(eq(plannedDay.date, input.date), eq(plannedDay.userId, userId)),
-			});
+		const day = await ctx.db.query.plannedDay.findFirst({
+			where: and(eq(plannedDay.date, input.date), eq(plannedDay.userId, userId)),
+		});
 
-			if (!day) return;
+		if (!day) return;
 
-			await ctx.db
-				.delete(plannedSlot)
-				.where(and(eq(plannedSlot.plannedDayId, day.id), eq(plannedSlot.userId, userId)));
+		await ctx.db.delete(plannedSlot).where(and(eq(plannedSlot.plannedDayId, day.id), eq(plannedSlot.userId, userId)));
 
-			await ctx.db.update(plannedDay).set({ templateId: null }).where(eq(plannedDay.id, day.id));
-		}),
+		await ctx.db.update(plannedDay).set({ templateId: null }).where(eq(plannedDay.id, day.id));
+	}),
 });

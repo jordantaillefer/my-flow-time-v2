@@ -4,7 +4,7 @@
 	"main": "src/index.ts",
 	"compatibility_date": "2026-01-28",
 	"observability": {
-		"enabled": true
+		"enabled": true,
 	},
 	"compatibility_flags": ["nodejs_compat"],
 	"d1_databases": [
@@ -12,8 +12,8 @@
 			"binding": "DB",
 			"database_name": "flowtime-dev",
 			"database_id": "fe29178c-82e2-4bfd-8c48-b1c9dde84750",
-			"migrations_dir": "drizzle"
-		}
+			"migrations_dir": "drizzle",
+		},
 	],
 	"env": {
 		"prod": {
@@ -22,9 +22,9 @@
 					"binding": "DB",
 					"database_name": "flowtime-prod",
 					"database_id": "REPLACE_ME",
-					"migrations_dir": "drizzle"
-				}
-			]
-		}
-	}
+					"migrations_dir": "drizzle",
+				},
+			],
+		},
+	},
 }

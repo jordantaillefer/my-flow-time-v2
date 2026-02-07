@@ -1,13 +1,7 @@
 import { useState } from 'react';
 
 import { Badge } from '@/components/ui/badge';
-import {
-	Dialog,
-	DialogContent,
-	DialogDescription,
-	DialogHeader,
-	DialogTitle,
-} from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 
 import { EQUIPMENT_LABELS } from './equipment-labels';
 import type { ExerciseData } from './exercise-card';
@@ -33,12 +27,7 @@ export function ExerciseDetailSheet({ exercise, open, onOpenChange }: ExerciseDe
 				{/* Image */}
 				{exercise.imageUrl && !imgError ? (
 					<div className="relative aspect-[16/10] w-full overflow-hidden">
-						<img
-							src={exercise.imageUrl}
-							alt={exercise.name}
-							onError={() => setImgError(true)}
-							className="h-full w-full object-cover"
-						/>
+						<img src={exercise.imageUrl} alt={exercise.name} onError={() => setImgError(true)} className="h-full w-full object-cover" />
 						<div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
 					</div>
 				) : (
@@ -77,11 +66,7 @@ export function ExerciseDetailSheet({ exercise, open, onOpenChange }: ExerciseDe
 							</Badge>
 						)}
 					</div>
-					{exercise.description && (
-						<DialogDescription className="pt-2 leading-relaxed">
-							{exercise.description}
-						</DialogDescription>
-					)}
+					{exercise.description && <DialogDescription className="pt-2 leading-relaxed">{exercise.description}</DialogDescription>}
 				</DialogHeader>
 			</DialogContent>
 		</Dialog>

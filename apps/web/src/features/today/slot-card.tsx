@@ -26,10 +26,7 @@ export function SlotCard({ slot, status, currentMinutes, onClick }: SlotCardProp
 			)}
 		>
 			{/* Barre couleur categorie */}
-			<div
-				className="w-1 shrink-0 rounded-full"
-				style={{ backgroundColor: slot.subcategory.category.color }}
-			/>
+			<div className="w-1 shrink-0 rounded-full" style={{ backgroundColor: slot.subcategory.category.color }} />
 
 			{/* Contenu */}
 			<div className="flex min-w-0 flex-1 flex-col gap-0.5">
@@ -37,9 +34,7 @@ export function SlotCard({ slot, status, currentMinutes, onClick }: SlotCardProp
 					<span className="text-muted-foreground font-mono text-xs">
 						{slot.startTime} - {slot.endTime}
 					</span>
-					{status === 'active' && (
-						<span className="bg-primary h-2 w-2 animate-pulse rounded-full" />
-					)}
+					{status === 'active' && <span className="bg-primary h-2 w-2 animate-pulse rounded-full" />}
 				</div>
 				<span className="truncate text-sm font-medium">{slot.subcategory.name}</span>
 				<span className="text-muted-foreground truncate text-xs">{slot.subcategory.category.name}</span>
@@ -48,10 +43,7 @@ export function SlotCard({ slot, status, currentMinutes, onClick }: SlotCardProp
 			{/* Barre de progression en bas pour le creneau actif */}
 			{progress !== null && (
 				<div className="bg-secondary absolute inset-x-0 bottom-0 h-0.5">
-					<div
-						className="bg-primary h-full transition-all duration-500"
-						style={{ width: `${progress}%` }}
-					/>
+					<div className="bg-primary h-full transition-all duration-500" style={{ width: `${progress}%` }} />
 				</div>
 			)}
 		</button>

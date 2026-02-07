@@ -37,7 +37,9 @@ function TodayPage() {
 					<div className="flex items-center justify-between">
 						<h1 className="text-2xl font-bold">Aujourd'hui</h1>
 						{slots.length > 0 && (
-							<span className="text-muted-foreground text-sm">{slots.length} creneau{slots.length > 1 ? 'x' : ''}</span>
+							<span className="text-muted-foreground text-sm">
+								{slots.length} creneau{slots.length > 1 ? 'x' : ''}
+							</span>
 						)}
 					</div>
 					<p className="text-muted-foreground text-sm">{capitalizedDate}</p>

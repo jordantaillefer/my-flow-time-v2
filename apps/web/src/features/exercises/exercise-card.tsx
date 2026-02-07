@@ -56,9 +56,7 @@ export function ExerciseCard({ exercise, onSelect }: ExerciseCardProps) {
 				)}
 				{/* Gradient overlay with name */}
 				<div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent px-3 pb-3 pt-8">
-					<h3 className="text-sm font-semibold leading-tight text-white drop-shadow-sm">
-						{exercise.name}
-					</h3>
+					<h3 className="text-sm font-semibold leading-tight text-white drop-shadow-sm">{exercise.name}</h3>
 				</div>
 			</div>
 			<div className="flex flex-wrap gap-1.5 px-3 py-2.5">

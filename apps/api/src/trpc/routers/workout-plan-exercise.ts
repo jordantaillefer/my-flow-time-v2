@@ -52,40 +52,23 @@ export const workoutPlanExerciseRouter = router({
 					plannedWeight: input.plannedWeight,
 					plannedRestSeconds: input.plannedRestSeconds,
 				})
-				.where(
-					and(
-						eq(workoutPlanExercise.id, input.id),
-						eq(workoutPlanExercise.userId, ctx.session.user.id),
-					),
-				);
+				.where(and(eq(workoutPlanExercise.id, input.id), eq(workoutPlanExercise.userId, ctx.session.user.id)));
 		}),
 
 	remove: authedProcedure.input(z.object({ id: z.string() })).mutation(async ({ ctx, input }) => {
 		await ctx.db
 			.delete(workoutPlanExercise)
-			.where(
-				and(
-					eq(workoutPlanExercise.id, input.id),
-					eq(workoutPlanExercise.userId, ctx.session.user.id),
-				),
-			);
+			.where(and(eq(workoutPlanExercise.id, input.id), eq(workoutPlanExercise.userId, ctx.session.user.id)));
 	}),
 
-	reorder: authedProcedure
-		.input(z.array(z.object({ id: z.string(), order: z.number().int() })))
-		.mutation(async ({ ctx, input }) => {
-			await Promise.all(
-				input.map((item) =>
-					ctx.db
-						.update(workoutPlanExercise)
-						.set({ order: item.order })
-						.where(
-							and(
-								eq(workoutPlanExercise.id, item.id),
-								eq(workoutPlanExercise.userId, ctx.session.user.id),
-							),
-						),
-				),
-			);
-		}),
+	reorder: authedProcedure.input(z.array(z.object({ id: z.string(), order: z.number().int() }))).mutation(async ({ ctx, input }) => {
+		await Promise.all(
+			input.map((item) =>
+				ctx.db
+					.update(workoutPlanExercise)
+					.set({ order: item.order })
+					.where(and(eq(workoutPlanExercise.id, item.id), eq(workoutPlanExercise.userId, ctx.session.user.id))),
+			),
+		);
+	}),
 });

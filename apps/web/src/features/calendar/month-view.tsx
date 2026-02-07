@@ -47,13 +47,7 @@ export function MonthView({ monthStr, onNavigateToWeek }: MonthViewProps) {
 			{/* Day grid */}
 			<div className="grid grid-cols-7 gap-1">
 				{gridDates.map((date) => (
-					<MonthDayCell
-						key={date}
-						date={date}
-						monthStr={monthStr}
-						day={daysByDate.get(date)}
-						onNavigateToWeek={onNavigateToWeek}
-					/>
+					<MonthDayCell key={date} date={date} monthStr={monthStr} day={daysByDate.get(date)} onNavigateToWeek={onNavigateToWeek} />
 				))}
 			</div>
 		</div>

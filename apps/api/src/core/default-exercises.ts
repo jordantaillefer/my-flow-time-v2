@@ -10,7 +10,8 @@ const RAW_EXERCISES: {
 	{
 		name: 'Chest Press avec Sangles de Suspension',
 		muscleGroup: 'pectoraux',
-		description: 'This suspension strap exercise targets the chest while engaging the triceps and anterior shoulders through a pushing movement.',
+		description:
+			'This suspension strap exercise targets the chest while engaging the triceps and anterior shoulders through a pushing movement.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/10/chest-press-avec-sangles-de-suspension-musculation-pectoraux.jpg',
 	},
 	{
@@ -22,7 +23,8 @@ const RAW_EXERCISES: {
 	{
 		name: 'Développé Assis à la Machine pour les Pectoraux',
 		muscleGroup: 'pectoraux',
-		description: 'A seated machine exercise targeting the chest muscles (pectorals) as the primary mover, with secondary engagement of shoulders and triceps.',
+		description:
+			'A seated machine exercise targeting the chest muscles (pectorals) as the primary mover, with secondary engagement of shoulders and triceps.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/11/developpe-machine-assis-pectoraux-exercice-salle-sport.jpg',
 	},
 	{
@@ -41,61 +43,71 @@ const RAW_EXERCISES: {
 		name: 'Développé Couche avec Élastique',
 		muscleGroup: 'pectoraux',
 		description: 'A bench press variation using elastic bands to provide resistance during chest training exercises.',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2023/07/developpe-couche-avec-elastique-exercice-musculation-pectoraux-maison.jpg',
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2023/07/developpe-couche-avec-elastique-exercice-musculation-pectoraux-maison.jpg',
 	},
 	{
 		name: 'Développé Couché Haltères',
 		muscleGroup: 'pectoraux',
-		description: 'A chest-building exercise performed while lying on a bench, using dumbbells to develop pectoral muscles through a pressing movement.',
+		description:
+			'A chest-building exercise performed while lying on a bench, using dumbbells to develop pectoral muscles through a pressing movement.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2021/05/developpe-couche-halteres.jpg',
 	},
 	{
 		name: 'Développé Couché Larsen',
 		muscleGroup: 'pectoraux',
-		description: 'A chest-focused strength exercise performed on a bench that targets the pectoral muscles through a pressing movement variation.',
+		description:
+			'A chest-focused strength exercise performed on a bench that targets the pectoral muscles through a pressing movement variation.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/09/developpe-couche-larsen-exercice-pectoraux-salle-sport.jpg',
 	},
 	{
 		name: 'Développé Couché Prise Inversée',
 		muscleGroup: 'pectoraux',
-		description: 'Une variante du développé couché effectuée avec les mains en supination (paumes" dirigées vers le haut, permettant de cibler différemment les muscles pectoraux.',
+		description:
+			'Une variante du développé couché effectuée avec les mains en supination (paumes" dirigées vers le haut, permettant de cibler différemment les muscles pectoraux.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/01/developpe-couche-prise-inversee-exercice-pectoraux.jpg',
 	},
 	{
 		name: 'Développé Couché Serré avec Haltères',
 		muscleGroup: 'pectoraux',
-		description: 'A chest-focused exercise performed while lying on a bench, where dumbbells are pressed together with a tight grip to intensify activation of the pectoral muscles.',
+		description:
+			'A chest-focused exercise performed while lying on a bench, where dumbbells are pressed together with a tight grip to intensify activation of the pectoral muscles.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/08/developpe-couche-serre-avec-halteres-milieu-pectoraux.jpg',
 	},
 	{
 		name: 'Développé Couché au Sol',
 		muscleGroup: 'pectoraux',
-		description: 'A chest-focused exercise performed lying on the ground without a bench, targeting the pectoral muscles through a pressing movement pattern.',
+		description:
+			'A chest-focused exercise performed lying on the ground without a bench, targeting the pectoral muscles through a pressing movement pattern.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2021/12/developpe-couche-au-sol-exercice-pectoraux.jpg',
 	},
 	{
 		name: 'Développé Couché à la Smith Machine',
 		muscleGroup: 'pectoraux',
-		description: 'A chest-focused strength training exercise performed on a Smith Machine that targets pushing power by moving the barbell along a fixed vertical path.',
+		description:
+			'A chest-focused strength training exercise performed on a Smith Machine that targets pushing power by moving the barbell along a fixed vertical path.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/08/developpe-couche-smith-machine-musculation-debutant.jpg',
 	},
 	{
 		name: 'Développé Debout avec Élastique',
 		muscleGroup: 'pectoraux',
 		description: 'A standing chest exercise using resistance bands as an alternative to bench press for targeting the pectoral muscles.',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/02/developpe-debout-pectoraux-elastique-exercice-grand-pectoraux.jpg',
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2022/02/developpe-debout-pectoraux-elastique-exercice-grand-pectoraux.jpg',
 	},
 	{
 		name: 'Développé Décliné avec Haltère',
 		muscleGroup: 'pectoraux',
-		description: 'A variation of the decline bench press using dumbbells instead of a barbell, which allows for greater range of motion and individual arm work to target the lower chest muscles.',
+		description:
+			'A variation of the decline bench press using dumbbells instead of a barbell, which allows for greater range of motion and individual arm work to target the lower chest muscles.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2021/12/developpe-decline-halteres-exercice-pectoraux.jpg',
 	},
 	{
 		name: 'Développé Décliné avec Élastique',
 		muscleGroup: 'pectoraux',
 		description: 'An excellent exercise to tone and develop the lower portion of the pectoral muscles using resistance band at home.',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/09/developpe-decline-avec-elastique-renforcement-pectoraux-maison.jpg',
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2022/09/developpe-decline-avec-elastique-renforcement-pectoraux-maison.jpg',
 	},
 	{
 		name: 'Développé Décliné à la Barre',
@@ -112,19 +124,22 @@ const RAW_EXERCISES: {
 	{
 		name: 'Développé Incliné à la Barre',
 		muscleGroup: 'pectoraux',
-		description: 'This barbell exercise targets the upper chest muscles through a pressing movement performed on an inclined bench, building significant upper pectoral strength and mass.',
+		description:
+			'This barbell exercise targets the upper chest muscles through a pressing movement performed on an inclined bench, building significant upper pectoral strength and mass.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2021/10/developpe-incline-barre-exercice-pectoraux.jpg',
 	},
 	{
 		name: 'Développé Incliné à la Machine Convergente',
 		muscleGroup: 'pectoraux',
-		description: 'A chest-targeting machine exercise that provides an alternative to incline dumbbell presses, utilizing converging arm paths for targeted pectoral development.',
+		description:
+			'A chest-targeting machine exercise that provides an alternative to incline dumbbell presses, utilizing converging arm paths for targeted pectoral development.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2000/06/developpe-incline-machine-convergente-pectoraux.jpg',
 	},
 	{
 		name: 'Développé Incliné à la Poulie',
 		muscleGroup: 'pectoraux',
-		description: 'A compound chest exercise that develops pectoral muscle mass and strength using an inclined bench and cable pulley system.',
+		description:
+			'A compound chest exercise that develops pectoral muscle mass and strength using an inclined bench and cable pulley system.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/05/developpe-incline-poulie-exercice-pectoraux.jpg',
 	},
 	{
@@ -154,7 +169,8 @@ const RAW_EXERCISES: {
 	{
 		name: 'Le Pullover avec Haltère',
 		muscleGroup: 'pectoraux',
-		description: 'Un exercice qui "permet de faire travailler les muscles de la poitrine et les grands dorsaux (les muscles du milieu et du bas du dos).',
+		description:
+			'Un exercice qui "permet de faire travailler les muscles de la poitrine et les grands dorsaux (les muscles du milieu et du bas du dos).',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2021/12/pullover-haltere-exercice-dos.jpg',
 	},
 	{
@@ -166,14 +182,18 @@ const RAW_EXERCISES: {
 	{
 		name: 'Pompes Inclinees sur Smith Machine',
 		muscleGroup: 'pectoraux',
-		description: 'An inclined push-up performed on a Smith machine that makes the movement more accessible for beginners building chest strength.',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2023/07/pompes-inclinees-sur-smith-machine-exercice-musculation-pectoraux-debutant.jpg',
+		description:
+			'An inclined push-up performed on a Smith machine that makes the movement more accessible for beginners building chest strength.',
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2023/07/pompes-inclinees-sur-smith-machine-exercice-musculation-pectoraux-debutant.jpg',
 	},
 	{
 		name: 'Pompes Inclinées avec Sangles de Suspension',
 		muscleGroup: 'pectoraux',
-		description: 'A bodyweight exercise using suspension straps that engages multiple muscle groups simultaneously for chest and upper body development.',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2023/08/pompes-inclinees-avec-sangles-de-suspension-exercice-musculation-maison-pectoraux.jpg',
+		description:
+			'A bodyweight exercise using suspension straps that engages multiple muscle groups simultaneously for chest and upper body development.',
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2023/08/pompes-inclinees-avec-sangles-de-suspension-exercice-musculation-maison-pectoraux.jpg',
 	},
 	{
 		name: 'Svend Press',
@@ -191,7 +211,8 @@ const RAW_EXERCISES: {
 		name: 'Écarté a la Poulie vis a vis Haute a Genoux',
 		muscleGroup: 'pectoraux',
 		description: 'A kneeling high-to-low cable fly that isolates and targets the pectoral muscles through controlled chest contractions.',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2023/07/ecarte-a-la-poulie-vis-a-vis-haute-a-genoux-exercice-isolation-gros-pectoraux.jpg',
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2023/07/ecarte-a-la-poulie-vis-a-vis-haute-a-genoux-exercice-isolation-gros-pectoraux.jpg',
 	},
 	{
 		name: 'Écartés Couche avec Haltères',
@@ -221,7 +242,8 @@ const RAW_EXERCISES: {
 		name: 'Écartés Incliné avec Haltères',
 		muscleGroup: 'pectoraux',
 		description: 'An excellent incline dumbbell fly isolation exercise to increase upper chest muscle mass.',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/09/ecartes-incline-avec-halteres-exercice-milieu-muscles-pectoraux.jpg',
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2022/09/ecartes-incline-avec-halteres-exercice-milieu-muscles-pectoraux.jpg',
 	},
 	{
 		name: 'Écartés Unilatéraux a la Landmine',
@@ -258,13 +280,15 @@ const RAW_EXERCISES: {
 	{
 		name: 'Bent Over Row Prise Disque',
 		muscleGroup: 'dos',
-		description: 'A back-building exercise using a barbell with plate grip, performed in a bent-over position to develop back thickness and strength.',
+		description:
+			'A back-building exercise using a barbell with plate grip, performed in a bent-over position to develop back thickness and strength.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/10/bent-over-row-prise-disque-exercice-dos-epaisseur.jpg',
 	},
 	{
 		name: 'Bird Dog',
 		muscleGroup: 'dos',
-		description: 'An effective core stability exercise that targets the glutes, abdominals, and back muscles through alternating limb extension.',
+		description:
+			'An effective core stability exercise that targets the glutes, abdominals, and back muscles through alternating limb extension.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/04/bird-dog-exercice-fessiers-gainage-abdos.jpg',
 	},
 	{
@@ -276,13 +300,15 @@ const RAW_EXERCISES: {
 	{
 		name: 'Extension Lombaire au Banc à 45°',
 		muscleGroup: 'dos',
-		description: 'A lower back strengthening exercise performed on an inclined bench that targets the lumbar extensors and stabilizes the spine.',
+		description:
+			'A lower back strengthening exercise performed on an inclined bench that targets the lumbar extensors and stabilizes the spine.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2021/08/extension-lombaire-au-banc-45-dos.jpg',
 	},
 	{
 		name: 'Extension Lombaire à la Machine',
 		muscleGroup: 'dos',
-		description: 'A machine-based back exercise that isolates the erector spinae muscles to maintain proper posture and strengthen the lower back.',
+		description:
+			'A machine-based back exercise that isolates the erector spinae muscles to maintain proper posture and strengthen the lower back.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2021/12/extension-lombaire-a-la-machine-exercice-dos.jpg',
 	},
 	{
@@ -300,37 +326,44 @@ const RAW_EXERCISES: {
 	{
 		name: 'Muscle-up',
 		muscleGroup: 'dos',
-		description: 'An impressive calisthenics movement that transitions from a pull-up position to a dip position in one fluid motion, demanding substantial upper body strength.',
+		description:
+			'An impressive calisthenics movement that transitions from a pull-up position to a dip position in one fluid motion, demanding substantial upper body strength.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/08/muscle-up-calisthenics-exercice-dos.jpg',
 	},
 	{
 		name: 'Oiseau Inversé avec Sangles de Suspension',
 		muscleGroup: 'dos',
-		description: 'L\'oiseau inversé fait partie des exercices les plus élémentaires pour l\'entraînement des épaules" (reverse bird with suspension straps targets the rear shoulders using bodyweight).',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/10/oiseau-inverse-avec-sangles-de-suspension-exercice-arriere-epaules.jpg',
+		description:
+			"L'oiseau inversé fait partie des exercices les plus élémentaires pour l'entraînement des épaules\" (reverse bird with suspension straps targets the rear shoulders using bodyweight).",
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2022/10/oiseau-inverse-avec-sangles-de-suspension-exercice-arriere-epaules.jpg',
 	},
 	{
 		name: 'Overhead Shrug',
 		muscleGroup: 'dos',
-		description: 'An excellent exercise for developing the upper trapezius muscles through shoulder elevation movements performed with a barbell overhead.',
+		description:
+			'An excellent exercise for developing the upper trapezius muscles through shoulder elevation movements performed with a barbell overhead.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/01/overhead-shrug-exercice-trapeze.jpg',
 	},
 	{
 		name: 'Planche Inversée',
 		muscleGroup: 'dos',
-		description: 'Une excellente alternative à la planche classique" que l\'on pratique en étirement du corps vers l\'arrière pour renforcer les fessiers et les abdominaux.',
+		description:
+			"Une excellente alternative à la planche classique\" que l'on pratique en étirement du corps vers l'arrière pour renforcer les fessiers et les abdominaux.",
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/05/planche-inversee-abdos-gainage-renforcement.jpg',
 	},
 	{
 		name: 'Pull-over Assis à la Machine',
 		muscleGroup: 'dos',
-		description: 'An excellent seated machine exercise that effectively isolates the latissimus dorsi muscles of the back through a controlled pulling motion.',
+		description:
+			'An excellent seated machine exercise that effectively isolates the latissimus dorsi muscles of the back through a controlled pulling motion.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/01/musculation-pull-over-assis-machine-exercice-dorsaux.jpg',
 	},
 	{
 		name: 'Pull-over Décliné à la Barre',
 		muscleGroup: 'dos',
-		description: 'An isolation exercise that primarily targets the latissimus dorsi and pectoral muscles through a barbell pull-over movement performed on a decline bench.',
+		description:
+			'An isolation exercise that primarily targets the latissimus dorsi and pectoral muscles through a barbell pull-over movement performed on a decline bench.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/05/pull-over-barre-exercice-dos.jpg',
 	},
 	{
@@ -354,7 +387,8 @@ const RAW_EXERCISES: {
 	{
 		name: 'Renegade Row',
 		muscleGroup: 'dos',
-		description: 'An excellent strength-training exercise that "works the back, while engaging the" core and stabilizer muscles simultaneously using dumbbells.',
+		description:
+			'An excellent strength-training exercise that "works the back, while engaging the" core and stabilizer muscles simultaneously using dumbbells.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/04/renegade-row-exercice-muscul-dos-haltere.jpg',
 	},
 	{
@@ -372,49 +406,57 @@ const RAW_EXERCISES: {
 	{
 		name: 'Rowing Buste Penché avec élastique',
 		muscleGroup: 'dos',
-		description: 'An excellent exercise for developing the latissimus dorsi while engaging the upper back muscles using resistance band tension.',
+		description:
+			'An excellent exercise for developing the latissimus dorsi while engaging the upper back muscles using resistance band tension.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/09/rowing-buste-penche-avec-elastique-prise-neutre-muscu-dos.jpg',
 	},
 	{
 		name: 'Rowing Haltère à un Bras',
 		muscleGroup: 'dos',
-		description: 'A unilateral back exercise using a single dumbbell that targets the lats and improves muscular balance through one-armed rowing movements.',
+		description:
+			'A unilateral back exercise using a single dumbbell that targets the lats and improves muscular balance through one-armed rowing movements.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2021/08/rowing-haltere-un-bras-dos.jpg',
 	},
 	{
 		name: 'Rowing Haltères sur Banc Incliné',
 		muscleGroup: 'dos',
-		description: 'Le rowing avec haltères sur un banc incliné est une variante intéressante pour se muscler le dos. Cet exercice met l\'accent sur le muscle grand dorsal',
+		description:
+			"Le rowing avec haltères sur un banc incliné est une variante intéressante pour se muscler le dos. Cet exercice met l'accent sur le muscle grand dorsal",
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/02/rowing-halteres-banc-incline-prise-neutre-exercice-dos.jpg',
 	},
 	{
 		name: 'Rowing Horizontal avec Élastique',
 		muscleGroup: 'dos',
-		description: 'A back-focused resistance band exercise that targets the horizontal pulling muscles for strength and posture development.',
+		description:
+			'A back-focused resistance band exercise that targets the horizontal pulling muscles for strength and posture development.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/02/rowing-horizontal-bande-elastique-exercice-dos.jpg',
 	},
 	{
 		name: 'Rowing Inversé Sous une Table',
 		muscleGroup: 'dos',
-		description: 'An inverted rowing exercise performed under a table, which can be slightly more challenging than using a bar since you must grasp the table edge.',
+		description:
+			'An inverted rowing exercise performed under a table, which can be slightly more challenging than using a bar since you must grasp the table edge.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/10/rowing-inverse-sous-une-table-exercice-dos-maison.jpg',
 	},
 	{
 		name: 'Rowing Unilatéral avec élastique',
 		muscleGroup: 'dos',
-		description: 'A single-arm rowing movement performed with a resistance band that targets back muscles and can be executed at home using various band anchoring techniques.',
+		description:
+			'A single-arm rowing movement performed with a resistance band that targets back muscles and can be executed at home using various band anchoring techniques.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/10/rowing-unilateral-avec-elastique-exercice-dos-maison.jpg',
 	},
 	{
 		name: 'Rowing Unilatéral à la Landmine',
 		muscleGroup: 'dos',
-		description: 'A single-arm rowing movement performed at a landmine station that "targets the muscles of the back" while engaging grip strength and stability.',
+		description:
+			'A single-arm rowing movement performed at a landmine station that "targets the muscles of the back" while engaging grip strength and stability.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/02/rowing-unilateral-landmine-exercice-meadows-row-grand-dorsal.jpg',
 	},
 	{
 		name: 'Rowing avec Haltères',
 		muscleGroup: 'dos',
-		description: 'A back strengthening exercise performed at home using dumbbells in a bent-over position to target the latissimus dorsi and upper back muscles.',
+		description:
+			'A back strengthening exercise performed at home using dumbbells in a bent-over position to target the latissimus dorsi and upper back muscles.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/10/bent-over-row-avec-halteres-exercice-renforcement-dos-maison.jpg',
 	},
 	{
@@ -426,25 +468,29 @@ const RAW_EXERCISES: {
 	{
 		name: 'Rowing en Pronation Assis a la Machine Technogym',
 		muscleGroup: 'dos',
-		description: 'A pronated-grip seated machine row that primarily targets the back muscles while also engaging biceps, forearms, and shoulders.',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/02/rowing-assis-machine-prise-pronation-exercice-muscle-grand-rond.jpg',
+		description:
+			'A pronated-grip seated machine row that primarily targets the back muscles while also engaging biceps, forearms, and shoulders.',
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2022/02/rowing-assis-machine-prise-pronation-exercice-muscle-grand-rond.jpg',
 	},
 	{
 		name: 'Rowing à la Barre en T avec Machine',
 		muscleGroup: 'dos',
-		description: 'A machine-based rowing exercise that "permet de travailler les muscles du dos et les biceps en toute sécurité et avec un mouvement fluide" (enables safe back and biceps training with smooth movement).',
+		description:
+			'A machine-based rowing exercise that "permet de travailler les muscles du dos et les biceps en toute sécurité et avec un mouvement fluide" (enables safe back and biceps training with smooth movement).',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/01/rowing-t-bar-machine-exercice-dos.jpg',
 	},
 	{
 		name: 'Rowing à la Smith Machine',
 		muscleGroup: 'dos',
-		description: 'Le rowing à la machine permet de travailler directement plusieurs muscles du haut du dos, notamment les rhomboïdes, les trapèzes inférieurs et moyens',
+		description:
+			'Le rowing à la machine permet de travailler directement plusieurs muscles du haut du dos, notamment les rhomboïdes, les trapèzes inférieurs et moyens',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/10/rowing-smith-machine-exercice-dos-masse-musculaire.jpg',
 	},
 	{
 		name: 'Seal Row avec Haltères',
 		muscleGroup: 'dos',
-		description: 'Une variante du rowing qui permet de travailler les muscles du dos et des bras en s\'allongeant sur un banc.',
+		description: "Une variante du rowing qui permet de travailler les muscles du dos et des bras en s'allongeant sur un banc.",
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/05/seal-row-halteres-exercice-dos-halteres.jpg',
 	},
 	{
@@ -456,37 +502,42 @@ const RAW_EXERCISES: {
 	{
 		name: 'Shrug à la Machine à Mollets',
 		muscleGroup: 'dos',
-		description: 'A shoulder-raising exercise performed using a calf raise machine, allowing practitioners to target the trapezius muscles without requiring a barbell.',
+		description:
+			'A shoulder-raising exercise performed using a calf raise machine, allowing practitioners to target the trapezius muscles without requiring a barbell.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/04/shrug-machine-mollets-exercice-de-musculation.jpg',
 	},
 	{
 		name: 'Shrug à la Poulie',
 		muscleGroup: 'dos',
-		description: 'Le haussement des épaules à la poulie (en anglais cable shrug) est une variante très intéressante pour travailler la partie supérieure des trapèzes.',
+		description:
+			'Le haussement des épaules à la poulie (en anglais cable shrug) est une variante très intéressante pour travailler la partie supérieure des trapèzes.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/04/shrug-poulie-haussement-epaules-musculation-trapezes.jpg',
 	},
 	{
 		name: 'Shrugs avec Haltères',
 		muscleGroup: 'dos',
-		description: 'Le shrug (en français haussement des épaules) est l\'exercice principal pour développer le haut des trapèzes.',
+		description: "Le shrug (en français haussement des épaules) est l'exercice principal pour développer le haut des trapèzes.",
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/11/shrugs-avec-halteres-exercice-trapezes-superieurs.jpg',
 	},
 	{
 		name: 'Sled Pull',
 		muscleGroup: 'dos',
-		description: 'A functional pulling movement used in conditioning and physical preparation that involves dragging a weighted sled, targeting the back and biceps.',
+		description:
+			'A functional pulling movement used in conditioning and physical preparation that involves dragging a weighted sled, targeting the back and biceps.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2025/11/sled-pull-cat.jpg',
 	},
 	{
 		name: 'Soulevé de Terre',
 		muscleGroup: 'dos',
-		description: 'un exercice extrêmement populaire et un véritable test de la force globale du corps" that targets the back, legs, and glutes through a compound lifting movement.',
+		description:
+			'un exercice extrêmement populaire et un véritable test de la force globale du corps" that targets the back, legs, and glutes through a compound lifting movement.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2021/12/souleve-de-terre-exercice-jambes-dos.jpg',
 	},
 	{
 		name: 'Soulevé de Terre avec Machine',
 		muscleGroup: 'dos',
-		description: 'Le mouvement se fera avec une prise neutre" permettant de "porter des charges" plus importantes qu\'avec d\'autres variantes du soulevé de terre.',
+		description:
+			'Le mouvement se fera avec une prise neutre" permettant de "porter des charges" plus importantes qu\'avec d\'autres variantes du soulevé de terre.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/11/souleve-de-terre-avec-machine-exercice-muscu-debutant.jpg',
 	},
 	{
@@ -498,13 +549,15 @@ const RAW_EXERCISES: {
 	{
 		name: 'Tirage Horizontal Prise Large',
 		muscleGroup: 'dos',
-		description: 'A back-building exercise that targets the trapezius, posterior deltoids, latissimus dorsi, and abdominal muscles using a wide grip pulling motion.',
+		description:
+			'A back-building exercise that targets the trapezius, posterior deltoids, latissimus dorsi, and abdominal muscles using a wide grip pulling motion.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/10/tirage-horizontal-prise-large-exercice-dos-massif.jpg',
 	},
 	{
 		name: 'Tirage Horizontal à la Poulie',
 		muscleGroup: 'dos',
-		description: 'Excellent exercice de musculation pour le dos, en particulier les muscles grands" dorsaux utilisant une machine à câble en position assise.',
+		description:
+			'Excellent exercice de musculation pour le dos, en particulier les muscles grands" dorsaux utilisant une machine à câble en position assise.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/02/tirage-horizontal-poulie-exercice-dos.jpg',
 	},
 	{
@@ -528,13 +581,15 @@ const RAW_EXERCISES: {
 	{
 		name: 'Tirage Vertical Prise Serrée',
 		muscleGroup: 'dos',
-		description: 'A back-strengthening exercise performed on a lat pulldown machine using a narrow grip attachment to target the latissimus dorsi muscles.',
+		description:
+			'A back-strengthening exercise performed on a lat pulldown machine using a narrow grip attachment to target the latissimus dorsi muscles.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2021/08/tirage-vertical-prise-serree-dos.jpg',
 	},
 	{
 		name: 'Tirage Vertical en Supination à la Machine Hammer Strength',
 		muscleGroup: 'dos',
-		description: 'An excellent back-focused movement performed on the Hammer Strength machine using a reverse-grip pulldown technique to target the latissimus dorsi muscles.',
+		description:
+			'An excellent back-focused movement performed on the Hammer Strength machine using a reverse-grip pulldown technique to target the latissimus dorsi muscles.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/01/tirage-avant-iso-laterale-hammer-strength-exercice-dos.jpg',
 	},
 	{
@@ -546,19 +601,22 @@ const RAW_EXERCISES: {
 	{
 		name: 'Traction Assistée avec Banc',
 		muscleGroup: 'dos',
-		description: 'An assisted pull-up exercise using a bench that helps build upper body strength by providing support during the pulling movement.',
+		description:
+			'An assisted pull-up exercise using a bench that helps build upper body strength by providing support during the pulling movement.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/02/traction-assistee-avec-banc-exercice-dos.jpg',
 	},
 	{
 		name: 'Traction Assistée avec élastique',
 		muscleGroup: 'dos',
-		description: 'A resistance band-assisted pull-up exercise that targets the latissimus dorsi, upper back, and rear shoulders while providing support for those building strength.',
+		description:
+			'A resistance band-assisted pull-up exercise that targets the latissimus dorsi, upper back, and rear shoulders while providing support for those building strength.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2021/12/traction-assiste-elastique-exercice-dos.jpg',
 	},
 	{
 		name: 'Traction Assistée à la Machine',
 		muscleGroup: 'dos',
-		description: 'An assisted pull-up exercise performed on a specialized machine that provides support to help develop back and arm strength for those building toward unassisted pull-ups.',
+		description:
+			'An assisted pull-up exercise performed on a specialized machine that provides support to help develop back and arm strength for those building toward unassisted pull-ups.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/02/traction-assistee-machine-exercice-dos.jpg',
 	},
 	{
@@ -583,7 +641,8 @@ const RAW_EXERCISES: {
 		name: 'Tractions Australiennes avec Sangles de Suspension',
 		muscleGroup: 'dos',
 		description: 'An inverted rowing movement using suspension straps that effectively targets the back, rear shoulders, and core muscles.',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/11/tractions-australiennes-avec-sangles-de-suspension-exercice-dos-maison.jpg',
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2022/11/tractions-australiennes-avec-sangles-de-suspension-exercice-dos-maison.jpg',
 	},
 	{
 		name: 'Tractions Prise Neutre',
@@ -596,43 +655,51 @@ const RAW_EXERCISES: {
 	{
 		name: 'Croix de Fer avec Haltères',
 		muscleGroup: 'epaules',
-		description: 'A challenging isometric exercise that targets the shoulders and thighs while holding dumbbells in an extended cross position.',
+		description:
+			'A challenging isometric exercise that targets the shoulders and thighs while holding dumbbells in an extended cross position.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/04/croix-de-fer-halteres-exercice-epaules-cuisses.jpg',
 	},
 	{
 		name: 'Développé Arnold',
 		muscleGroup: 'epaules',
-		description: 'Un exercice très efficace pour développer les muscles deltoïdes, utilisant des haltères avec une rotation unique du mouvement.',
+		description:
+			'Un exercice très efficace pour développer les muscles deltoïdes, utilisant des haltères avec une rotation unique du mouvement.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2021/08/developpe-arnold-epaules.jpg',
 	},
 	{
 		name: 'Développé Militaire',
 		muscleGroup: 'epaules',
-		description: 'Un exercice qui permet de solliciter les muscles des épaules, des pectoraux, du haut du dos, des triceps" - an effective compound movement targeting multiple upper body muscle groups.',
+		description:
+			'Un exercice qui permet de solliciter les muscles des épaules, des pectoraux, du haut du dos, des triceps" - an effective compound movement targeting multiple upper body muscle groups.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2021/08/developpe-militaire-epaules.jpg',
 	},
 	{
 		name: 'Développé Nuque Barre Guidée',
 		muscleGroup: 'epaules',
-		description: 'This guided barbell exercise performed on a Smith machine targets shoulder muscles while placing emphasis on the rotator cuff stabilizers.',
+		description:
+			'This guided barbell exercise performed on a Smith machine targets shoulder muscles while placing emphasis on the rotator cuff stabilizers.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/08/developpe-nuque-barre-guidee-muscu-epaule-debutant.jpg',
 	},
 	{
 		name: 'Développé Épaules Assis',
 		muscleGroup: 'epaules',
-		description: 'A challenging seated exercise that targets the shoulder muscles and deltoids using dumbbells for upper body strength development.',
+		description:
+			'A challenging seated exercise that targets the shoulder muscles and deltoids using dumbbells for upper body strength development.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2023/05/developpe-epaules-assis-exercice-epaule-deltoide-halteres.jpg',
 	},
 	{
 		name: 'Développé épaule Unilatéral avec élastique',
 		muscleGroup: 'epaules',
-		description: 'A single-arm shoulder pressing movement using resistance bands, performed in a half-kneeling position to target shoulder muscles while improving core stability.',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/08/developpe-epaule-unilateral-avec-elastique-exercice-musculation.jpg',
+		description:
+			'A single-arm shoulder pressing movement using resistance bands, performed in a half-kneeling position to target shoulder muscles while improving core stability.',
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2022/08/developpe-epaule-unilateral-avec-elastique-exercice-musculation.jpg',
 	},
 	{
 		name: 'Développé épaule Unilatéral à Genou avec Landmine',
 		muscleGroup: 'epaules',
-		description: 'This unilateral shoulder press variation performed on one knee with a landmine targets the deltoids and triceps for strength development.',
+		description:
+			'This unilateral shoulder press variation performed on one knee with a landmine targets the deltoids and triceps for strength development.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/11/developpe-epaules-unilateral-landmine-exercice-bodybuilding.jpg',
 	},
 	{
@@ -644,37 +711,44 @@ const RAW_EXERCISES: {
 	{
 		name: 'Développé épaules Assis avec élastique',
 		muscleGroup: 'epaules',
-		description: 'This seated shoulder press exercise using a resistance band is designed to "strengthen and develop strong, muscular deltoids" and can be performed at home or in an office setting.',
+		description:
+			'This seated shoulder press exercise using a resistance band is designed to "strengthen and develop strong, muscular deltoids" and can be performed at home or in an office setting.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/11/developpe-epaules-assis-avec-elastique-exercice-bureau.jpg',
 	},
 	{
 		name: 'Développé épaules Debout à la Landmine',
 		muscleGroup: 'epaules',
-		description: 'A strength-building movement where practitioners lift a barbell secured in a landmine apparatus from shoulder height overhead.',
+		description:
+			'A strength-building movement where practitioners lift a barbell secured in a landmine apparatus from shoulder height overhead.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/02/developpe-landmine-exercice-muscle-deltoide.jpg',
 	},
 	{
 		name: 'Développé épaules avec Haltères',
 		muscleGroup: 'epaules',
-		description: 'Un exercice fondamental de musculation qui cible les épaules en utilisant des haltères pour développer la force et le volume des muscles deltoïdes.',
+		description:
+			'Un exercice fondamental de musculation qui cible les épaules en utilisant des haltères pour développer la force et le volume des muscles deltoïdes.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/02/developpe-epaule-halteres-exercice-musculation-deltoide.jpg',
 	},
 	{
 		name: 'Développé épaules avec élastique',
 		muscleGroup: 'epaules',
-		description: 'This shoulder press variation using resistance bands effectively targets deltoid development for building upper body strength and muscle mass.',
+		description:
+			'This shoulder press variation using resistance bands effectively targets deltoid development for building upper body strength and muscle mass.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/08/developpe-epaules-avec-elastique-muscler-deltoides.jpg',
 	},
 	{
 		name: 'Développé épaules à la Machine',
 		muscleGroup: 'epaules',
-		description: 'A guided resistance training movement performed on a machine that targets shoulder development with controlled form and reduced injury risk compared to free-weight variations.',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/11/developpe-epaules-a-la-machine-shoulder-press-exercice-basic-fit.jpg',
+		description:
+			'A guided resistance training movement performed on a machine that targets shoulder development with controlled form and reduced injury risk compared to free-weight variations.',
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2022/11/developpe-epaules-a-la-machine-shoulder-press-exercice-basic-fit.jpg',
 	},
 	{
 		name: 'Développé épaules à la Smith Machine',
 		muscleGroup: 'epaules',
-		description: 'A shoulder press exercise performed using a Smith machine, designed to build upper body strength with guided barbell movement along a fixed vertical track.',
+		description:
+			'A shoulder press exercise performed using a Smith machine, designed to build upper body strength with guided barbell movement along a fixed vertical track.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/08/developpe-epaules-smith-machine-musculation-debutant.jpg',
 	},
 	{
@@ -686,23 +760,26 @@ const RAW_EXERCISES: {
 	{
 		name: 'Extension Horizontale des épaules avec élastique',
 		muscleGroup: 'epaules',
-		description: 'This resistance band exercise effectively targets and strengthens the rear shoulder muscles through horizontal pulling movements.',
+		description:
+			'This resistance band exercise effectively targets and strengthens the rear shoulder muscles through horizontal pulling movements.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/03/extension-horizontale-de-epaule-elastique-musculation.jpg',
 	},
 	{
 		name: 'Face Pull',
 		muscleGroup: 'epaules',
-		description: 'An isolation exercise using a cable machine that "allows working mainly the shoulders and secondarily the back," targeting the rear deltoids and upper back muscles.',
+		description:
+			'An isolation exercise using a cable machine that "allows working mainly the shoulders and secondarily the back," targeting the rear deltoids and upper back muscles.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/01/face-pull-exercice-epaules.jpg',
 	},
 	{
 		name: 'Face Pull Couché à la Poulie',
 		muscleGroup: 'epaules',
-		description: 'Le face pull allongé à la poulie est une variante peu connue mais redoutablement efficace du face pull classique" réalisée en position allongée sur un banc avec une machine à poulie.',
+		description:
+			'Le face pull allongé à la poulie est une variante peu connue mais redoutablement efficace du face pull classique" réalisée en position allongée sur un banc avec une machine à poulie.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2025/11/face-pull-couche-a-la-poulie-cat.jpg',
 	},
 	{
-		name: 'Les Élévations Frontales pour Muscler L\'avant des épaules',
+		name: "Les Élévations Frontales pour Muscler L'avant des épaules",
 		muscleGroup: 'epaules',
 		description: 'A shoulder strengthening exercise using dumbbells that targets the anterior deltoids through front raises.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2021/08/elevation-frontale-epaules.jpg',
@@ -710,62 +787,74 @@ const RAW_EXERCISES: {
 	{
 		name: 'Les Élévations Latérales pour Muscler ses épaules avec Haltères',
 		muscleGroup: 'epaules',
-		description: 'This shoulder-building exercise involves "élever une paire d\'haltères sur les côtés" (raising a pair of dumbbells to the sides) to target the lateral deltoids.',
+		description:
+			'This shoulder-building exercise involves "élever une paire d\'haltères sur les côtés" (raising a pair of dumbbells to the sides) to target the lateral deltoids.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2000/08/elevations-laterales-epaules.jpg',
 	},
 	{
 		name: 'Oiseau Assis sur un Banc',
 		muscleGroup: 'epaules',
-		description: 'A shoulder exercise performed while seated on a bench using dumbbells in a reverse fly motion to target the rear deltoids.',
+		description:
+			'A shoulder exercise performed while seated on a bench using dumbbells in a reverse fly motion to target the rear deltoids.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2021/12/oiseau-assis-sur-banc-exercice-epaule.jpg',
 	},
 	{
 		name: 'Oiseau avec élastique',
 		muscleGroup: 'epaules',
-		description: 'This resistance band exercise, also known as "bent over reverse fly," targets the rear shoulder muscles through a pulling motion performed while leaning forward.',
+		description:
+			'This resistance band exercise, also known as "bent over reverse fly," targets the rear shoulder muscles through a pulling motion performed while leaning forward.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/09/oiseau-avec-elastique-exercice-muscler-epaules.jpg',
 	},
 	{
 		name: 'Pec Deck Inversé',
 		muscleGroup: 'epaules',
-		description: 'A machine-based exercise that serves as a variation of bent-over lateral raises, designed to strengthen the rear shoulders and upper back muscles.',
+		description:
+			'A machine-based exercise that serves as a variation of bent-over lateral raises, designed to strengthen the rear shoulders and upper back muscles.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2021/12/pec-deck-inverse-exercice-epaules.jpg',
 	},
 	{
 		name: 'Pompes Piquées',
 		muscleGroup: 'epaules',
-		description: 'An overhead pressing movement that targets the anterior deltoids, triceps, and upper chest through an inverted V-shaped body position.',
+		description:
+			'An overhead pressing movement that targets the anterior deltoids, triceps, and upper chest through an inverted V-shaped body position.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/06/pike-push-up-exercice-epaules-deltoides.jpg',
 	},
 	{
 		name: 'Presse à épaules Inclinée',
 		muscleGroup: 'epaules',
-		description: 'La presse à épaules se concentre sur les parties antérieures et externes du deltoïde, c\'est-à-dire l\'avant et les côtés de vos épaules.',
+		description:
+			"La presse à épaules se concentre sur les parties antérieures et externes du deltoïde, c'est-à-dire l'avant et les côtés de vos épaules.",
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2021/08/presse-epaule.jpg',
 	},
 	{
-		name: 'Rotation Externe de L\'épaule Couchée avec Haltère',
+		name: "Rotation Externe de L'épaule Couchée avec Haltère",
 		muscleGroup: 'epaules',
-		description: 'A preparatory shoulder exercise performed lying down with a dumbbell that targets the rotator cuff muscles through external rotation movements.',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/06/rotation-externe-epaule-haltere-exercice-coiffe-des-rotateurs.jpg',
+		description:
+			'A preparatory shoulder exercise performed lying down with a dumbbell that targets the rotator cuff muscles through external rotation movements.',
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2022/06/rotation-externe-epaule-haltere-exercice-coiffe-des-rotateurs.jpg',
 	},
 	{
-		name: 'Rotation Externe de L\'épaule à la Poulie',
+		name: "Rotation Externe de L'épaule à la Poulie",
 		muscleGroup: 'epaules',
-		description: 'An excellent cable machine variation designed for developing the rotator cuff muscles through controlled external shoulder rotation movements.',
+		description:
+			'An excellent cable machine variation designed for developing the rotator cuff muscles through controlled external shoulder rotation movements.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/04/rotation-externe-epaule-poulie-coiffe-rotateurs.jpg',
 	},
 	{
 		name: 'Rotations Cubaines',
 		muscleGroup: 'epaules',
-		description: 'préserver la santé de l\'épaule',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/06/rotation-externe-vertical-epaule-haltere-exercice-coiffe-rotateurs.jpg',
+		description: "préserver la santé de l'épaule",
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2022/06/rotation-externe-vertical-epaule-haltere-exercice-coiffe-rotateurs.jpg',
 	},
 	{
 		name: 'Russian Twist avec Développé épaules',
 		muscleGroup: 'epaules',
-		description: 'A dynamic combination movement that merges the Russian Twist with an overhead press, targeting both core and shoulder muscles through functional training.',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2023/07/russian-twist-avec-developpe-epaule-exercice-combine-abdos-deltoide-musculation-fonctionnelle.jpg',
+		description:
+			'A dynamic combination movement that merges the Russian Twist with an overhead press, targeting both core and shoulder muscles through functional training.',
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2023/07/russian-twist-avec-developpe-epaule-exercice-combine-abdos-deltoide-musculation-fonctionnelle.jpg',
 	},
 	{
 		name: 'Thruster',
@@ -776,13 +865,15 @@ const RAW_EXERCISES: {
 	{
 		name: 'Thruster avec Kettlebell',
 		muscleGroup: 'epaules',
-		description: 'Un exercice combiné qui associe le mouvement du squat avant à celui du développé" pour travailler les quadriceps et les épaules avec une kettlebell.',
+		description:
+			'Un exercice combiné qui associe le mouvement du squat avant à celui du développé" pour travailler les quadriceps et les épaules avec une kettlebell.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2021/12/thruster-kettlebell-exercice-quadriceps-epaules.jpg',
 	},
 	{
 		name: 'Thruster avec Landmine',
 		muscleGroup: 'epaules',
-		description: 'A compound movement that combines a squat with an overhead press using a landmine apparatus, targeting the legs and shoulders simultaneously.',
+		description:
+			'A compound movement that combines a squat with an overhead press using a landmine apparatus, targeting the legs and shoulders simultaneously.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/10/thruster-landmine-exercice-compose-jambe-epaule.jpg',
 	},
 	{
@@ -800,13 +891,15 @@ const RAW_EXERCISES: {
 	{
 		name: 'Tirage Menton avec élastique',
 		muscleGroup: 'epaules',
-		description: 'Le tirage vertical, aussi appelé tirage menton ou rowing menton (en anglais upright rows), est un exercice très populaire pour travailler les deltoïdes ainsi',
+		description:
+			'Le tirage vertical, aussi appelé tirage menton ou rowing menton (en anglais upright rows), est un exercice très populaire pour travailler les deltoïdes ainsi',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/02/tirage-vertical-avec-elastique-exercice-muscle-epaule.jpg',
 	},
 	{
-		name: 'Écart Arrière à L\'élastique',
+		name: "Écart Arrière à L'élastique",
 		muscleGroup: 'epaules',
-		description: 'A postural strengthening exercise using resistance bands that primarily targets the posterior shoulders and upper back muscles.',
+		description:
+			'A postural strengthening exercise using resistance bands that primarily targets the posterior shoulders and upper back muscles.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2025/11/ecarte-arriere-elastique-cat.jpg',
 	},
 	{
@@ -818,31 +911,36 @@ const RAW_EXERCISES: {
 	{
 		name: 'Élévation Frontale sur Banc Incliné',
 		muscleGroup: 'epaules',
-		description: 'This inclined bench variation specifically targets the anterior deltoids and upper back muscles for shoulder development.',
+		description:
+			'This inclined bench variation specifically targets the anterior deltoids and upper back muscles for shoulder development.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2023/08/elevation-frontale-banc-incline-exercice-epaule.jpg',
 	},
 	{
 		name: 'Élévation Latérale à la Poulie en Inclinaison',
 		muscleGroup: 'epaules',
-		description: 'An inclined cable lateral raise variation that targets the shoulders by performing the movement while in a leaning position against a cable machine.',
+		description:
+			'An inclined cable lateral raise variation that targets the shoulders by performing the movement while in a leaning position against a cable machine.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2025/11/elevation-laterale-a-la-poulie-en-inclinaison-cat.jpg',
 	},
 	{
 		name: 'Élévation en Y à la Poulie',
 		muscleGroup: 'epaules',
-		description: 'The cable Y-raise represents a dumbbell Y-raise variation that effectively targets the shoulder muscles through a pulley-based resistance mechanism.',
+		description:
+			'The cable Y-raise represents a dumbbell Y-raise variation that effectively targets the shoulder muscles through a pulley-based resistance mechanism.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2025/11/elevation-en-y-a-la-poulie-cat.jpg',
 	},
 	{
 		name: 'Élévations Frontales à la Poulie Basse',
 		muscleGroup: 'epaules',
-		description: 'Les élévations frontales à la poulie (double cable front raise) sont un exercice d\'isolation qui permet de muscler et de renforcer les deltoïdes antérieurs.',
+		description:
+			"Les élévations frontales à la poulie (double cable front raise) sont un exercice d'isolation qui permet de muscler et de renforcer les deltoïdes antérieurs.",
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/04/elevation-frontale-poulie-basse-exercice-muscul-epaules.jpg',
 	},
 	{
 		name: 'Élévations Latérales Inclinées avec Haltère',
 		muscleGroup: 'epaules',
-		description: 'This shoulder exercise improves overall aesthetics and definition by targeting the external deltoid muscles using an inclined position with dumbbells.',
+		description:
+			'This shoulder exercise improves overall aesthetics and definition by targeting the external deltoid muscles using an inclined position with dumbbells.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/06/elevation-laterale-incline-haltere-exercice-deltoide-externe.jpg',
 	},
 	{
@@ -854,14 +952,17 @@ const RAW_EXERCISES: {
 	{
 		name: 'Élévations Latérales avec Landmine',
 		muscleGroup: 'epaules',
-		description: 'This movement utilizes an arc-like trajectory to effectively target the deltoid muscles through lateral raises using a landmine apparatus.',
+		description:
+			'This movement utilizes an arc-like trajectory to effectively target the deltoid muscles through lateral raises using a landmine apparatus.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2021/08/elevation-laterale-landmine-epaules.jpg',
 	},
 	{
 		name: 'Élévations Latérales uniLatérales à la Poulie',
 		muscleGroup: 'epaules',
-		description: 'Un exercice d\'isolation des épaules utilisant une poulie pour développer des deltoïdes latéraux bien arrondis et créer l\'illusion d\'une silhouette plus imposante.',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/11/elevations-laterales-unilaterale-poulie-exercice-epaules-larges.jpg',
+		description:
+			"Un exercice d'isolation des épaules utilisant une poulie pour développer des deltoïdes latéraux bien arrondis et créer l'illusion d'une silhouette plus imposante.",
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2022/11/elevations-laterales-unilaterale-poulie-exercice-epaules-larges.jpg',
 	},
 	{
 		name: 'Élévations Latérales à la Machine',
@@ -874,25 +975,29 @@ const RAW_EXERCISES: {
 	{
 		name: 'Curl Allongé à la Poulie',
 		muscleGroup: 'biceps',
-		description: 'This exercise isolates the biceps and forearms perfectly; in a reclined position, your body cannot rely on momentum," making it an effective isolation movement for arm development.',
+		description:
+			'This exercise isolates the biceps and forearms perfectly; in a reclined position, your body cannot rely on momentum," making it an effective isolation movement for arm development.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/01/curl-allonge-a-la-poulie-exercice-biceps.jpg',
 	},
 	{
 		name: 'Curl Biceps Alterné avec Haltères',
 		muscleGroup: 'biceps',
-		description: 'A popular dumbbell exercise that alternates between arms to target bicep and forearm development during standing curl movements.',
+		description:
+			'A popular dumbbell exercise that alternates between arms to target bicep and forearm development during standing curl movements.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/08/curl-avec-halteres-alterne-exercice-biceps-long-large.jpg',
 	},
 	{
 		name: 'Curl Biceps Alterné en Supination sur Banc Incliné',
 		muscleGroup: 'biceps',
-		description: 'A dumbbell curl variation performed on an inclined bench with alternating arms in supinated grip position, commonly used to target the long head of the biceps.',
+		description:
+			'A dumbbell curl variation performed on an inclined bench with alternating arms in supinated grip position, commonly used to target the long head of the biceps.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/09/curl-biceps-alterne-sur-banc-incline-longue-portion.jpg',
 	},
 	{
 		name: 'Curl Biceps Assis à la Machine',
 		muscleGroup: 'biceps',
-		description: 'A seated machine exercise designed to intensively train the biceps in a safe and controlled manner with pre-loaded equipment.',
+		description:
+			'A seated machine exercise designed to intensively train the biceps in a safe and controlled manner with pre-loaded equipment.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/01/curl-biceps-pupitre-machine-prechargee.jpg',
 	},
 	{
@@ -910,7 +1015,8 @@ const RAW_EXERCISES: {
 	{
 		name: 'Curl Concentré',
 		muscleGroup: 'biceps',
-		description: 'Le curl concentré est un mouvement de la vieille école qui peut produire de vrais résultats" - an isolation exercise designed to intensely target bicep development through focused arm curling.',
+		description:
+			'Le curl concentré est un mouvement de la vieille école qui peut produire de vrais résultats" - an isolation exercise designed to intensely target bicep development through focused arm curling.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2021/09/curl-concentre-biceps.jpg',
 	},
 	{
@@ -934,7 +1040,8 @@ const RAW_EXERCISES: {
 	{
 		name: 'Curl Haltères Prise Neutre',
 		muscleGroup: 'biceps',
-		description: 'A dumbbell curl performed with a neutral grip position that targets the biceps and forearms for increased arm size and strength.',
+		description:
+			'A dumbbell curl performed with a neutral grip position that targets the biceps and forearms for increased arm size and strength.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/09/curl-haltere-prise-neutre-exercice-biceps-enorme.jpg',
 	},
 	{
@@ -946,32 +1053,38 @@ const RAW_EXERCISES: {
 	{
 		name: 'Curl Inversé à la Barre',
 		muscleGroup: 'biceps',
-		description: 'An underhand barbell curl variation that targets the biceps and forearms through reverse grip positioning during the lifting movement.',
+		description:
+			'An underhand barbell curl variation that targets the biceps and forearms through reverse grip positioning during the lifting movement.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/04/curl-inverse-barre-exercice-biceps.jpg',
 	},
 	{
 		name: 'Curl Poulie en Position Squat',
 		muscleGroup: 'biceps',
-		description: 'This cable curl variation performed in a squat position targets and strengthens the biceps while maintaining a specific body posture.',
+		description:
+			'This cable curl variation performed in a squat position targets and strengthens the biceps while maintaining a specific body posture.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/02/curl-poulie-en-position-squat-exerice-biceps.jpg',
 	},
 	{
 		name: 'Curl Pupitre Barre EZ',
 		muscleGroup: 'biceps',
-		description: 'An seated bicep exercise performed at a preacher bench using an EZ-bar that "offers a certain number of advantages" for isolating the biceps through controlled arm movements.',
+		description:
+			'An seated bicep exercise performed at a preacher bench using an EZ-bar that "offers a certain number of advantages" for isolating the biceps through controlled arm movements.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/01/curl-au-pupitre-barre-ez-larry-scott-exercice-biceps.jpg',
 	},
 	{
 		name: 'Curl Spider',
 		muscleGroup: 'biceps',
-		description: 'An isolation exercise performed on an inclined bench that effectively targets bicep development through a controlled curling motion.',
+		description:
+			'An isolation exercise performed on an inclined bench that effectively targets bicep development through a controlled curling motion.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/01/spider-curl-exercice-biceps.jpg',
 	},
 	{
 		name: 'Curl Unilatéral avec Sangles de Suspension',
 		muscleGroup: 'biceps',
-		description: 'A unilateral bicep exercise performed using suspension straps that targets one arm at a time for balanced strength development.',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/11/curl-unilateral-avec-sangles-de-suspension-exercice-biceps-vacances.jpg',
+		description:
+			'A unilateral bicep exercise performed using suspension straps that targets one arm at a time for balanced strength development.',
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2022/11/curl-unilateral-avec-sangles-de-suspension-exercice-biceps-vacances.jpg',
 	},
 	{
 		name: 'Curl Zottman',
@@ -982,55 +1095,64 @@ const RAW_EXERCISES: {
 	{
 		name: 'Curl au Pupitre à la Poulie',
 		muscleGroup: 'biceps',
-		description: 'An isolated biceps exercise performed at a pulley machine with a preacher curl bench to target arm muscle development through controlled flexion movements.',
+		description:
+			'An isolated biceps exercise performed at a pulley machine with a preacher curl bench to target arm muscle development through controlled flexion movements.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/02/curl-pupitre-poulie-exercice-biceps.jpg',
 	},
 	{
 		name: 'Curl avec Sangles de Suspension',
 		muscleGroup: 'biceps',
-		description: 'Un exercice de musculation des biceps au poids de corps utilisant des sangles de suspension, praticable à domicile ou en extérieur.',
+		description:
+			'Un exercice de musculation des biceps au poids de corps utilisant des sangles de suspension, praticable à domicile ou en extérieur.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/10/curl-avec-sangles-de-suspension-exercice-biceps.jpg',
 	},
 	{
 		name: 'Curl en Prise Marteau avec élastique',
 		muscleGroup: 'biceps',
-		description: 'This hammer grip bicep curl variation using resistance bands offers "a fun and effective way to vary your workouts and stimulate your body" through elastic resistance.',
+		description:
+			'This hammer grip bicep curl variation using resistance bands offers "a fun and effective way to vary your workouts and stimulate your body" through elastic resistance.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/01/curl-avec-elastique-exercice-biceps.jpg',
 	},
 	{
 		name: 'Curl à la Barre',
 		muscleGroup: 'biceps',
-		description: 'A barbell exercise designed to "muscler ses biceps" (build bicep muscles) through controlled arm curling movements with a weighted bar.',
+		description:
+			'A barbell exercise designed to "muscler ses biceps" (build bicep muscles) through controlled arm curling movements with a weighted bar.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2021/09/curl-barre-biceps.jpg',
 	},
 	{
 		name: 'Curl à la Poulie Vis-à-vis',
 		muscleGroup: 'biceps',
-		description: 'An isolation exercise designed to strengthen and develop the biceps using a cable pulley machine positioned opposite the user.',
+		description:
+			'An isolation exercise designed to strengthen and develop the biceps using a cable pulley machine positioned opposite the user.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2021/10/curl-poulie-vis-a-vis-biceps.jpg',
 	},
 	{
 		name: 'Drag Curl',
 		muscleGroup: 'biceps',
-		description: 'A barbell curl variation that isolates the biceps by keeping the elbows positioned against the torso throughout the movement.',
+		description:
+			'A barbell curl variation that isolates the biceps by keeping the elbows positioned against the torso throughout the movement.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/06/drag-curl-exercice-biceps.jpg',
 	},
 	{
 		name: 'Drag Curl avec Haltères',
 		muscleGroup: 'biceps',
-		description: 'A dumbbell biceps exercise variant that involves dragging the weights up the body to isolate and maximize arm muscle engagement.',
+		description:
+			'A dumbbell biceps exercise variant that involves dragging the weights up the body to isolate and maximize arm muscle engagement.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/09/drag-curl-halteres-assis-exercice-gros-biceps.jpg',
 	},
 	{
 		name: 'Drag Curl à la Smith Machine',
 		muscleGroup: 'biceps',
-		description: 'This Smith machine variation isolates the biceps more effectively than standard curls by "reducing secondary muscle involvement" through a specific pulling trajectory.',
+		description:
+			'This Smith machine variation isolates the biceps more effectively than standard curls by "reducing secondary muscle involvement" through a specific pulling trajectory.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/08/drag-curl-smith-machine-exercice-biceps-brachial.jpg',
 	},
 	{
 		name: 'Waiter Curl',
 		muscleGroup: 'biceps',
-		description: 'A dumbbell bicep exercise performed with the weight held at shoulder height in a waiter-style position, emphasizing the upper arm musculature.',
+		description:
+			'A dumbbell bicep exercise performed with the weight held at shoulder height in a waiter-style position, emphasizing the upper arm musculature.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/06/waiter-curl-exercice-biceps-haltere.jpg',
 	},
 
@@ -1044,31 +1166,36 @@ const RAW_EXERCISES: {
 	{
 		name: 'Dips Assis à la Machine Hammer Strength',
 		muscleGroup: 'triceps',
-		description: 'Machine à dips en position assise permet de travailler principalement les triceps, et secondairement les pectoraux avec une charge définie.',
+		description:
+			'Machine à dips en position assise permet de travailler principalement les triceps, et secondairement les pectoraux avec une charge définie.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2021/12/dips-assis-machine-avec-poids-exercice-triceps.jpg',
 	},
 	{
 		name: 'Dips Assis à la Machine Matrix',
 		muscleGroup: 'triceps',
-		description: 'A machine-based triceps exercise designed for those seeking "an effective alternative for individuals who lack the comfort or strength" for traditional dips.',
+		description:
+			'A machine-based triceps exercise designed for those seeking "an effective alternative for individuals who lack the comfort or strength" for traditional dips.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/04/dips-assis-machine-matrix-exercice-triceps.jpg',
 	},
 	{
 		name: 'Dips Assistés à la Machine',
 		muscleGroup: 'triceps',
-		description: 'An assisted machine exercise that helps individuals perform dips with reduced body weight, making it "very useful for a large number of people" when bodyweight dips aren\'t yet achievable.',
+		description:
+			'An assisted machine exercise that helps individuals perform dips with reduced body weight, making it "very useful for a large number of people" when bodyweight dips aren\'t yet achievable.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/04/dips-assiste-machine-exercice-muscu-triceps.jpg',
 	},
 	{
 		name: 'Dips Entre Deux Bancs',
 		muscleGroup: 'triceps',
-		description: 'Les dips entre deux bancs sont un exercice de musculation qui permet de solliciter principalement les triceps, et secondairement les épaules et les pectoraux.',
+		description:
+			'Les dips entre deux bancs sont un exercice de musculation qui permet de solliciter principalement les triceps, et secondairement les épaules et les pectoraux.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/05/dips-entre-deux-bancs-exercice-triceps-maison.jpg',
 	},
 	{
 		name: 'Dips aux Anneaux',
 		muscleGroup: 'triceps',
-		description: 'Ring dips are an unstable variation of the traditional dip exercise that adds challenge through the instability of gymnastics rings, making them popular in CrossFit training.',
+		description:
+			'Ring dips are an unstable variation of the traditional dip exercise that adds challenge through the instability of gymnastics rings, making them popular in CrossFit training.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/10/dips-aux-anneaux-exercice-triceps-crossfit.jpg',
 	},
 	{
@@ -1086,7 +1213,8 @@ const RAW_EXERCISES: {
 	{
 		name: 'Développé Couché Prise Serrée à la Smith Machine',
 		muscleGroup: 'triceps',
-		description: 'One of the best exercises for the triceps, though rarely practiced," this close-grip bench press variation on the Smith machine effectively isolates and strengthens the arm muscles.',
+		description:
+			'One of the best exercises for the triceps, though rarely practiced," this close-grip bench press variation on the Smith machine effectively isolates and strengthens the arm muscles.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/11/developpe-couche-prise-serree-smith-machine-exercice-triceps.jpg',
 	},
 	{
@@ -1104,14 +1232,16 @@ const RAW_EXERCISES: {
 	{
 		name: 'Extension Verticale des Triceps avec élastique',
 		muscleGroup: 'triceps',
-		description: 'This resistance band exercise targets the triceps, the muscles comprising "two-thirds of the upper arm," to build strength and size.',
+		description:
+			'This resistance band exercise targets the triceps, the muscles comprising "two-thirds of the upper arm," to build strength and size.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/02/extension-triceps-verticale-elastique-exercice.jpg',
 	},
 	{
 		name: 'Extension Verticale à la Poulie Basse',
 		muscleGroup: 'triceps',
-		description: 'L\'extension verticale des triceps à la poulie avec corde est un exercice populaire pour muscler l\'arrière des bras.',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/04/extension-verticale-triceps-poulie-basse-exercice-musculation.jpg',
+		description: "L'extension verticale des triceps à la poulie avec corde est un exercice populaire pour muscler l'arrière des bras.",
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2022/04/extension-verticale-triceps-poulie-basse-exercice-musculation.jpg',
 	},
 	{
 		name: 'Extension des Triceps au Dessus de la Tete avec Élastique',
@@ -1123,78 +1253,95 @@ const RAW_EXERCISES: {
 		name: 'Extension des Triceps en Planche',
 		muscleGroup: 'triceps',
 		description: 'A bodyweight triceps exercise requiring no equipment that delivers remarkable effectiveness for arm training.',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2023/07/extensions-triceps-planche-exercice-triceps-brachial-bras-sans-materiel.jpg',
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2023/07/extensions-triceps-planche-exercice-triceps-brachial-bras-sans-materiel.jpg',
 	},
 	{
 		name: 'Extensions Concentrées des Triceps à la Poulie',
 		muscleGroup: 'triceps',
-		description: 'Un exercice d\'isolation qui cible efficacement les" triceps via une poulie, permettant de travailler les bras de manière ciblée.',
+		description:
+			'Un exercice d\'isolation qui cible efficacement les" triceps via une poulie, permettant de travailler les bras de manière ciblée.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/06/extensions-concentres-des-triceps-poulie-exercice-muscu.jpg',
 	},
 	{
-		name: 'Extensions Verticales D\'un Bras avec Haltère',
+		name: "Extensions Verticales D'un Bras avec Haltère",
 		muscleGroup: 'triceps',
-		description: 'Cet exercice d\'isolation est parfait pour renforcer, développer et tonifier le triceps brachial, muscle situé à l\'arrière du bras.',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/09/extensions-verticales-dun-bras-avec-haltere-bodybuilding-triceps.jpg',
+		description:
+			"Cet exercice d'isolation est parfait pour renforcer, développer et tonifier le triceps brachial, muscle situé à l'arrière du bras.",
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2022/09/extensions-verticales-dun-bras-avec-haltere-bodybuilding-triceps.jpg',
 	},
 	{
 		name: 'Extensions Verticales à Deux Mains avec Haltère',
 		muscleGroup: 'triceps',
-		description: 'A two-arm dumbbell extension exercise performed in an inclined seated position that effectively targets the triceps muscles.',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/09/extensions-verticales-a-deux-mains-avec-haltere-exercice-triceps.jpg',
+		description:
+			'A two-arm dumbbell extension exercise performed in an inclined seated position that effectively targets the triceps muscles.',
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2022/09/extensions-verticales-a-deux-mains-avec-haltere-exercice-triceps.jpg',
 	},
 	{
 		name: 'Extensions Verticales à la Poulie Haute',
 		muscleGroup: 'triceps',
-		description: 'A highly popular triceps isolation movement performed at a cable machine that targets the triceps brachial muscle through vertical arm extensions.',
+		description:
+			'A highly popular triceps isolation movement performed at a cable machine that targets the triceps brachial muscle through vertical arm extensions.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/04/extension-triceps-poulie-haute-exercice-triceps-brachial.jpg',
 	},
 	{
 		name: 'Extensions des Triceps Assis avec Haltère',
 		muscleGroup: 'triceps',
-		description: 'A seated triceps exercise performed with a dumbbell that targets all three heads of the triceps muscle for arm development.',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/12/extensions-des-triceps-assis-avec-haltere-exercice-bras-enorme.jpg',
+		description:
+			'A seated triceps exercise performed with a dumbbell that targets all three heads of the triceps muscle for arm development.',
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2022/12/extensions-des-triceps-assis-avec-haltere-exercice-bras-enorme.jpg',
 	},
 	{
 		name: 'Extensions des Triceps Couché avec Haltères',
 		muscleGroup: 'triceps',
 		description: 'A popular strength training movement performed lying down that targets "the back of the arm" to develop tricep muscles.',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/12/extensions-triceps-couche-halteres-exercice-musculation-gros-bras.jpg',
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2022/12/extensions-triceps-couche-halteres-exercice-musculation-gros-bras.jpg',
 	},
 	{
 		name: 'Extensions des Triceps Décliné avec Haltères',
 		muscleGroup: 'triceps',
-		description: 'Un exercice d\'isolation très efficace" réalisé sur un banc décliné avec des haltères pour cibler spécifiquement les triceps.',
+		description:
+			'Un exercice d\'isolation très efficace" réalisé sur un banc décliné avec des haltères pour cibler spécifiquement les triceps.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/09/extensions-triceps-decline-halteres-gros-bras.jpg',
 	},
 	{
 		name: 'Extensions des Triceps Incliné avec Haltères',
 		muscleGroup: 'triceps',
-		description: 'An isolation movement performed on an inclined bench using dumbbells to effectively target and strengthen the triceps muscles.',
+		description:
+			'An isolation movement performed on an inclined bench using dumbbells to effectively target and strengthen the triceps muscles.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/09/extension-triceps-banc-incline-halteres-exercice-isolation.jpg',
 	},
 	{
 		name: 'Extensions des Triceps Incliné à la Poulie Basse',
 		muscleGroup: 'triceps',
-		description: 'An isolation exercise that targets all three heads of the triceps using a low cable pulley machine in an inclined position.',
+		description:
+			'An isolation exercise that targets all three heads of the triceps using a low cable pulley machine in an inclined position.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/01/extension-triceps-incline-poulie-basse-exercice-triceps.jpg',
 	},
 	{
 		name: 'Extensions des Triceps Incliné à la Smith Machine',
 		muscleGroup: 'triceps',
-		description: 'An isolation exercise performed on an inclined bench using a Smith Machine to target the triceps muscles, which comprise approximately two-thirds of arm mass.',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/11/extensions-triceps-incline-smith-machine-exercice-bodybuilding.jpg',
+		description:
+			'An isolation exercise performed on an inclined bench using a Smith Machine to target the triceps muscles, which comprise approximately two-thirds of arm mass.',
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2022/11/extensions-triceps-incline-smith-machine-exercice-bodybuilding.jpg',
 	},
 	{
 		name: 'Extensions des Triceps avec Sangles de Suspension',
 		muscleGroup: 'triceps',
 		description: 'This suspension strap exercise combines core strengthening with targeted tricep work for home training.',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/10/extensions-des-triceps-avec-sangles-de-suspension-muscul-maison.jpg',
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2022/10/extensions-des-triceps-avec-sangles-de-suspension-muscul-maison.jpg',
 	},
 	{
 		name: 'Extensions des Triceps à la Machine Technogym',
 		muscleGroup: 'triceps',
-		description: 'Un excellent exercice pour isoler le muscle triceps brachial" en utilisant une machine spécialisée pour cibler efficacement les triceps.',
+		description:
+			'Un excellent exercice pour isoler le muscle triceps brachial" en utilisant une machine spécialisée pour cibler efficacement les triceps.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/02/extension-triceps-machine-technogym-exercice-triceps.jpg',
 	},
 	{
@@ -1218,19 +1365,22 @@ const RAW_EXERCISES: {
 	{
 		name: 'Kickback Alterné Assis',
 		muscleGroup: 'triceps',
-		description: 'Le kickback alterné assis avec haltères est un fantastique exercice d\'isolation des triceps, efficace pour renforcer les trois chefs des triceps.',
+		description:
+			"Le kickback alterné assis avec haltères est un fantastique exercice d'isolation des triceps, efficace pour renforcer les trois chefs des triceps.",
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/09/kickback-alterne-assis-mouvement-entrainement-triceps.jpg',
 	},
 	{
 		name: 'Kickback Debout avec Haltères',
 		muscleGroup: 'triceps',
-		description: 'This standing dumbbell exercise effectively targets the triceps, though proper technique is essential to maximize benefits and avoid common mistakes.',
+		description:
+			'This standing dumbbell exercise effectively targets the triceps, though proper technique is essential to maximize benefits and avoid common mistakes.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/12/kickback-debout-avec-halteres-exercice-triceps-facile.jpg',
 	},
 	{
 		name: 'Tate Press à un Bras avec Haltère',
 		muscleGroup: 'triceps',
-		description: 'This unilateral isolation exercise targets principally the triceps muscles" and helps address muscular imbalances between the two arms.',
+		description:
+			'This unilateral isolation exercise targets principally the triceps muscles" and helps address muscular imbalances between the two arms.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/01/tate-press-exercice-triceps.jpg',
 	},
 
@@ -1238,31 +1388,36 @@ const RAW_EXERCISES: {
 	{
 		name: 'AB Coaster',
 		muscleGroup: 'abdominaux',
-		description: 'The AB Coaster is "un appareil révolutionnaire pour les abdominaux" designed to effectively target and strengthen the abdominal muscles.',
+		description:
+			'The AB Coaster is "un appareil révolutionnaire pour les abdominaux" designed to effectively target and strengthen the abdominal muscles.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/04/ab-coaster-abdominaux-exercice-musculation.jpg',
 	},
 	{
 		name: 'Bear Plank avec Kickback',
 		muscleGroup: 'abdominaux',
-		description: 'A comprehensive exercise that simultaneously targets the abdominal muscles and glutes through a plank position combined with leg extension movements.',
+		description:
+			'A comprehensive exercise that simultaneously targets the abdominal muscles and glutes through a plank position combined with leg extension movements.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/11/bear-plank-avec-kickback-exercice-abdos-fessiers.jpg',
 	},
 	{
 		name: 'Cercles Jambes Tendues',
 		muscleGroup: 'abdominaux',
-		description: 'A dynamic core stabilization exercise that targets the abdominal muscles and obliques while also engaging the leg muscles.',
+		description:
+			'A dynamic core stabilization exercise that targets the abdominal muscles and obliques while also engaging the leg muscles.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/11/cercles-jambes-tendues-exercice-sans-materiel-abdos-obliques.jpg',
 	},
 	{
 		name: 'Cocon',
 		muscleGroup: 'abdominaux',
-		description: 'An excellent bodyweight exercise for strengthening the abdominal muscles" that can be performed using only your body weight.',
+		description:
+			'An excellent bodyweight exercise for strengthening the abdominal muscles" that can be performed using only your body weight.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/04/cocon-abdominaux-exercice-muscul.jpg',
 	},
 	{
-		name: 'Crunch : L\'exercice pour Muscler ses Abdominaux',
+		name: "Crunch : L'exercice pour Muscler ses Abdominaux",
 		muscleGroup: 'abdominaux',
-		description: 'A fundamental abdominal movement that targets the rectus abdominis muscle and other core muscles to build visible ab definition.',
+		description:
+			'A fundamental abdominal movement that targets the rectus abdominis muscle and other core muscles to build visible ab definition.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2021/07/crunch-au-sol-abdominaux.jpg',
 	},
 	{
@@ -1281,12 +1436,14 @@ const RAW_EXERCISES: {
 		name: 'Crunch Papillon',
 		muscleGroup: 'abdominaux',
 		description: 'An excellent butterfly crunch variation for strengthening the abdominal muscles.',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/05/crunch-papillon-butterfly-sit-ups-renforcement-musculaire-abdos.jpg',
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2022/05/crunch-papillon-butterfly-sit-ups-renforcement-musculaire-abdos.jpg',
 	},
 	{
 		name: 'Crunch avec Jambes Verticales',
 		muscleGroup: 'abdominaux',
-		description: 'An excellent exercise for strengthening the abdominal muscles" that involves performing crunches with legs positioned vertically.',
+		description:
+			'An excellent exercise for strengthening the abdominal muscles" that involves performing crunches with legs positioned vertically.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/08/crunch-avec-jambes-verticales-exercice-abdos-beton.jpg',
 	},
 	{
@@ -1298,7 +1455,8 @@ const RAW_EXERCISES: {
 	{
 		name: 'Crunch sur Swiss Ball',
 		muscleGroup: 'abdominaux',
-		description: 'Les crunchs sont un excellent moyen de renforcer les abdominaux" en utilisant un Swiss ball pour améliorer l\'instabilité et l\'efficacité de l\'exercice.',
+		description:
+			"Les crunchs sont un excellent moyen de renforcer les abdominaux\" en utilisant un Swiss ball pour améliorer l'instabilité et l'efficacité de l'exercice.",
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2021/07/crunch-swiss-ball-abdominaux.jpg',
 	},
 	{
@@ -1310,25 +1468,30 @@ const RAW_EXERCISES: {
 	{
 		name: 'Crunch à la Poulie',
 		muscleGroup: 'abdominaux',
-		description: 'A machine-based core exercise that uses cable resistance to intensify abdominal muscle engagement compared to traditional bodyweight crunches.',
+		description:
+			'A machine-based core exercise that uses cable resistance to intensify abdominal muscle engagement compared to traditional bodyweight crunches.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2021/06/crunch-poulie-haute-abdominaux.jpg',
 	},
 	{
 		name: 'Crunch à la Poulie pour les Obliques',
 		muscleGroup: 'abdominaux',
-		description: 'Un exercice efficace pour travailler les obliques avec une résistance" en utilisant une machine à poulie, idéal pour affiner la taille.',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2023/07/crunch-a-la-poulie-pour-les-obliques-exercice-affiner-taille-fine.jpg',
+		description:
+			'Un exercice efficace pour travailler les obliques avec une résistance" en utilisant une machine à poulie, idéal pour affiner la taille.',
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2023/07/crunch-a-la-poulie-pour-les-obliques-exercice-affiner-taille-fine.jpg',
 	},
 	{
 		name: 'Dead Bug',
 		muscleGroup: 'abdominaux',
-		description: 'A core-strengthening abdominal exercise performed lying on your back with limbs extended, designed to build stability and control.',
+		description:
+			'A core-strengthening abdominal exercise performed lying on your back with limbs extended, designed to build stability and control.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/11/dead-bug-meilleur-exercice-abdos.jpg',
 	},
 	{
 		name: 'Dragon Flag',
 		muscleGroup: 'abdominaux',
-		description: 'An advanced core strengthening exercise that became famous through martial artist Bruce Lee, requiring significant abdominal endurance and stability.',
+		description:
+			'An advanced core strengthening exercise that became famous through martial artist Bruce Lee, requiring significant abdominal endurance and stability.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/07/dragon-flag-exercice-abdo-6-pack.jpg',
 	},
 	{
@@ -1340,8 +1503,10 @@ const RAW_EXERCISES: {
 	{
 		name: 'Flexions Latérales à la Poulie Basse',
 		muscleGroup: 'abdominaux',
-		description: 'This exercise targets the oblique muscles through lateral bending movements performed at a low cable machine, offering an alternative to traditional dumbbell variations.',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/04/flexions-laterales-poulie-basse-exercice-musculation-obliques.jpg',
+		description:
+			'This exercise targets the oblique muscles through lateral bending movements performed at a low cable machine, offering an alternative to traditional dumbbell variations.',
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2022/04/flexions-laterales-poulie-basse-exercice-musculation-obliques.jpg',
 	},
 	{
 		name: 'Flexions des Obliques au Banc à Lombaire à 45°',
@@ -1352,7 +1517,8 @@ const RAW_EXERCISES: {
 	{
 		name: 'Hollow Hold',
 		muscleGroup: 'abdominaux',
-		description: 'A core stabilization exercise where the body is held in a hollow position to strengthen abdominal muscles and improve overall body tension.',
+		description:
+			'A core stabilization exercise where the body is held in a hollow position to strengthen abdominal muscles and improve overall body tension.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/04/hollow-hold-exercice-gainer-abdominaux.jpg',
 	},
 	{
@@ -1364,7 +1530,8 @@ const RAW_EXERCISES: {
 	{
 		name: 'La Planche Latérale',
 		muscleGroup: 'abdominaux',
-		description: 'An excellent core-strengthening exercise that works the entire abdominal muscles, with particular emphasis on the oblique muscles.',
+		description:
+			'An excellent core-strengthening exercise that works the entire abdominal muscles, with particular emphasis on the oblique muscles.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/01/planche-laterale-exercice-abdos-obliques.jpg',
 	},
 	{
@@ -1376,7 +1543,8 @@ const RAW_EXERCISES: {
 	{
 		name: 'Mountain Climber',
 		muscleGroup: 'abdominaux',
-		description: 'an excellent exercise for improving core stability, cardiovascular endurance and agility" with primary focus on abdominal engagement.',
+		description:
+			'an excellent exercise for improving core stability, cardiovascular endurance and agility" with primary focus on abdominal engagement.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2021/06/mountain-climber-abdominaux.jpg',
 	},
 	{
@@ -1388,17 +1556,20 @@ const RAW_EXERCISES: {
 	{
 		name: 'Planche Latérale avec Rotation',
 		muscleGroup: 'abdominaux',
-		description: 'A dynamic core exercise that develops abdominal strength and stability while engaging the oblique muscles through rotation.',
+		description:
+			'A dynamic core exercise that develops abdominal strength and stability while engaging the oblique muscles through rotation.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/08/planche-laterale-avec-rotation-exercice-obliques-dynamique.jpg',
 	},
 	{
 		name: 'Planche avec Sangles de Suspension',
 		muscleGroup: 'abdominaux',
-		description: 'A challenging core stability variation using suspension straps that tests balance while strengthening the abdominal muscles through an isometric hold.',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/10/planche-avec-sangles-de-suspension-exercice-gainage-abdominaux.jpg',
+		description:
+			'A challenging core stability variation using suspension straps that tests balance while strengthening the abdominal muscles through an isometric hold.',
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2022/10/planche-avec-sangles-de-suspension-exercice-gainage-abdominaux.jpg',
 	},
 	{
-		name: 'Planche de L\'ours',
+		name: "Planche de L'ours",
 		muscleGroup: 'abdominaux',
 		description: 'An isometric core conditioning movement performed in an inverted position that targets abdominal muscles and stability.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/04/gainage-ours-bear-plan-gainer-abdos.jpg',
@@ -1448,7 +1619,8 @@ const RAW_EXERCISES: {
 	{
 		name: 'Rotations Russes',
 		muscleGroup: 'abdominaux',
-		description: 'A highly effective abdominal exercise that targets the external and internal oblique muscles responsible for torso rotation.',
+		description:
+			'A highly effective abdominal exercise that targets the external and internal oblique muscles responsible for torso rotation.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/04/rotations-russes-obliques-exercice-muscu.jpg',
 	},
 	{
@@ -1472,7 +1644,7 @@ const RAW_EXERCISES: {
 	{
 		name: 'Roulage avec une Barre',
 		muscleGroup: 'abdominaux',
-		description: 'Un excellent exercice qui fait travailler l\'ensemble de la zone abdominale, y compris les muscles obliques',
+		description: "Un excellent exercice qui fait travailler l'ensemble de la zone abdominale, y compris les muscles obliques",
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/02/abdominaux-a-la-barre-exercice.jpg',
 	},
 	{
@@ -1491,12 +1663,14 @@ const RAW_EXERCISES: {
 		name: 'Sit Up avec Medicine Ball Contre Un Mur',
 		muscleGroup: 'abdominaux',
 		description: 'A CrossFit-popularized wall ball sit-up that targets core muscles through dynamic abdominal engagement.',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/09/sit-up-avec-medicine-ball-contre-un-mur-exercice-abdos-crossfit.jpg',
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2022/09/sit-up-avec-medicine-ball-contre-un-mur-exercice-abdos-crossfit.jpg',
 	},
 	{
 		name: 'Sit-up Décliné',
 		muscleGroup: 'abdominaux',
-		description: 'A challenging abdominal exercise variant performed on an inclined bench that intensifies the traditional sit-up by increasing resistance and difficulty.',
+		description:
+			'A challenging abdominal exercise variant performed on an inclined bench that intensifies the traditional sit-up by increasing resistance and difficulty.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2021/11/crunch-decline-exercice-abdominaux.jpg',
 	},
 	{
@@ -1520,7 +1694,7 @@ const RAW_EXERCISES: {
 	{
 		name: 'Zercher Carry',
 		muscleGroup: 'abdominaux',
-		description: 'A strongman-style farmer\'s walk variation where weight is carried in the crook of the arms for full-body engagement.',
+		description: "A strongman-style farmer's walk variation where weight is carried in the crook of the arms for full-body engagement.",
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/06/zercher-carry-exercice-corps-entier.jpg',
 	},
 
@@ -1534,13 +1708,15 @@ const RAW_EXERCISES: {
 	{
 		name: 'Belt Squat',
 		muscleGroup: 'quadriceps',
-		description: 'A lower body machine exercise that distributes the load at hip level rather than on the shoulders for safer squat training.',
+		description:
+			'A lower body machine exercise that distributes the load at hip level rather than on the shoulders for safer squat training.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/06/belt-squat-exercice-jambes-musculation.jpg',
 	},
 	{
 		name: 'Fentes Inversées avec Landmine',
 		muscleGroup: 'quadriceps',
-		description: 'This variation of reverse lunges utilizes a landmine apparatus to target the leg muscles, offering an effective lower body strengthening movement that engages the quadriceps and supporting musculature.',
+		description:
+			'This variation of reverse lunges utilizes a landmine apparatus to target the leg muscles, offering an effective lower body strengthening movement that engages the quadriceps and supporting musculature.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/04/fentes-arriere-landmine-exercice-musculation-jambes.jpg',
 	},
 	{
@@ -1564,7 +1740,8 @@ const RAW_EXERCISES: {
 	{
 		name: 'Overhead Squat avec Haltères',
 		muscleGroup: 'quadriceps',
-		description: 'This demanding lower-body movement requires lifters to "hold dumbbells over your head" while performing a squat, combining mobility, stability, and leg strength in a single compound exercise.',
+		description:
+			'This demanding lower-body movement requires lifters to "hold dumbbells over your head" while performing a squat, combining mobility, stability, and leg strength in a single compound exercise.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/05/overhead-squat-halteres-exercice-jambes.jpg',
 	},
 	{
@@ -1588,25 +1765,30 @@ const RAW_EXERCISES: {
 	{
 		name: 'Safety Bar Squat',
 		muscleGroup: 'quadriceps',
-		description: 'The safety bar squat is "an alternative to the back squat" that strengthens the leg muscles, particularly the quadriceps.',
+		description:
+			'The safety bar squat is "an alternative to the back squat" that strengthens the leg muscles, particularly the quadriceps.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/07/safety-bar-squat-exercice-jambes-muscu.jpg',
 	},
 	{
 		name: 'Sissy Squat Sans Machine',
 		muscleGroup: 'quadriceps',
-		description: 'The sissy squat is "a squat variant that can be performed using body weight alone without equipment," making it an accessible option for targeting the quadriceps muscles.',
+		description:
+			'The sissy squat is "a squat variant that can be performed using body weight alone without equipment," making it an accessible option for targeting the quadriceps muscles.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/02/sissy-squat-exercice-quadriceps.jpg',
 	},
 	{
 		name: 'Split Squat avec Élastique',
 		muscleGroup: 'quadriceps',
-		description: 'A resistance band split squat that uniquely overloads the upper portion of the movement for effective home-based leg training.',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/08/split-squat-avec-elastique-exercice-quadriceps-musculation-maison.jpg',
+		description:
+			'A resistance band split squat that uniquely overloads the upper portion of the movement for effective home-based leg training.',
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2022/08/split-squat-avec-elastique-exercice-quadriceps-musculation-maison.jpg',
 	},
 	{
 		name: 'Squat Avant avec Double Kettlebell',
 		muscleGroup: 'quadriceps',
-		description: 'A front squat performed with two kettlebells held at chest level to strengthen the leg muscles, particularly the quadriceps.',
+		description:
+			'A front squat performed with two kettlebells held at chest level to strengthen the leg muscles, particularly the quadriceps.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2021/12/front-squat-kettlebell-exercice-quadriceps.jpg',
 	},
 	{
@@ -1618,7 +1800,8 @@ const RAW_EXERCISES: {
 	{
 		name: 'Squat a la Smith Machine',
 		muscleGroup: 'quadriceps',
-		description: 'A Smith machine squat variation that targets leg muscles with particular emphasis on quadriceps development through guided barbell movement.',
+		description:
+			'A Smith machine squat variation that targets leg muscles with particular emphasis on quadriceps development through guided barbell movement.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/04/squat-smith-machine-exercice-musculation-quadriceps.jpg',
 	},
 	{
@@ -1636,7 +1819,8 @@ const RAW_EXERCISES: {
 	{
 		name: 'Squat sur Banc',
 		muscleGroup: 'quadriceps',
-		description: 'A squat variation where you lower your body until touching a bench behind you, helping develop proper depth control and quadriceps engagement.',
+		description:
+			'A squat variation where you lower your body until touching a bench behind you, helping develop proper depth control and quadriceps engagement.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2021/12/squat-sur-banc-exercice-quadriceps.jpg',
 	},
 
@@ -1650,8 +1834,10 @@ const RAW_EXERCISES: {
 	{
 		name: 'Extension de Jambe Unilatérale sur une Machine à Dips Assistés',
 		muscleGroup: 'fessiers',
-		description: 'Les extensions de jambe avec une machine à dips assistés sont comparables à une presse à une jambe et sont destinées à renforcer et à développer les muscles',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2021/12/extension-de-jambe-unilateral-machine-dips-assistes-exercice-jambe.jpg',
+		description:
+			'Les extensions de jambe avec une machine à dips assistés sont comparables à une presse à une jambe et sont destinées à renforcer et à développer les muscles',
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2021/12/extension-de-jambe-unilateral-machine-dips-assistes-exercice-jambe.jpg',
 	},
 	{
 		name: 'Extension de la Hanche à la Poulie Basse',
@@ -1662,13 +1848,15 @@ const RAW_EXERCISES: {
 	{
 		name: 'Fentes Avant avec Barre',
 		muscleGroup: 'fessiers',
-		description: 'A barbell leg exercise that "develop the quadriceps, the glutes and the hamstrings, increase functional strength" and enhance overall lower body performance.',
+		description:
+			'A barbell leg exercise that "develop the quadriceps, the glutes and the hamstrings, increase functional strength" and enhance overall lower body performance.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/12/fente-avant-barre-femme-exercice-musculation-jambes.jpg',
 	},
 	{
 		name: 'Fentes Avant avec Haltères',
 		muscleGroup: 'fessiers',
-		description: 'This dumbbell lunge exercise involves taking a large step forward while holding weights to strengthen the quadriceps and lower body muscles.',
+		description:
+			'This dumbbell lunge exercise involves taking a large step forward while holding weights to strengthen the quadriceps and lower body muscles.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2021/06/fentes-avant-quadriceps.jpg',
 	},
 	{
@@ -1680,13 +1868,16 @@ const RAW_EXERCISES: {
 	{
 		name: 'Fentes Croisées',
 		muscleGroup: 'fessiers',
-		description: 'A lower body strengthening exercise that targets the legs, particularly the quadriceps and glutes, performed without equipment.',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2023/08/fentes-croisees-exercice-musculation-quadriceps-fessiers-sans-materiel.jpg',
+		description:
+			'A lower body strengthening exercise that targets the legs, particularly the quadriceps and glutes, performed without equipment.',
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2023/08/fentes-croisees-exercice-musculation-quadriceps-fessiers-sans-materiel.jpg',
 	},
 	{
 		name: 'Fentes Marchées avec Sandbag',
 		muscleGroup: 'fessiers',
-		description: 'Un exercice de renforcement des jambes où l\'on effectue des fentes en marchant en tenant un sandbag sur les épaules pour augmenter la difficulté.',
+		description:
+			"Un exercice de renforcement des jambes où l'on effectue des fentes en marchant en tenant un sandbag sur les épaules pour augmenter la difficulté.",
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2025/11/fentes-marchees-avec-sandbag-cat.jpg',
 	},
 	{
@@ -1698,19 +1889,22 @@ const RAW_EXERCISES: {
 	{
 		name: 'Front Squat avec Haltères',
 		muscleGroup: 'fessiers',
-		description: 'An effective leg-strengthening movement using dumbbells that provides an accessible alternative for those without access to a barbell squat rack.',
+		description:
+			'An effective leg-strengthening movement using dumbbells that provides an accessible alternative for those without access to a barbell squat rack.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/10/front-squat-avec-halteres-exercice-musculation-jambes-maison.jpg',
 	},
 	{
 		name: 'GHD Hip Extensions Exercise',
 		muscleGroup: 'fessiers',
-		description: 'un exercice incroyable pour travailler les fessiers, mais aussi les ischio-jambiers" - an excellent movement targeting both glute and hamstring musculature using the Glute Ham Developer apparatus.',
+		description:
+			'un exercice incroyable pour travailler les fessiers, mais aussi les ischio-jambiers" - an excellent movement targeting both glute and hamstring musculature using the Glute Ham Developer apparatus.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/10/glute-ham-developer-ghd-exercice-fessier-ischio-jambiers.jpg',
 	},
 	{
 		name: 'Goblet Squat avec Haltère',
 		muscleGroup: 'fessiers',
-		description: 'A complete exercise that involves squatting while holding a free weight like a dumbbell or kettlebell" to target leg muscles effectively.',
+		description:
+			'A complete exercise that involves squatting while holding a free weight like a dumbbell or kettlebell" to target leg muscles effectively.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2000/06/squat-goblet-quadriceps.jpg',
 	},
 	{
@@ -1722,7 +1916,8 @@ const RAW_EXERCISES: {
 	{
 		name: 'Good Morning avec élastique',
 		muscleGroup: 'fessiers',
-		description: 'Un exercice de musculation utilisant une bande élastique pour "renforcer les ischio-jambiers et les fessiers" lors d\'une flexion avant du buste.',
+		description:
+			'Un exercice de musculation utilisant une bande élastique pour "renforcer les ischio-jambiers et les fessiers" lors d\'une flexion avant du buste.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/01/good-morning-avec-elastique-exercice-fessiers.jpg',
 	},
 	{
@@ -1734,13 +1929,15 @@ const RAW_EXERCISES: {
 	{
 		name: 'Hack Squat Assis',
 		muscleGroup: 'fessiers',
-		description: 'A machine-based leg exercise performed on a Hammer Strength apparatus that primarily targets the quadriceps while secondarily engaging other lower body muscles.',
+		description:
+			'A machine-based leg exercise performed on a Hammer Strength apparatus that primarily targets the quadriceps while secondarily engaging other lower body muscles.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2023/08/hack-squat-assis-exercice-muscul-jambes-machine.jpg',
 	},
 	{
 		name: 'Hack Squat Inversé',
 		muscleGroup: 'fessiers',
-		description: 'The reverse hack squat is "un exercice qui est devenu populaire auprès de nombreux amateurs de fitness ces dernières années" for targeting leg muscle development.',
+		description:
+			'The reverse hack squat is "un exercice qui est devenu populaire auprès de nombreux amateurs de fitness ces dernières années" for targeting leg muscle development.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/02/hack-squat-inverse-se-muscler-quadriceps.jpg',
 	},
 	{
@@ -1759,7 +1956,8 @@ const RAW_EXERCISES: {
 		name: 'Hip Thrust avec Sangles de Suspension',
 		muscleGroup: 'fessiers',
 		description: 'A challenging hip thrust variation using suspension straps that effectively works the glutes.',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/10/hip-thrust-avec-sangles-de-suspension-exercice-fessier-maison.jpg',
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2022/10/hip-thrust-avec-sangles-de-suspension-exercice-fessier-maison.jpg',
 	},
 	{
 		name: 'Hip Thrust à la Machine',
@@ -1770,13 +1968,15 @@ const RAW_EXERCISES: {
 	{
 		name: 'Hip Thrust à la Smith Machine',
 		muscleGroup: 'fessiers',
-		description: 'Le hip thrust à la Smith Machine est considéré par beaucoup comme le roi de tous les exercices de renforcement des fessiers.',
+		description:
+			'Le hip thrust à la Smith Machine est considéré par beaucoup comme le roi de tous les exercices de renforcement des fessiers.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/08/hip-thrust-a-la-smith-machine-exercice-fessier-bombe.jpg',
 	},
 	{
 		name: 'Hip Thrusts à Genoux avec élastique',
 		muscleGroup: 'fessiers',
-		description: 'A kneeling glute exercise using a resistance band that employs "almost the same biomechanics" as the traditional lying hip thrust variation.',
+		description:
+			'A kneeling glute exercise using a resistance band that employs "almost the same biomechanics" as the traditional lying hip thrust variation.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/09/hip-thrusts-a-genoux-avec-elastique-fesse-ronde.jpg',
 	},
 	{
@@ -1800,7 +2000,8 @@ const RAW_EXERCISES: {
 	{
 		name: 'Marche avec élastique',
 		muscleGroup: 'fessiers',
-		description: 'Un exercice destiné à renforcer et à développer les fessiers" (a resistance band walking exercise that strengthens and develops the glute muscles, particularly the gluteus medius).',
+		description:
+			'Un exercice destiné à renforcer et à développer les fessiers" (a resistance band walking exercise that strengthens and develops the glute muscles, particularly the gluteus medius).',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/08/marche-avec-elastique-exercice-jambes-fines.jpg',
 	},
 	{
@@ -1812,13 +2013,16 @@ const RAW_EXERCISES: {
 	{
 		name: 'Montées sur Banc Latérales avec Barre',
 		muscleGroup: 'fessiers',
-		description: 'This barbell exercise targets leg strength and muscle development through lateral stepping movements performed on a bench.',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2023/07/montees-sur-banc-laterales-avec-barre-barbell-bench-lateral-step-up-exercice-jambes.jpg',
+		description:
+			'This barbell exercise targets leg strength and muscle development through lateral stepping movements performed on a bench.',
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2023/07/montees-sur-banc-laterales-avec-barre-barbell-bench-lateral-step-up-exercice-jambes.jpg',
 	},
 	{
 		name: 'Montées sur Banc Latérales avec Haltères',
 		muscleGroup: 'fessiers',
-		description: 'A lateral bench stepping exercise performed with dumbbells that targets the quadriceps and glutes through side-stepping movements onto an elevated surface.',
+		description:
+			'A lateral bench stepping exercise performed with dumbbells that targets the quadriceps and glutes through side-stepping movements onto an elevated surface.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/12/montees-sur-banc-lateral-avec-halteres-exercice-jambes-femme.jpg',
 	},
 	{
@@ -1836,8 +2040,10 @@ const RAW_EXERCISES: {
 	{
 		name: 'Presse à Cuisse sur le Côté',
 		muscleGroup: 'fessiers',
-		description: 'A single-leg variant of the traditional leg press that targets the thighs and glutes with emphasis on one side at a time.',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2023/08/presse-a-cuisse-sur-le-cote-exercice-musculation-cuisses-femme.jpg',
+		description:
+			'A single-leg variant of the traditional leg press that targets the thighs and glutes with emphasis on one side at a time.',
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2023/08/presse-a-cuisse-sur-le-cote-exercice-musculation-cuisses-femme.jpg',
 	},
 	{
 		name: 'Presse à Cuisses Verticale',
@@ -1872,14 +2078,16 @@ const RAW_EXERCISES: {
 	{
 		name: 'Sled Push',
 		muscleGroup: 'fessiers',
-		description: 'A conditioning exercise that involves "déplacer un traîneau chargé" (pushing a loaded sled) to build lower body strength and power.',
+		description:
+			'A conditioning exercise that involves "déplacer un traîneau chargé" (pushing a loaded sled) to build lower body strength and power.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2025/11/sled-push-hyrox-cat.jpg',
 	},
 	{
 		name: 'Souleve de Terre Valise a Un Bras',
 		muscleGroup: 'fessiers',
 		description: 'A one-armed deadlift variation that engages both upper and lower body muscle groups as a compound movement.',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/10/souleve-de-terre-valise-a-un-bras-exercice-kettlebell-full-body.jpg',
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2022/10/souleve-de-terre-valise-a-un-bras-exercice-kettlebell-full-body.jpg',
 	},
 	{
 		name: 'Souleve de Terre avec Élastique',
@@ -1890,25 +2098,30 @@ const RAW_EXERCISES: {
 	{
 		name: 'Soulevé de Terre Roumain',
 		muscleGroup: 'fessiers',
-		description: 'Un exercice populaire et efficace pour la chaîne postérieure" ciblant particulièrement les ischio-jambiers et les fessiers.',
+		description:
+			'Un exercice populaire et efficace pour la chaîne postérieure" ciblant particulièrement les ischio-jambiers et les fessiers.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/04/souleve-de-terre-roumain-exercice-ischio-jambier.jpg',
 	},
 	{
 		name: 'Soulevé de Terre Roumain avec Kettlebell',
 		muscleGroup: 'fessiers',
-		description: 'A kettlebell variation of the Romanian deadlift that targets the posterior chain muscles including the hamstrings and glutes.',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2021/12/souleve-de-terre-roumain-kettlebell-exercice-chaine-posterieure.jpg',
+		description:
+			'A kettlebell variation of the Romanian deadlift that targets the posterior chain muscles including the hamstrings and glutes.',
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2021/12/souleve-de-terre-roumain-kettlebell-exercice-chaine-posterieure.jpg',
 	},
 	{
 		name: 'Soulevé de Terre Roumain à la Landmine',
 		muscleGroup: 'fessiers',
-		description: 'A variation of the Romanian deadlift using a landmine apparatus that "targets principally the hamstring muscles" for enhanced posterior chain development.',
+		description:
+			'A variation of the Romanian deadlift using a landmine apparatus that "targets principally the hamstring muscles" for enhanced posterior chain development.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/01/souleve-de-terre-roumain-landmine-exercice-ischio-jambiers.jpg',
 	},
 	{
 		name: 'Soulevé de Terre Sumo avec Kettlebell',
 		muscleGroup: 'fessiers',
-		description: 'A kettlebell variation of the sumo deadlift that targets the hamstrings, glutes, and quadriceps through a wider stance positioning.',
+		description:
+			'A kettlebell variation of the sumo deadlift that targets the hamstrings, glutes, and quadriceps through a wider stance positioning.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2021/12/souleve-de-terre-sumo-kettlebell-exercice-jambes.jpg',
 	},
 	{
@@ -1926,7 +2139,8 @@ const RAW_EXERCISES: {
 	{
 		name: 'Squat Bulgare avec Haltères',
 		muscleGroup: 'fessiers',
-		description: 'A single-leg squat variation where the back foot rests on an elevated platform while holding dumbbells for added resistance.',
+		description:
+			'A single-leg squat variation where the back foot rests on an elevated platform while holding dumbbells for added resistance.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2021/06/squat-bulgare-halteres-quadriceps.jpg',
 	},
 	{
@@ -1938,31 +2152,36 @@ const RAW_EXERCISES: {
 	{
 		name: 'Squat Goblet avec Kettlebell',
 		muscleGroup: 'fessiers',
-		description: 'Une variante du squat goblet" utilisant une kettlebell pour renforcer les muscles des jambes, notamment les quadriceps, ischio-jambiers et fessiers.',
+		description:
+			'Une variante du squat goblet" utilisant une kettlebell pour renforcer les muscles des jambes, notamment les quadriceps, ischio-jambiers et fessiers.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2021/12/squat-goblet-kettlebell-exercice-jambes.jpg',
 	},
 	{
 		name: 'Squat Sauté',
 		muscleGroup: 'fessiers',
-		description: 'Un exercice de musculation explosif qui sollicite les jambes en combinant flexion et saut pour renforcer les quadriceps et les fessiers.',
+		description:
+			'Un exercice de musculation explosif qui sollicite les jambes en combinant flexion et saut pour renforcer les quadriceps et les fessiers.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/04/squat-saute-exercice-musculation-jambes-jump-squat.jpg',
 	},
 	{
 		name: 'Squat Sumo avec Haltère',
 		muscleGroup: 'fessiers',
-		description: 'An effective lower-body exercise targeting the legs, glutes, and hamstrings using a single dumbbell held at chest level with a wide stance.',
+		description:
+			'An effective lower-body exercise targeting the legs, glutes, and hamstrings using a single dumbbell held at chest level with a wide stance.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/12/squat-sumo-avec-haltere-exercice-jambe-debutant-femme.jpg',
 	},
 	{
 		name: 'Squat Sumo à la Landmine',
 		muscleGroup: 'fessiers',
-		description: 'A lower-body exercise performed with feet positioned wider than shoulder-width while holding a landmine bar, targeting the glutes, hamstrings, and quadriceps.',
+		description:
+			'A lower-body exercise performed with feet positioned wider than shoulder-width while holding a landmine bar, targeting the glutes, hamstrings, and quadriceps.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/04/souleve-de-terre-sumo-landmine-exercice-ischio-jambiers.jpg',
 	},
 	{
 		name: 'Squat avec Landmine',
 		muscleGroup: 'fessiers',
-		description: 'A front squat variation where the barbell is anchored to the ground via a landmine attachment, making it accessible for beginners and those seeking joint-friendly leg training.',
+		description:
+			'A front squat variation where the barbell is anchored to the ground via a landmine attachment, making it accessible for beginners and those seeking joint-friendly leg training.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/01/squat-landmine-exercice-jambe.jpg',
 	},
 	{
@@ -1974,7 +2193,8 @@ const RAW_EXERCISES: {
 	{
 		name: 'Zercher Deadlift',
 		muscleGroup: 'fessiers',
-		description: 'An unconventional and extremely challenging deadlift variation where the barbell is held in the crooks of the elbows rather than in the hands.',
+		description:
+			'An unconventional and extremely challenging deadlift variation where the barbell is held in the crooks of the elbows rather than in the hands.',
 		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/05/zercher-deadlift-souleve-de-terre.jpg',
 	},
 	{
@@ -2025,13 +2245,15 @@ const RAW_EXERCISES: {
 		name: 'Nordic Curl',
 		muscleGroup: 'ischio_jambiers',
 		description: 'One of the most difficult but most effective bodyweight exercises to target and strengthen the hamstrings.',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/09/nordic-hamstring-curl-avec-elastique-exercice-ischio-jambiers.jpg',
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2022/09/nordic-hamstring-curl-avec-elastique-exercice-ischio-jambiers.jpg',
 	},
 	{
 		name: 'Souleve de Terre Jambes Tendues',
 		muscleGroup: 'ischio_jambiers',
 		description: 'A barbell deadlift variant performed with straight legs that primarily targets the hamstring muscles.',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/04/souleve-de-terre-jambes-tendues-exercice-musculation-ischio-jambiers.jpg',
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2022/04/souleve-de-terre-jambes-tendues-exercice-musculation-ischio-jambiers.jpg',
 	},
 	{
 		name: 'Souleve de Terre Roumain Unilatéral',
@@ -2068,8 +2290,10 @@ const RAW_EXERCISES: {
 	{
 		name: 'Extensions des Mollets Assis a la Smith Machine',
 		muscleGroup: 'mollets',
-		description: 'A seated calf raise performed on a Smith machine that provides excellent stretching in the lower position for greater range of motion.',
-		imageUrl: 'https://www.docteur-fitness.com/wp-content/uploads/2022/08/extension-mollets-assis-machine-smith-exercice-muscle-jumeaux.jpg',
+		description:
+			'A seated calf raise performed on a Smith machine that provides excellent stretching in the lower position for greater range of motion.',
+		imageUrl:
+			'https://www.docteur-fitness.com/wp-content/uploads/2022/08/extension-mollets-assis-machine-smith-exercice-muscle-jumeaux.jpg',
 	},
 	{
 		name: 'Extensions des Mollets Assis avec Barre',

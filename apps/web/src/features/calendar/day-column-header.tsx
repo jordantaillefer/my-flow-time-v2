@@ -1,12 +1,7 @@
 import { Eraser, MoreHorizontal, Plus } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
-import {
-	DropdownMenu,
-	DropdownMenuContent,
-	DropdownMenuItem,
-	DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import { formatDayHeader, isToday } from '@/lib/calendar';
 import { trpc } from '@/lib/trpc';
 import { cn } from '@/lib/utils';
@@ -47,8 +42,7 @@ export function DayColumnHeader({ date, day }: DayColumnHeaderProps) {
 					<span
 						className={cn(
 							'text-sm font-semibold',
-							today &&
-								'bg-primary text-primary-foreground inline-flex h-6 w-6 items-center justify-center rounded-full',
+							today && 'bg-primary text-primary-foreground inline-flex h-6 w-6 items-center justify-center rounded-full',
 						)}
 					>
 						{dayNumber}
@@ -92,10 +86,7 @@ export function DayColumnHeader({ date, day }: DayColumnHeaderProps) {
 					className="inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-medium"
 					style={{ backgroundColor: day.template.color + '20', color: day.template.color }}
 				>
-					<span
-						className="inline-block h-1.5 w-1.5 rounded-full"
-						style={{ backgroundColor: day.template.color }}
-					/>
+					<span className="inline-block h-1.5 w-1.5 rounded-full" style={{ backgroundColor: day.template.color }} />
 					{day.template.name}
 				</span>
 			)}

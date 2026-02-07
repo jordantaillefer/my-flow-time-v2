@@ -90,10 +90,7 @@ export function SlotFormDialog({ trigger, defaultValues, onSubmit, title }: Slot
 												<SelectGroup key={cat.id}>
 													<SelectLabel>
 														<span className="flex items-center gap-1.5">
-															<span
-																className="inline-block h-2 w-2 rounded-full"
-																style={{ backgroundColor: cat.color }}
-															/>
+															<span className="inline-block h-2 w-2 rounded-full" style={{ backgroundColor: cat.color }} />
 															{cat.name}
 														</span>
 													</SelectLabel>

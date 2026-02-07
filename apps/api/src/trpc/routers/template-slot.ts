@@ -52,21 +52,17 @@ export const templateSlotRouter = router({
 		}),
 
 	delete: authedProcedure.input(z.object({ id: z.string() })).mutation(async ({ ctx, input }) => {
-		await ctx.db
-			.delete(templateSlot)
-			.where(and(eq(templateSlot.id, input.id), eq(templateSlot.userId, ctx.session.user.id)));
+		await ctx.db.delete(templateSlot).where(and(eq(templateSlot.id, input.id), eq(templateSlot.userId, ctx.session.user.id)));
 	}),
 
-	reorder: authedProcedure
-		.input(z.array(z.object({ id: z.string(), order: z.number().int() })))
-		.mutation(async ({ ctx, input }) => {
-			await Promise.all(
-				input.map((item) =>
-					ctx.db
-						.update(templateSlot)
-						.set({ order: item.order })
-						.where(and(eq(templateSlot.id, item.id), eq(templateSlot.userId, ctx.session.user.id))),
-				),
-			);
-		}),
+	reorder: authedProcedure.input(z.array(z.object({ id: z.string(), order: z.number().int() }))).mutation(async ({ ctx, input }) => {
+		await Promise.all(
+			input.map((item) =>
+				ctx.db
+					.update(templateSlot)
+					.set({ order: item.order })
+					.where(and(eq(templateSlot.id, item.id), eq(templateSlot.userId, ctx.session.user.id))),
+			),
+		);
+	}),
 });

@@ -9,20 +9,20 @@ L'objectif est de structurer ses journees, les executer via des modules interact
 
 ## Stack technique
 
-| Couche | Techno |
-|--------|--------|
-| Monorepo | pnpm workspaces |
-| Frontend | React 19 + Vite + shadcn/ui + Tailwind |
-| API layer | tRPC (end-to-end type-safe) + TanStack Query |
-| Backend | Hono sur Cloudflare Workers |
-| Database | Cloudflare D1 (SQLite) + Drizzle ORM |
-| Auth | Better Auth (multi-utilisateur) |
-| Formulaires | React Hook Form + Zod (validation) |
-| Tableaux | TanStack Table |
-| Routing | TanStack Router |
-| Shared | Package partage pour les types + schemas Zod |
-| Tests | Vitest |
-| PWA | vite-plugin-pwa + Workbox (offline-first) |
+| Couche      | Techno                                       |
+| ----------- | -------------------------------------------- |
+| Monorepo    | pnpm workspaces                              |
+| Frontend    | React 19 + Vite + shadcn/ui + Tailwind       |
+| API layer   | tRPC (end-to-end type-safe) + TanStack Query |
+| Backend     | Hono sur Cloudflare Workers                  |
+| Database    | Cloudflare D1 (SQLite) + Drizzle ORM         |
+| Auth        | Better Auth (multi-utilisateur)              |
+| Formulaires | React Hook Form + Zod (validation)           |
+| Tableaux    | TanStack Table                               |
+| Routing     | TanStack Router                              |
+| Shared      | Package partage pour les types + schemas Zod |
+| Tests       | Vitest                                       |
+| PWA         | vite-plugin-pwa + Workbox (offline-first)    |
 
 Base de code initiale : projet `billable`.
 
@@ -104,14 +104,15 @@ Base de code initiale : projet `billable`.
 - [x] Page de consultation : liste filtrable par groupe, barre de recherche
 - [x] Composant `ExerciseCard` reutilisable (utilise dans le planificateur et l'historique)
 
-## Phase 7 - Module Musculation : Planificateur de seance
+## Phase 7 - Module Musculation : Planificateur de seance ✅
 
-- [ ] Schema DB : table `workout_plan` (FK planned_slot) + table `workout_plan_exercise` (FK exercise, ordre, series_prevues, reps_prevues, poids_prevu, repos_prevu_secondes)
-- [ ] API CRUD plan de seance
-- [ ] UI : depuis un creneau Musculation dans le calendrier, construire sa seance
-- [ ] Ajout d'exercices depuis la base (recherche + selection rapide)
-- [ ] Reordonner les exercices (drag & drop)
-- [ ] Previsualisation de la seance planifiee
+- [x] Schema DB : table `workout_plan` (name, userId) + table `workout_plan_exercise` (FK exercise, order, plannedSets, plannedReps, plannedWeight, plannedRestSeconds, FK workout_plan, userId) + FK `workoutPlanId` nullable sur `planned_slot`
+- [x] API CRUD : workoutPlanRouter (list/getById/create/update/delete) + workoutPlanExerciseRouter (add/update/remove/reorder) + workoutPlanId sur plannedSlot create/update
+- [x] Page `/workouts` : liste des plans en cards (nom, nb exercices), creation/renommage/suppression
+- [x] Page `/workouts/$planId` : editeur de plan avec ajout d'exercices (picker avec recherche + filtres), configuration series/reps/poids/repos, drag & drop pour reordonner (@dnd-kit)
+- [x] Association creneau-plan : select conditionnel "Plan de seance" dans le formulaire de creneau quand moduleType === 'workout'
+- [x] Module workout dans la vue Aujourd'hui : affiche le resume du plan associe (liste exercices, series/reps/poids) ou lien vers /workouts
+- [x] Navigation : lien "Seances" ajoute dans la sidebar/bottom nav
 
 ## Phase 8 - Module Musculation : Execution de seance
 

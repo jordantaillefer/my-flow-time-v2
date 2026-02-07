@@ -24,10 +24,7 @@ export function GenericSlotDetail({ slot, currentMinutes }: ModuleProps) {
 
 			{/* Categorie / Sous-categorie */}
 			<div className="flex items-center gap-2">
-				<span
-					className="inline-block h-3 w-3 rounded-full"
-					style={{ backgroundColor: slot.subcategory.category.color }}
-				/>
+				<span className="inline-block h-3 w-3 rounded-full" style={{ backgroundColor: slot.subcategory.category.color }} />
 				<span className="text-muted-foreground text-sm">{slot.subcategory.category.name}</span>
 				<span className="text-muted-foreground text-sm">/</span>
 				<span className="text-sm font-medium">{slot.subcategory.name}</span>
@@ -41,10 +38,7 @@ export function GenericSlotDetail({ slot, currentMinutes }: ModuleProps) {
 						<span className="font-mono font-medium">{Math.round(progress)}%</span>
 					</div>
 					<div className="bg-secondary h-2 overflow-hidden rounded-full">
-						<div
-							className="bg-primary h-full rounded-full transition-all duration-500"
-							style={{ width: `${progress}%` }}
-						/>
+						<div className="bg-primary h-full rounded-full transition-all duration-500" style={{ width: `${progress}%` }} />
 					</div>
 				</div>
 			)}

@@ -97,9 +97,7 @@ export function AuthPage({ initialMode = 'login' }: { initialMode?: AuthMode }) 
 								onClick={() => switchMode('login')}
 								className={cn(
 									'flex-1 rounded-md py-2 text-sm font-medium transition-all',
-									mode === 'login'
-										? 'bg-white/[0.08] text-white shadow-sm'
-										: 'text-white/50 hover:text-white/70',
+									mode === 'login' ? 'bg-white/[0.08] text-white shadow-sm' : 'text-white/50 hover:text-white/70',
 								)}
 							>
 								Connexion
@@ -109,9 +107,7 @@ export function AuthPage({ initialMode = 'login' }: { initialMode?: AuthMode }) 
 								onClick={() => switchMode('signup')}
 								className={cn(
 									'flex-1 rounded-md py-2 text-sm font-medium transition-all',
-									mode === 'signup'
-										? 'bg-white/[0.08] text-white shadow-sm'
-										: 'text-white/50 hover:text-white/70',
+									mode === 'signup' ? 'bg-white/[0.08] text-white shadow-sm' : 'text-white/50 hover:text-white/70',
 								)}
 							>
 								Inscription
@@ -120,21 +116,11 @@ export function AuthPage({ initialMode = 'login' }: { initialMode?: AuthMode }) 
 
 						{/* Social login */}
 						<div className="mb-6 flex gap-3">
-							<Button
-								type="button"
-								variant="outline"
-								className="flex-1 border-white/[0.08] bg-white/[0.02] hover:bg-white/[0.06]"
-								disabled
-							>
+							<Button type="button" variant="outline" className="flex-1 border-white/[0.08] bg-white/[0.02] hover:bg-white/[0.06]" disabled>
 								<Github className="h-4 w-4" />
 								GitHub
 							</Button>
-							<Button
-								type="button"
-								variant="outline"
-								className="flex-1 border-white/[0.08] bg-white/[0.02] hover:bg-white/[0.06]"
-								disabled
-							>
+							<Button type="button" variant="outline" className="flex-1 border-white/[0.08] bg-white/[0.02] hover:bg-white/[0.06]" disabled>
 								<svg className="h-4 w-4" viewBox="0 0 24 24">
 									<path
 										fill="currentColor"
@@ -168,11 +154,7 @@ export function AuthPage({ initialMode = 'login' }: { initialMode?: AuthMode }) 
 						</div>
 
 						{/* Error message */}
-						{error && (
-							<div className="mb-4 rounded-lg border border-red-500/20 bg-red-500/10 px-4 py-3 text-sm text-red-400">
-								{error}
-							</div>
-						)}
+						{error && <div className="mb-4 rounded-lg border border-red-500/20 bg-red-500/10 px-4 py-3 text-sm text-red-400">{error}</div>}
 
 						{/* Login form */}
 						{mode === 'login' && (
@@ -325,7 +307,7 @@ export function AuthPage({ initialMode = 'login' }: { initialMode?: AuthMode }) 
 										className="h-11 w-full bg-gradient-to-r from-violet-600 to-indigo-600 font-medium text-white shadow-lg shadow-violet-500/25 transition-all hover:shadow-violet-500/40 hover:brightness-110 active:scale-[0.98]"
 										disabled={isSubmitting}
 									>
-										{isSubmitting ? <Loader2 className="h-4 w-4 animate-spin" /> : "Creer un compte"}
+										{isSubmitting ? <Loader2 className="h-4 w-4 animate-spin" /> : 'Creer un compte'}
 									</Button>
 								</form>
 							</Form>

@@ -47,9 +47,7 @@ export function WorkoutPlanList() {
 				/>
 			</div>
 
-			{plans.length === 0 && (
-				<p className="text-muted-foreground py-8 text-center text-sm">Aucun plan de seance.</p>
-			)}
+			{plans.length === 0 && <p className="text-muted-foreground py-8 text-center text-sm">Aucun plan de seance.</p>}
 
 			<div className="grid gap-4 sm:grid-cols-2">
 				{plans.map((plan) => (
@@ -72,12 +70,7 @@ export function WorkoutPlanList() {
 										await updatePlan.mutateAsync({ id: plan.id, ...values });
 									}}
 								/>
-								<Button
-									variant="ghost"
-									size="icon"
-									className="text-destructive h-8 w-8"
-									onClick={() => deletePlan.mutate({ id: plan.id })}
-								>
+								<Button variant="ghost" size="icon" className="text-destructive h-8 w-8" onClick={() => deletePlan.mutate({ id: plan.id })}>
 									<Trash2 className="h-3.5 w-3.5" />
 								</Button>
 							</div>

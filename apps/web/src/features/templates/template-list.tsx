@@ -43,15 +43,11 @@ export function TemplateList() {
 				/>
 			</div>
 
-			{templates.length === 0 && (
-				<p className="text-muted-foreground py-8 text-center text-sm">Aucun template.</p>
-			)}
+			{templates.length === 0 && <p className="text-muted-foreground py-8 text-center text-sm">Aucun template.</p>}
 
 			<div className="grid gap-4 sm:grid-cols-2">
 				{templates.map((tpl) => {
-					const assignedDays = tpl.recurrences
-						.map((r) => DAYS_OF_WEEK.find((d) => d.value === r.dayOfWeek)?.short)
-						.filter(Boolean);
+					const assignedDays = tpl.recurrences.map((r) => DAYS_OF_WEEK.find((d) => d.value === r.dayOfWeek)?.short).filter(Boolean);
 
 					return (
 						<Card key={tpl.id}>

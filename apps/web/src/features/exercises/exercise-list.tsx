@@ -58,11 +58,7 @@ export function ExerciseList() {
 		if (!debouncedSearch.trim()) return exercises;
 
 		const q = debouncedSearch.toLowerCase();
-		return exercises.filter(
-			(ex) =>
-				ex.name.toLowerCase().includes(q) ||
-				ex.description.toLowerCase().includes(q),
-		);
+		return exercises.filter((ex) => ex.name.toLowerCase().includes(q) || ex.description.toLowerCase().includes(q));
 	}, [exercisesQuery.data, debouncedSearch]);
 
 	const hasActiveFilters = selectedGroup !== null || selectedEquipment !== null || search.trim() !== '';
@@ -85,12 +81,7 @@ export function ExerciseList() {
 			{/* Search bar */}
 			<div className="relative">
 				<Search className="text-muted-foreground absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2" />
-				<Input
-					placeholder="Rechercher un exercice..."
-					value={search}
-					onChange={(e) => setSearch(e.target.value)}
-					className="pl-9"
-				/>
+				<Input placeholder="Rechercher un exercice..." value={search} onChange={(e) => setSearch(e.target.value)} className="pl-9" />
 			</div>
 
 			{/* Muscle group filters */}
@@ -101,9 +92,7 @@ export function ExerciseList() {
 						onClick={() => setSelectedGroup(null)}
 						className={cn(
 							'shrink-0 rounded-full border px-3 py-1 text-xs font-medium transition-colors',
-							selectedGroup === null
-								? 'bg-primary text-primary-foreground border-primary'
-								: 'text-muted-foreground hover:text-foreground',
+							selectedGroup === null ? 'bg-primary text-primary-foreground border-primary' : 'text-muted-foreground hover:text-foreground',
 						)}
 					>
 						Tous les muscles
@@ -118,9 +107,7 @@ export function ExerciseList() {
 								onClick={() => setSelectedGroup(isActive ? null : group)}
 								className={cn(
 									'shrink-0 rounded-full border px-3 py-1 text-xs font-medium transition-colors',
-									isActive
-										? 'border-transparent text-white'
-										: 'text-muted-foreground hover:text-foreground',
+									isActive ? 'border-transparent text-white' : 'text-muted-foreground hover:text-foreground',
 								)}
 								style={
 									isActive && meta
@@ -156,9 +143,7 @@ export function ExerciseList() {
 							<button
 								key={equip}
 								type="button"
-								onClick={() =>
-									setSelectedEquipment(selectedEquipment === equip ? null : equip)
-								}
+								onClick={() => setSelectedEquipment(selectedEquipment === equip ? null : equip)}
 								className={cn(
 									'shrink-0 rounded-full border px-3 py-1 text-xs font-medium transition-colors',
 									selectedEquipment === equip
@@ -213,16 +198,10 @@ export function ExerciseList() {
 				<div className="flex flex-col items-center gap-2 py-16">
 					<Search className="text-muted-foreground h-10 w-10" />
 					<p className="text-muted-foreground text-sm">
-						{hasActiveFilters
-							? 'Aucun exercice ne correspond aux filtres.'
-							: 'Aucun exercice disponible.'}
+						{hasActiveFilters ? 'Aucun exercice ne correspond aux filtres.' : 'Aucun exercice disponible.'}
 					</p>
 					{hasActiveFilters && (
-						<button
-							type="button"
-							onClick={clearFilters}
-							className="text-primary text-sm underline underline-offset-4"
-						>
+						<button type="button" onClick={clearFilters} className="text-primary text-sm underline underline-offset-4">
 							Effacer les filtres
 						</button>
 					)}
@@ -236,11 +215,7 @@ export function ExerciseList() {
 			)}
 
 			{/* Detail sheet */}
-			<ExerciseDetailSheet
-				exercise={selectedExercise}
-				open={sheetOpen}
-				onOpenChange={setSheetOpen}
-			/>
+			<ExerciseDetailSheet exercise={selectedExercise} open={sheetOpen} onOpenChange={setSheetOpen} />
 		</div>
 	);
 }

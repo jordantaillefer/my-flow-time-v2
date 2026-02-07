@@ -75,12 +75,7 @@ export function TimeSlotBlock({ slot }: TimeSlotBlockProps) {
 							});
 						}}
 					/>
-					<Button
-						variant="ghost"
-						size="icon"
-						className="text-destructive h-5 w-5"
-						onClick={() => deleteSlot.mutate({ id: slot.id })}
-					>
+					<Button variant="ghost" size="icon" className="text-destructive h-5 w-5" onClick={() => deleteSlot.mutate({ id: slot.id })}>
 						<Trash2 className="h-3 w-3" />
 					</Button>
 				</div>

@@ -23,9 +23,7 @@ export const templateRecurrenceRouter = router({
 			// Remove existing assignment for this day
 			await ctx.db
 				.delete(templateRecurrence)
-				.where(
-					and(eq(templateRecurrence.dayOfWeek, input.dayOfWeek), eq(templateRecurrence.userId, ctx.session.user.id)),
-				);
+				.where(and(eq(templateRecurrence.dayOfWeek, input.dayOfWeek), eq(templateRecurrence.userId, ctx.session.user.id)));
 			// Insert new assignment
 			const id = crypto.randomUUID();
 			await ctx.db.insert(templateRecurrence).values({
@@ -37,13 +35,9 @@ export const templateRecurrenceRouter = router({
 			return { id };
 		}),
 
-	unset: authedProcedure
-		.input(z.object({ dayOfWeek: z.number().int().min(0).max(6) }))
-		.mutation(async ({ ctx, input }) => {
-			await ctx.db
-				.delete(templateRecurrence)
-				.where(
-					and(eq(templateRecurrence.dayOfWeek, input.dayOfWeek), eq(templateRecurrence.userId, ctx.session.user.id)),
-				);
-		}),
+	unset: authedProcedure.input(z.object({ dayOfWeek: z.number().int().min(0).max(6) })).mutation(async ({ ctx, input }) => {
+		await ctx.db
+			.delete(templateRecurrence)
+			.where(and(eq(templateRecurrence.dayOfWeek, input.dayOfWeek), eq(templateRecurrence.userId, ctx.session.user.id)));
+	}),
 });

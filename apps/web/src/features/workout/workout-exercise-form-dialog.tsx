@@ -33,13 +33,7 @@ interface WorkoutExerciseFormDialogProps {
 	onSubmit: (values: WorkoutExerciseValues) => Promise<void>;
 }
 
-export function WorkoutExerciseFormDialog({
-	exerciseName,
-	defaultValues,
-	open,
-	onOpenChange,
-	onSubmit,
-}: WorkoutExerciseFormDialogProps) {
+export function WorkoutExerciseFormDialog({ exerciseName, defaultValues, open, onOpenChange, onSubmit }: WorkoutExerciseFormDialogProps) {
 	const form = useForm<WorkoutExerciseValues>({
 		resolver: formResolver(workoutExerciseSchema),
 		defaultValues: defaultValues ?? DEFAULT_VALUES,
@@ -61,7 +55,7 @@ export function WorkoutExerciseFormDialog({
 		<Dialog open={open} onOpenChange={onOpenChange}>
 			<DialogContent className="max-w-sm">
 				<DialogHeader>
-					<DialogTitle>{exerciseName ? `Configurer : ${exerciseName}` : 'Configurer l\'exercice'}</DialogTitle>
+					<DialogTitle>{exerciseName ? `Configurer : ${exerciseName}` : "Configurer l'exercice"}</DialogTitle>
 				</DialogHeader>
 				<Form {...form}>
 					<form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">

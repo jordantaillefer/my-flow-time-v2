@@ -1,4 +1,4 @@
-import { createFileRoute,Link } from '@tanstack/react-router';
+import { createFileRoute, Link } from '@tanstack/react-router';
 import { ArrowLeft, Clock, Loader2, Pencil, Plus, Trash2 } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
@@ -93,9 +93,7 @@ function TemplateEditorPage() {
 					/>
 				</div>
 
-				{template.slots.length === 0 && (
-					<p className="text-muted-foreground py-8 text-center text-sm">Aucun creneau.</p>
-				)}
+				{template.slots.length === 0 && <p className="text-muted-foreground py-8 text-center text-sm">Aucun creneau.</p>}
 
 				<div className="space-y-2">
 					{template.slots.map((slot) => (
@@ -107,10 +105,7 @@ function TemplateEditorPage() {
 										{slot.startTime} - {slot.endTime}
 									</span>
 									<div className="flex items-center gap-1.5">
-										<span
-											className="inline-block h-2 w-2 rounded-full"
-											style={{ backgroundColor: slot.subcategory.category.color }}
-										/>
+										<span className="inline-block h-2 w-2 rounded-full" style={{ backgroundColor: slot.subcategory.category.color }} />
 										<span className="text-muted-foreground text-sm">
 											{slot.subcategory.category.name} / {slot.subcategory.name}
 										</span>

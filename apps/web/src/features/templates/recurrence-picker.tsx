@@ -53,9 +53,7 @@ export function RecurrencePicker({ templateId }: RecurrencePickerProps) {
 								onClick={() => handleToggle(day.value)}
 								className={cn(
 									'flex h-9 w-9 items-center justify-center rounded-full border text-xs font-medium transition-colors',
-									isAssignedHere
-										? 'border-primary bg-primary text-primary-foreground'
-										: 'border-border hover:bg-accent',
+									isAssignedHere ? 'border-primary bg-primary text-primary-foreground' : 'border-border hover:bg-accent',
 								)}
 							>
 								{day.short}
