@@ -5,6 +5,7 @@ export const plannedSlotSchema = z
 		startTime: z.string().min(1, 'Heure de debut requise'),
 		endTime: z.string().min(1, 'Heure de fin requise'),
 		subcategoryId: z.string().min(1, 'Sous-categorie requise'),
+		workoutPlanId: z.string().optional(),
 	})
 	.refine((data) => data.startTime < data.endTime, {
 		message: "L'heure de fin doit etre apres l'heure de debut",

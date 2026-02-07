@@ -9,14 +9,22 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WorkoutsRouteImport } from './routes/workouts'
 import { Route as SignupRouteImport } from './routes/signup'
 import { Route as SettingsRouteImport } from './routes/settings'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as ExercisesRouteImport } from './routes/exercises'
 import { Route as CalendarRouteImport } from './routes/calendar'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as WorkoutsIndexRouteImport } from './routes/workouts.index'
+import { Route as WorkoutsPlanIdRouteImport } from './routes/workouts.$planId'
 import { Route as TemplatesTemplateIdRouteImport } from './routes/templates.$templateId'
 
+const WorkoutsRoute = WorkoutsRouteImport.update({
+  id: '/workouts',
+  path: '/workouts',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SignupRoute = SignupRouteImport.update({
   id: '/signup',
   path: '/signup',
@@ -47,6 +55,16 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WorkoutsIndexRoute = WorkoutsIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => WorkoutsRoute,
+} as any)
+const WorkoutsPlanIdRoute = WorkoutsPlanIdRouteImport.update({
+  id: '/$planId',
+  path: '/$planId',
+  getParentRoute: () => WorkoutsRoute,
+} as any)
 const TemplatesTemplateIdRoute = TemplatesTemplateIdRouteImport.update({
   id: '/templates/$templateId',
   path: '/templates/$templateId',
@@ -60,7 +78,10 @@ export interface FileRoutesByFullPath {
   '/login': typeof LoginRoute
   '/settings': typeof SettingsRoute
   '/signup': typeof SignupRoute
+  '/workouts': typeof WorkoutsRouteWithChildren
   '/templates/$templateId': typeof TemplatesTemplateIdRoute
+  '/workouts/$planId': typeof WorkoutsPlanIdRoute
+  '/workouts/': typeof WorkoutsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -70,6 +91,8 @@ export interface FileRoutesByTo {
   '/settings': typeof SettingsRoute
   '/signup': typeof SignupRoute
   '/templates/$templateId': typeof TemplatesTemplateIdRoute
+  '/workouts/$planId': typeof WorkoutsPlanIdRoute
+  '/workouts': typeof WorkoutsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -79,7 +102,10 @@ export interface FileRoutesById {
   '/login': typeof LoginRoute
   '/settings': typeof SettingsRoute
   '/signup': typeof SignupRoute
+  '/workouts': typeof WorkoutsRouteWithChildren
   '/templates/$templateId': typeof TemplatesTemplateIdRoute
+  '/workouts/$planId': typeof WorkoutsPlanIdRoute
+  '/workouts/': typeof WorkoutsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -90,7 +116,10 @@ export interface FileRouteTypes {
     | '/login'
     | '/settings'
     | '/signup'
+    | '/workouts'
     | '/templates/$templateId'
+    | '/workouts/$planId'
+    | '/workouts/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -100,6 +129,8 @@ export interface FileRouteTypes {
     | '/settings'
     | '/signup'
     | '/templates/$templateId'
+    | '/workouts/$planId'
+    | '/workouts'
   id:
     | '__root__'
     | '/'
@@ -108,7 +139,10 @@ export interface FileRouteTypes {
     | '/login'
     | '/settings'
     | '/signup'
+    | '/workouts'
     | '/templates/$templateId'
+    | '/workouts/$planId'
+    | '/workouts/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -118,11 +152,19 @@ export interface RootRouteChildren {
   LoginRoute: typeof LoginRoute
   SettingsRoute: typeof SettingsRoute
   SignupRoute: typeof SignupRoute
+  WorkoutsRoute: typeof WorkoutsRouteWithChildren
   TemplatesTemplateIdRoute: typeof TemplatesTemplateIdRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/workouts': {
+      id: '/workouts'
+      path: '/workouts'
+      fullPath: '/workouts'
+      preLoaderRoute: typeof WorkoutsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/signup': {
       id: '/signup'
       path: '/signup'
@@ -165,6 +207,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/workouts/': {
+      id: '/workouts/'
+      path: '/'
+      fullPath: '/workouts/'
+      preLoaderRoute: typeof WorkoutsIndexRouteImport
+      parentRoute: typeof WorkoutsRoute
+    }
+    '/workouts/$planId': {
+      id: '/workouts/$planId'
+      path: '/$planId'
+      fullPath: '/workouts/$planId'
+      preLoaderRoute: typeof WorkoutsPlanIdRouteImport
+      parentRoute: typeof WorkoutsRoute
+    }
     '/templates/$templateId': {
       id: '/templates/$templateId'
       path: '/templates/$templateId'
@@ -175,6 +231,20 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface WorkoutsRouteChildren {
+  WorkoutsPlanIdRoute: typeof WorkoutsPlanIdRoute
+  WorkoutsIndexRoute: typeof WorkoutsIndexRoute
+}
+
+const WorkoutsRouteChildren: WorkoutsRouteChildren = {
+  WorkoutsPlanIdRoute: WorkoutsPlanIdRoute,
+  WorkoutsIndexRoute: WorkoutsIndexRoute,
+}
+
+const WorkoutsRouteWithChildren = WorkoutsRoute._addFileChildren(
+  WorkoutsRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CalendarRoute: CalendarRoute,
@@ -182,6 +252,7 @@ const rootRouteChildren: RootRouteChildren = {
   LoginRoute: LoginRoute,
   SettingsRoute: SettingsRoute,
   SignupRoute: SignupRoute,
+  WorkoutsRoute: WorkoutsRouteWithChildren,
   TemplatesTemplateIdRoute: TemplatesTemplateIdRoute,
 }
 export const routeTree = rootRouteImport

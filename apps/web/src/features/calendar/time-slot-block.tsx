@@ -60,6 +60,7 @@ export function TimeSlotBlock({ slot }: TimeSlotBlockProps) {
 							startTime: slot.startTime,
 							endTime: slot.endTime,
 							subcategoryId: slot.subcategoryId,
+							workoutPlanId: slot.workoutPlanId ?? undefined,
 						}}
 						trigger={
 							<Button variant="ghost" size="icon" className="h-5 w-5">

@@ -13,6 +13,7 @@ export const plannedSlotRouter = router({
 				endTime: z.string().min(1),
 				subcategoryId: z.string(),
 				order: z.number().int(),
+				workoutPlanId: z.string().optional(),
 			}),
 		)
 		.mutation(async ({ ctx, input }) => {
@@ -41,6 +42,7 @@ export const plannedSlotRouter = router({
 				order: input.order,
 				subcategoryId: input.subcategoryId,
 				plannedDayId: day.id,
+				workoutPlanId: input.workoutPlanId ?? null,
 				userId,
 			});
 			return { id };
@@ -54,6 +56,7 @@ export const plannedSlotRouter = router({
 				endTime: z.string().min(1),
 				subcategoryId: z.string(),
 				order: z.number().int(),
+				workoutPlanId: z.string().optional(),
 			}),
 		)
 		.mutation(async ({ ctx, input }) => {
@@ -65,6 +68,7 @@ export const plannedSlotRouter = router({
 					subcategoryId: input.subcategoryId,
 					order: input.order,
 					templateSlotId: null, // Detach from template slot on edit
+					workoutPlanId: input.workoutPlanId ?? null,
 				})
 				.where(and(eq(plannedSlot.id, input.id), eq(plannedSlot.userId, ctx.session.user.id)));
 		}),

@@ -9,6 +9,8 @@ export interface PlannedDayData {
 		endTime: string;
 		order: number;
 		subcategoryId: string;
+		workoutPlanId: string | null;
+		workoutPlan: { id: string; name: string } | null;
 		subcategory: {
 			id: string;
 			name: string;

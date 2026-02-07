@@ -1,5 +1,5 @@
 import { Loader2 } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 import { Button } from '@/components/ui/button';
@@ -13,6 +13,8 @@ import { trpc } from '@/lib/trpc';
 import { plannedSlotSchema, type PlannedSlotValues } from './schemas';
 
 const EMPTY_VALUES: PlannedSlotValues = { startTime: '', endTime: '', subcategoryId: '' };
+
+const NO_PLAN = '__none__';
 
 interface PlannedSlotFormDialogProps {
 	trigger?: React.ReactNode;
@@ -37,6 +39,7 @@ export function PlannedSlotFormDialog({
 	const setOpen = isControlled ? (onOpenChange ?? (() => {})) : setInternalOpen;
 
 	const categoriesQuery = trpc.category.list.useQuery();
+	const workoutPlansQuery = trpc.workoutPlan.list.useQuery();
 
 	const form = useForm<PlannedSlotValues>({
 		resolver: formResolver(plannedSlotSchema),
@@ -44,7 +47,7 @@ export function PlannedSlotFormDialog({
 	});
 
 	// Reset form values each time the dialog opens
-	 
+
 	useEffect(() => {
 		if (open) {
 			form.reset(defaultValues ?? EMPTY_VALUES);
@@ -58,6 +61,19 @@ export function PlannedSlotFormDialog({
 	}
 
 	const categories = categoriesQuery.data ?? [];
+	const workoutPlans = workoutPlansQuery.data ?? [];
+
+	// Find the moduleType of the currently selected subcategory
+	const selectedSubcategoryId = form.watch('subcategoryId');
+	const selectedModuleType = useMemo(() => {
+		for (const cat of categories) {
+			const sub = cat.subcategories.find((s) => s.id === selectedSubcategoryId);
+			if (sub) return sub.moduleType;
+		}
+		return null;
+	}, [categories, selectedSubcategoryId]);
+
+	const showWorkoutPlan = selectedModuleType === 'workout';
 
 	return (
 		<Dialog open={open} onOpenChange={setOpen}>
@@ -133,6 +149,36 @@ export function PlannedSlotFormDialog({
 								</FormItem>
 							)}
 						/>
+						{showWorkoutPlan && (
+							<FormField
+								control={form.control}
+								name="workoutPlanId"
+								render={({ field }) => (
+									<FormItem>
+										<FormLabel>Plan de seance</FormLabel>
+										<Select
+											onValueChange={(v) => field.onChange(v === NO_PLAN ? undefined : v)}
+											defaultValue={field.value ?? NO_PLAN}
+										>
+											<FormControl>
+												<SelectTrigger className="w-full">
+													<SelectValue placeholder="Aucun plan" />
+												</SelectTrigger>
+											</FormControl>
+											<SelectContent>
+												<SelectItem value={NO_PLAN}>Aucun plan</SelectItem>
+												{workoutPlans.map((plan) => (
+													<SelectItem key={plan.id} value={plan.id}>
+														{plan.name} ({plan.exerciseCount} ex.)
+													</SelectItem>
+												))}
+											</SelectContent>
+										</Select>
+										<FormMessage />
+									</FormItem>
+								)}
+							/>
+						)}
 						<Button type="submit" className="w-full" disabled={form.formState.isSubmitting}>
 							{form.formState.isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
 							{defaultValues ? 'Modifier' : 'Creer'}

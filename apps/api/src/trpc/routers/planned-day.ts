@@ -2,7 +2,7 @@ import { and, eq, gte, lte } from 'drizzle-orm';
 import { z } from 'zod';
 
 import { generateDateRange, getTemplateForDate } from '../../core/calendar';
-import { dayTemplate, plannedDay, plannedSlot, templateRecurrence, templateSlot } from '../../db/schema';
+import { plannedDay, plannedSlot, templateRecurrence, templateSlot } from '../../db/schema';
 import { authedProcedure, router } from '../trpc';
 
 export const plannedDayRouter = router({
@@ -28,6 +28,7 @@ export const plannedDayRouter = router({
 					slots: {
 						with: {
 							subcategory: { with: { category: true } },
+						workoutPlan: true,
 						},
 						orderBy: (slot, { asc }) => [asc(slot.order)],
 					},
@@ -92,6 +93,7 @@ export const plannedDayRouter = router({
 					slots: {
 						with: {
 							subcategory: { with: { category: true } },
+						workoutPlan: true,
 						},
 						orderBy: (slot, { asc }) => [asc(slot.order)],
 					},

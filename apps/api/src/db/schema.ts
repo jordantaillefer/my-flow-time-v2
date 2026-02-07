@@ -1,5 +1,5 @@
 import { relations, sql } from 'drizzle-orm';
-import { index, integer, sqliteTable, text, uniqueIndex } from 'drizzle-orm/sqlite-core';
+import { index, integer, real, sqliteTable, text, uniqueIndex } from 'drizzle-orm/sqlite-core';
 
 // =============================================================================
 // Auth tables (Better Auth)
@@ -304,6 +304,7 @@ export const plannedSlot = sqliteTable(
 			.notNull()
 			.references(() => plannedDay.id, { onDelete: 'cascade' }),
 		templateSlotId: text('template_slot_id').references(() => templateSlot.id, { onDelete: 'set null' }),
+		workoutPlanId: text('workout_plan_id').references(() => workoutPlan.id, { onDelete: 'set null' }),
 		userId: text('user_id')
 			.notNull()
 			.references(() => user.id, { onDelete: 'cascade' }),
@@ -332,7 +333,74 @@ export const plannedSlotRelations = relations(plannedSlot, ({ one }) => ({
 	plannedDay: one(plannedDay, { fields: [plannedSlot.plannedDayId], references: [plannedDay.id] }),
 	subcategory: one(subcategory, { fields: [plannedSlot.subcategoryId], references: [subcategory.id] }),
 	templateSlot: one(templateSlot, { fields: [plannedSlot.templateSlotId], references: [templateSlot.id] }),
+	workoutPlan: one(workoutPlan, { fields: [plannedSlot.workoutPlanId], references: [workoutPlan.id] }),
 	user: one(user, { fields: [plannedSlot.userId], references: [user.id] }),
+}));
+
+// =============================================================================
+// Workout plans
+// =============================================================================
+
+export const workoutPlan = sqliteTable(
+	'workout_plan',
+	{
+		id: text('id').primaryKey(),
+		name: text('name').notNull(),
+		userId: text('user_id')
+			.notNull()
+			.references(() => user.id, { onDelete: 'cascade' }),
+		createdAt: integer('created_at', { mode: 'timestamp_ms' })
+			.default(sql`(cast(unixepoch('subsecond') * 1000 as integer))`)
+			.notNull(),
+	},
+	(table) => [
+		index('workout_plan_userId_idx').on(table.userId),
+		uniqueIndex('workout_plan_name_userId_uidx').on(table.name, table.userId),
+	],
+);
+
+export const workoutPlanExercise = sqliteTable(
+	'workout_plan_exercise',
+	{
+		id: text('id').primaryKey(),
+		exerciseId: text('exercise_id')
+			.notNull()
+			.references(() => exercise.id, { onDelete: 'cascade' }),
+		order: integer('order').notNull(),
+		plannedSets: integer('planned_sets').notNull().default(3),
+		plannedReps: integer('planned_reps').notNull().default(10),
+		plannedWeight: real('planned_weight').notNull().default(0),
+		plannedRestSeconds: integer('planned_rest_seconds').notNull().default(90),
+		workoutPlanId: text('workout_plan_id')
+			.notNull()
+			.references(() => workoutPlan.id, { onDelete: 'cascade' }),
+		userId: text('user_id')
+			.notNull()
+			.references(() => user.id, { onDelete: 'cascade' }),
+		createdAt: integer('created_at', { mode: 'timestamp_ms' })
+			.default(sql`(cast(unixepoch('subsecond') * 1000 as integer))`)
+			.notNull(),
+	},
+	(table) => [
+		index('wpe_workoutPlanId_idx').on(table.workoutPlanId),
+		index('wpe_userId_idx').on(table.userId),
+	],
+);
+
+// =============================================================================
+// Workout plan relations
+// =============================================================================
+
+export const workoutPlanRelations = relations(workoutPlan, ({ one, many }) => ({
+	user: one(user, { fields: [workoutPlan.userId], references: [user.id] }),
+	exercises: many(workoutPlanExercise),
+	plannedSlots: many(plannedSlot),
+}));
+
+export const workoutPlanExerciseRelations = relations(workoutPlanExercise, ({ one }) => ({
+	workoutPlan: one(workoutPlan, { fields: [workoutPlanExercise.workoutPlanId], references: [workoutPlan.id] }),
+	exercise: one(exercise, { fields: [workoutPlanExercise.exerciseId], references: [exercise.id] }),
+	user: one(user, { fields: [workoutPlanExercise.userId], references: [user.id] }),
 }));
 
 // =============================================================================
