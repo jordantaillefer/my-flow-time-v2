@@ -5,8 +5,8 @@ import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Label } from '@/components/ui/label';
-import { cn } from '@/lib/utils';
 import { formResolver } from '@/lib/form';
+import { cn } from '@/lib/utils';
 
 import { completeSessionSchema, type CompleteSessionValues } from './schemas';
 import type { SessionSummary, WeightDiff } from './session-core';

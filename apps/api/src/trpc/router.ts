@@ -3,6 +3,7 @@ import { dayTemplateRouter } from './routers/day-template';
 import { exerciseRouter } from './routers/exercise';
 import { plannedDayRouter } from './routers/planned-day';
 import { plannedSlotRouter } from './routers/planned-slot';
+import { statsRouter } from './routers/stats';
 import { templateRecurrenceRouter } from './routers/template-recurrence';
 import { templateSlotRouter } from './routers/template-slot';
 import { workoutPlanRouter } from './routers/workout-plan';
@@ -30,6 +31,7 @@ export const appRouter = router({
 	workoutPlanExercise: workoutPlanExerciseRouter,
 	workoutSession: workoutSessionRouter,
 	workoutSet: workoutSetRouter,
+	stats: statsRouter,
 });
 
 export type AppRouter = typeof appRouter;

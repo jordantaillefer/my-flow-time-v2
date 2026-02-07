@@ -67,6 +67,40 @@ export const workoutSessionRouter = router({
 		});
 	}),
 
+	listHistory: authedProcedure
+		.input(
+			z.object({
+				limit: z.number().int().min(1).max(50).default(10),
+				offset: z.number().int().min(0).default(0),
+				exerciseId: z.string().optional(),
+			}),
+		)
+		.query(async ({ ctx, input }) => {
+			const userId = ctx.session.user.id;
+
+			let sessions = await ctx.db.query.workoutSession.findMany({
+				where: and(eq(workoutSession.userId, userId), eq(workoutSession.status, 'completed')),
+				orderBy: desc(workoutSession.startedAt),
+				with: {
+					workoutPlan: true,
+					sets: {
+						with: { exercise: true },
+						orderBy: (s, { asc }) => [asc(s.completedAt)],
+					},
+				},
+			});
+
+			// Filter sessions that have at least one set with the given exerciseId
+			if (input.exerciseId) {
+				sessions = sessions.filter((s) => s.sets.some((set) => set.exerciseId === input.exerciseId));
+			}
+
+			const total = sessions.length;
+			const paginated = sessions.slice(input.offset, input.offset + input.limit);
+
+			return { sessions: paginated, total };
+		}),
+
 	getActive: authedProcedure.query(async ({ ctx }) => {
 		return (
 			ctx.db.query.workoutSession.findFirst({
