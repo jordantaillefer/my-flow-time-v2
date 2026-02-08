@@ -116,16 +116,16 @@ Base de code initiale : projet `billable`.
 
 ## Phase 8 - Module Musculation : Execution de seance ✅
 
-- [x] Schema DB : tables `workout_session` (status, notes, startedAt, completedAt, FK workout_plan, FK planned_slot nullable) + `workout_set` (setNumber, reps, weight, feeling 1-5, completedAt, FK session, FK exercise, FK workout_plan_exercise)
-- [x] API : workoutSessionRouter (start/getById/complete/abandon/listByPlan/getActive) + workoutSetRouter (log/update/delete)
-- [x] UI execution (page plein ecran `/session/$sessionId`, sans AppShell, centree max-w-lg) :
+- [] Schema DB : tables `workout_session` (status, notes, startedAt, completedAt, FK workout_plan, FK planned_slot nullable) + `workout_set` (setNumber, reps, weight, feeling 1-5, completedAt, FK session, FK exercise, FK workout_plan_exercise)
+- [] API : workoutSessionRouter (start/getById/complete/abandon/listByPlan/getActive) + workoutSetRouter (log/update/delete)
+- [] UI execution (page plein ecran `/session/$sessionId`, sans AppShell, centree max-w-lg) :
   - Exercice en cours avec objectifs affiches (series x reps x poids)
   - Saisie rapide : reps / poids / feeling par serie (boutons +/- avec clamping, inputs elargis)
   - Timer de repos auto-start avec countdown circulaire, pause/resume/skip, vibration
   - Navigation libre entre exercices avec Previous/Next
   - Recapitulatif complet en fin de seance avec proposition de mise a jour des poids du plan (multi-choix par exercice)
   - Confirmation d'abandon avec dialog
-- [x] Bouton "Demarrer" depuis `/workouts/$planId` et depuis la vue Aujourd'hui (module workout)
+- [] Bouton "Demarrer" depuis `/workouts/$planId` et depuis la vue Aujourd'hui (module workout)
 - [ ] Fonctionnement offline complet : toute la seance en local, sync au retour en ligne
 
 ## Phase 9 - Historique & statistiques
