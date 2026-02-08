@@ -4,6 +4,7 @@
 	"private": true,
 	"scripts": {
 		"deploy": "wrangler deploy",
+		"deploy:dev": "pnpm --filter web build && wrangler deploy",
 		"deploy:prod": "wrangler deploy --env prod",
 		"dev": "wrangler dev",
 		"dev:remote": "wrangler dev --remote",

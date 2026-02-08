@@ -26,4 +26,15 @@ app.all('/api/trpc/*', (c) => {
 	});
 });
 
+// SPA fallback: non-API routes → index.html (only in deployed environment)
+app.get('*', async (c) => {
+	const assets = (c.env as Record<string, unknown>).ASSETS as
+		| { fetch: (req: Request) => Promise<Response> }
+		| undefined;
+	if (!assets) return c.notFound();
+	const url = new URL(c.req.url);
+	url.pathname = '/index.html';
+	return assets.fetch(new Request(url, c.req.raw));
+});
+
 export default app;

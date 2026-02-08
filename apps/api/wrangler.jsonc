@@ -7,6 +7,15 @@
 		"enabled": true,
 	},
 	"compatibility_flags": ["nodejs_compat"],
+	"assets": {
+		"directory": "../web/dist",
+		"binding": "ASSETS",
+		"html_handling": "auto-trailing-slash",
+		"not_found_handling": "none",
+	},
+	"vars": {
+		"BETTER_AUTH_URL": "https://flowtime-api.jordantaillefer.workers.dev",
+	},
 	"d1_databases": [
 		{
 			"binding": "DB",
